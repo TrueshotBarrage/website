@@ -1,0 +1,39 @@
+@charset "utf-8";
+/**-----------------------------------------------------------
+ * name: main.css
+ * purpose: baseline css framework used for the whole website
+ * author: david kim
+ * last revised: april 2th, 2020
+ -----------------------------------------------------------*/
+
+/* Just in case browser does not support HTML5 */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Font set is same as the dashboard app Momentum */
+
+body {
+  background-color: #f2f2f2;
+  font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  line-height: 1.8;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+#no_javascript_msg {
+  text-align: center;
+}

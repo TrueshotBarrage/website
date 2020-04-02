@@ -1,0 +1,5 @@
+
+scripts/_*.js
+images/.DS_Store
+images/favicon_full_res.jpg
+css/_*.css

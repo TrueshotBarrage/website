@@ -1,0 +1,106 @@
+/**-----------------------------------------------------------
+ * name: nav-header.css
+ * purpose: css styles for the navigation bar & header
+ * author: david kim
+ * last revised: april 2th, 2020
+ -----------------------------------------------------------*/
+
+/* First, header: */
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #101010;
+  letter-spacing: 0.3em;
+}
+
+header .inner {
+  /* width: 1000px; */
+  width: 93%;
+  height: 100%;
+  margin: 0 auto;
+  /* background-color: red; */
+}
+
+/* Center logo in the header
+ * table: easy way to center logo, universal with all browsers */
+
+#logo {
+  height: 100%;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo h1 {
+  color: #fff;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+#logo h1 span {
+  font-weight: 800;
+}
+
+/* The intersect at the top left corner, between the header and the nav bar */
+
+#nav-intersect {
+  height: 100%;
+  display: table;
+  float: left;
+}
+
+#nav-intersect h1 {
+  color: #fff;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+/* The project nav at the top right corner */
+
+#project-nav {
+  height: 100%;
+  display: table;
+  float: right;
+}
+
+#project-nav h1 {
+  color: #fff;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+/* Now, navigation bar: */
+
+nav {
+  font-size: 1.5em;
+}
+
+nav>ul {
+  width: 220px;
+  height: 100%;
+  /* TODO: change this to #f2f2f2 later! */
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
+}
+
+nav ul {
+  padding: 40px 20px;
+  /* transition: 500ms;
+  transition-property: transform;
+  transform: translate(500, 0); */
+}
+
+nav li {
+  margin-bottom: 20px;
+}
