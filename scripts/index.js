@@ -1,6 +1,9 @@
 $(document).ready(function () {
   var $nav = $("nav");
   var leftToRight = checkSize();
+  $(window).resize(() => {
+    leftToRight = checkSize();
+  });
 
   // Toggles the nav bar when clicking the nav-intersect icon.
   $("#nav-intersect").click(() => {
@@ -11,9 +14,12 @@ $(document).ready(function () {
     }
   });
 
-  $(window).resize(() => {
-    leftToRight = checkSize();
-  });
+  // Index page animation for the three word blocks
+  for (let i = 0; i < 3; i++) {
+    let inner = "#inner";
+    let $innerItem = $(inner + String(i + 1));
+    $innerItem.delay(i * 1500).fadeIn(1500);
+  }
 });
 
 // If screen size is 500px or greater, return true

@@ -45,7 +45,21 @@ $title = "homepage";
   </nav>
 
   <!-- Contents -->
-
+  <main>
+    <div class="main-container">
+      <div class="outer">
+        <div class="inner" id="inner1">
+          <h2>Hi! My name is David Kim, a sophomore at <span class="cornell bold">Cornell University</span>.</h2>
+        </div>
+        <div class="inner" id="inner2">
+          <h2>Lorem ipsum dolor.</h2>
+        </div>
+        <div class="inner" id="inner3">
+          <h2>The quick brown fox jumps over the lazy dog.</h2>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <!-- Footer -->
   <footer>

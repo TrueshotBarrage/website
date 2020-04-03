@@ -66,15 +66,15 @@ header {
 
 /* Screens smaller than 1224px */
 
-@media only screen and (min-width: 500px) and (max-width: 1224px) {
+@media only screen and (min-width: 700px) and (max-width: 1224px) {
   #logo h1 .not-initials {
     display: none;
   }
 }
 
-/* Screens smaller than 500px */
+/* Screens smaller than 700px */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   #logo {
     display: none;
   }
