@@ -59,17 +59,8 @@ $title = "homepage";
         </div>
       </div>
 
-      <div class="external-links">
-        <div class="image" id="image1">
-          <img src="images/github.png" />
-        </div>
-        <div class="image" id="image2">
-          <img src="images/linkedin.png" />
-        </div>
-        <div class="image" id="image3">
-          <img src="images/spotify.png" />
-        </div>
-      </div>
+      <!-- Links to GitHub, LinkedIn, and Spotify profiles -->
+      <?php include("includes/external-links.php"); ?>
     </div>
   </main>
 
