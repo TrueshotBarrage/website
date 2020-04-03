@@ -58,6 +58,18 @@ $title = "homepage";
           <h2>or see <a href="projects">what gets me going</a> when I wake up in the morning.</h2>
         </div>
       </div>
+
+      <div class="external-links">
+        <div class="image" id="image1">
+          <img src="images/github.png" />
+        </div>
+        <div class="image" id="image2">
+          <img src="images/linkedin.png" />
+        </div>
+        <div class="image" id="image3">
+          <img src="images/spotify.png" />
+        </div>
+      </div>
     </div>
   </main>
 

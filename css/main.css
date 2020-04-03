@@ -47,21 +47,21 @@ main {
 .main-container {
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr auto 1fr;
-  grid-template-areas: ". . . ." ". main main ." ". . . .";
-  column-gap: 20px;
+  grid-template-areas: ". . ." ". main ." ". external .";
+  column-gap: 10px;
   row-gap: 10px;
 }
 
-/* The outer box itself is both a grid ITEM and a grid container! */
+/* The outer box itself is both a grid ITEM and a grid CONTAINER! */
 
 .outer {
   grid-area: main;
   justify-self: center;
   align-self: center;
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: auto;
   grid-template-rows: 1fr 1fr 1fr auto;
 }
 
@@ -78,21 +78,36 @@ main {
   color: blue;
 }
 
-/* Screens smaller than 1300px */
+/* External links also both a grid ITEM and a CONTAINER. */
 
-@media only screen and (min-width: 700px) and (max-width: 1300px) {
-  .main-container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: ". ." "main main" ". .";
-  }
+.external-links {
+  grid-area: external;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  column-gap: 100px;
 }
 
-/* Screens smaller than 700px */
+.image {
+  justify-self: center;
+  align-self: center;
+  margin: 25px;
+  display: none;
+}
 
-@media only screen and (max-width: 700px) {
+.image img {
+  width: 100px;
+  height: auto;
+}
+
+/* Screens smaller than 1300px */
+
+@media only screen and (max-width: 1300px) {
   .main-container {
     grid-template-columns: 1fr;
-    grid-template-areas: "." "main" ".";
+    grid-template-areas: "." "main" "external";
   }
 }
 

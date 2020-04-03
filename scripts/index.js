@@ -28,6 +28,10 @@ $(document).ready(function () {
     let $innerItem = $(inner + String(i + 1));
     $innerItem.delay(i * 1500).fadeIn(1500);
   }
+
+  // Fades the images in after the word blocks have completed loading
+  let $img = $(".image");
+  $img.delay(4500).fadeIn(1500);
 });
 
 // If screen size is 500px or greater, return true
