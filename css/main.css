@@ -17,7 +17,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: -apple-system, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -78,6 +78,10 @@ main {
   color: blue;
 }
 
+.inner h2 {
+  margin: 30px;
+}
+
 /* External links also both a grid ITEM and a CONTAINER. */
 
 .external-links {
@@ -111,11 +115,33 @@ main {
   }
 }
 
+/* Screens smaller than 700px */
+
+@media only screen and (max-width: 700px) {
+  .main-container {
+    grid-template-rows: 1fr auto 4fr;
+  }
+  .inner h2 {
+    margin: 20px;
+  }
+  .external-links {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+    column-gap: 0px;
+  }
+  .image {
+    margin: 10px;
+  }
+  .image img {
+    width: 75px;
+    height: auto;
+  }
+}
+
 /* Use h2 (not h1!!) for "big" texts! h1 reserved for header & nav. */
 
 h2 {
   font-weight: inherit;
-  margin: 30px;
 }
 
 footer {
