@@ -1,3 +1,11 @@
+/**-----------------------------------------------------------
+ * name: index.js
+ * purpose: jQuery scripts for animations on the main page
+ * author: david kim
+ * last revised: april 3rd, 2020
+ * Copyright 2020 David Kim. All rights reserved.
+ -----------------------------------------------------------*/
+
 $(document).ready(function () {
   var $nav = $("nav");
   var leftToRight = checkSize();

@@ -2,7 +2,8 @@
  * name: nav-header.css
  * purpose: css styles for the navigation bar & header
  * author: david kim
- * last revised: april 2th, 2020
+ * last revised: april 3rd, 2020
+ * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
 /* First, header: */
@@ -64,9 +65,9 @@ header {
   font-weight: 200;
 }
 
-/* Screens smaller than 1224px */
+/* Screens smaller than 1300px */
 
-@media only screen and (min-width: 700px) and (max-width: 1224px) {
+@media only screen and (min-width: 700px) and (max-width: 1300px) {
   #logo h1 .not-initials {
     display: none;
   }
@@ -114,9 +115,9 @@ nav li {
   margin-bottom: 20px;
 }
 
-/* Screens smaller than 500px */
+/* Screens smaller than 700px */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   nav {
     width: 100%;
     height: unset;

@@ -3,7 +3,8 @@
  * name: main.css
  * purpose: baseline css framework used for the whole website
  * author: david kim
- * last revised: april 2th, 2020
+ * last revised: april 3rd, 2020
+ * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
 /* Just in case browser does not support HTML5 */
@@ -64,6 +65,8 @@ main {
   grid-template-rows: 1fr 1fr 1fr auto;
 }
 
+/* And these are the subgrid boxes. */
+
 .inner {
   justify-self: center;
   align-self: center;
@@ -71,9 +74,13 @@ main {
   display: none;
 }
 
-/* Screens smaller than 1224px */
+.inner a {
+  color: blue;
+}
 
-@media only screen and (min-width: 700px) and (max-width: 1224px) {
+/* Screens smaller than 1300px */
+
+@media only screen and (min-width: 700px) and (max-width: 1300px) {
   .main-container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: ". ." "main main" ". .";
