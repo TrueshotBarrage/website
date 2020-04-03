@@ -12,53 +12,40 @@ header {
   height: 60px;
   background-color: #101010;
   letter-spacing: 0.3em;
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  /* column-gap: auto; */
 }
 
-header .inner {
-  width: 1000px;
-  /* width: 93%; */
-  height: 100%;
-  margin: 0 auto;
-  /* background-color: red; */
-}
-
-/* Center logo in the header
- * table: easy way to center logo, universal with all browsers */
+/* Center logo in the header */
 
 #logo {
-  height: 100%;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
+  grid-column: 2 / span 1;
+  justify-self: center;
+  align-self: center;
 }
 
 #logo h1 {
   color: #fff;
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
   font-size: 24px;
   font-weight: 200;
 }
 
-#logo h1 span {
+#logo h1 .initials {
   font-weight: 800;
 }
 
 /* The intersect at the top left corner, between the header and the nav bar */
 
 #nav-intersect {
-  height: 100%;
-  display: table;
-  float: left;
+  grid-column: 1 / span 1;
+  justify-self: center;
+  align-self: center;
   cursor: pointer;
 }
 
 #nav-intersect h1 {
   color: #fff;
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
   font-size: 20px;
   font-weight: 200;
 }
@@ -66,18 +53,37 @@ header .inner {
 /* The project nav at the top right corner */
 
 #project-nav {
-  height: 100%;
-  display: table;
-  float: right;
+  grid-column: 3 / span 1;
+  justify-self: center;
+  align-self: center;
 }
 
 #project-nav h1 {
   color: #fff;
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
   font-size: 20px;
   font-weight: 200;
+}
+
+/* Screens smaller than 1224px */
+
+@media only screen and (min-width: 500px) and (max-width: 1224px) {
+  #logo h1 .not-initials {
+    display: none;
+  }
+}
+
+/* Screens smaller than 500px */
+
+@media only screen and (max-width: 500px) {
+  #logo {
+    display: none;
+  }
+  #project-nav {
+    display: none;
+  }
+  #nav-intersect {
+    grid-column: 1 / span 3;
+  }
 }
 
 /* Now, navigation bar: */
@@ -87,6 +93,7 @@ nav {
   font-size: 1.5em;
   position: fixed;
   height: 100%;
+  --small: 0;
 }
 
 nav>ul {
@@ -101,11 +108,21 @@ nav>ul {
 
 nav ul {
   padding: 40px 20px;
-  /* transition: 500ms;
-  transition-property: transform;
-  transform: translate(500, 0); */
 }
 
 nav li {
   margin-bottom: 20px;
+}
+
+/* Screens smaller than 500px */
+
+@media only screen and (max-width: 500px) {
+  nav {
+    width: 100%;
+    height: unset;
+    --small: 1;
+  }
+  nav>ul {
+    width: 100%;
+  }
 }
