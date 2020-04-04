@@ -34,40 +34,41 @@ $title = "homepage";
     </div>
   </noscript>
 
-  <!-- Header -->
-  <header>
-    <?php include("includes/header.php"); ?>
-  </header>
+  <div class="main-container">
+    <!-- Header -->
+    <header>
+      <?php include("includes/header.php"); ?>
+    </header>
 
-  <!-- Navigation bar -->
-  <nav>
-    <?php include("includes/nav.php"); ?>
-  </nav>
+    <!-- Navigation bar -->
+    <nav>
+      <?php include("includes/nav.php"); ?>
+    </nav>
 
-  <!-- Contents -->
-  <main>
-    <div class="main-container">
-      <div class="outer">
-        <div class="inner" id="inner1">
-          <h2>Hi! I'm David Kim, a sophomore at <span class="cornell bold">Cornell University.</span></h2>
-        </div>
-        <div class="inner" id="inner2">
-          <h2>Here, you can learn about my <a href="profile">academic pursuits,</a></h2>
-        </div>
-        <div class="inner" id="inner3">
-          <h2>or see <a href="projects">what gets me going</a> when I wake up in the morning.</h2>
-        </div>
-      </div>
-
-      <!-- Links to GitHub, LinkedIn, and Spotify profiles -->
-      <?php include("includes/external-links.php"); ?>
+    <!-- Contents -->
+    <div class="greeting hidden" id="inner1">
+      <h2>Hello</h2>
     </div>
-  </main>
+    <div class="outer">
+      <div class="inner hidden" id="inner2">
+        <h2>I'm David Kim, a sophomore at <span class="cornell bold">Cornell University.</span></h2>
+      </div>
+      <div class="inner hidden" id="inner3">
+        <h2>Here, you can learn about my <a href="profile">academic pursuits,</a></h2>
+      </div>
+      <div class="inner hidden" id="inner4">
+        <h2>or see <a href="projects">what gets me going</a> when I wake up in the morning.</h2>
+      </div>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <?php include("includes/footer.php"); ?>
-  </footer>
+    <!-- Links to GitHub, LinkedIn, and Spotify profiles -->
+    <?php include("includes/external-links.php"); ?>
+
+    <!-- Footer -->
+    <footer>
+      <?php include("includes/footer.php"); ?>
+    </footer>
+  </div>
 </body>
 
 </html>

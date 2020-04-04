@@ -22,16 +22,21 @@ $(document).ready(function () {
     }
   });
 
+  let i;
   // Index page animation for the three word blocks
-  for (let i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     let inner = "#inner";
     let $innerItem = $(inner + String(i + 1));
-    $innerItem.delay(i * 1500).fadeIn(1500);
+    setTimeout(() => {
+      $innerItem.removeClass("hidden").addClass("shown");
+    }, (i + 1) * 1500);
   }
 
   // Fades the images in after the word blocks have completed loading
-  let $img = $(".image");
-  $img.delay(4500).fadeIn(1500);
+  let $img = $(".external-links");
+  setTimeout(() => {
+    $img.removeClass("hidden").addClass("shown");
+  }, (i + 1) * 1500);
 });
 
 // If screen size is 500px or greater, return true

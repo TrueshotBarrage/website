@@ -23,6 +23,6 @@ $images = array(
 );
 ?>
 
-<div class="external-links">
+<div class="external-links hidden">
   <?php create_external_link_divs($links, $images); ?>
 </div>

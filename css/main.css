@@ -3,7 +3,7 @@
  * name: main.css
  * purpose: baseline css framework used for the whole website
  * author: david kim
- * last revised: april 3rd, 2020
+ * last revised: april 4th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -27,7 +27,7 @@ html {
 body {
   background-color: #f2f2f2;
   font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   color: #1a1a1a;
   line-height: 1.8;
 }
@@ -36,22 +36,31 @@ article, aside, footer, header, nav, section {
   display: block;
 }
 
-/* <main> style, specifically for the main content on the page. Uses grid. */
-
-main {
-  height: 100vh;
-  margin-top: -60px;
-  margin-bottom: -32px;
-}
+/* main style, inclusive of everything(!!) on the page. Uses grid. */
 
 .main-container {
   display: grid;
-  height: 100%;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr auto 1fr;
-  grid-template-areas: ". . ." ". main ." ". external .";
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr auto 1fr 32px;
+  grid-template-areas: "header" "greet" "main" "external" "footer";
   column-gap: 10px;
-  row-gap: 10px;
+}
+
+/* Styles for the main greeting text */
+
+.greeting {
+  grid-area: greet;
+  justify-self: center;
+  align-self: center;
+  transition: opacity 1.5s;
+}
+
+.greeting h2 {
+  margin: 30px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 90px;
 }
 
 /* The outer box itself is both a grid ITEM and a grid CONTAINER! */
@@ -71,7 +80,11 @@ main {
   justify-self: center;
   align-self: center;
   text-align: center;
-  display: none;
+  transition: opacity 1.5s;
+}
+
+.inner h2 {
+  font-size: 32px;
 }
 
 .inner a {
@@ -79,7 +92,7 @@ main {
 }
 
 .inner h2 {
-  margin: 30px;
+  margin-bottom: 50px;
 }
 
 /* External links also both a grid ITEM and a CONTAINER. */
@@ -92,13 +105,13 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 100%;
   column-gap: 100px;
+  transition: opacity 1.5s;
 }
 
 .image {
   justify-self: center;
   align-self: center;
   margin: 25px;
-  display: none;
 }
 
 .image img {
@@ -106,23 +119,19 @@ main {
   height: auto;
 }
 
-/* Screens smaller than 1300px */
+/* Screens smaller than 800px */
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 800px) {
   .main-container {
-    grid-template-columns: 1fr;
-    grid-template-areas: "." "main" "external";
+    grid-template-rows: 60px 1fr auto 4fr 32px;
   }
-}
-
-/* Screens smaller than 700px */
-
-@media only screen and (max-width: 700px) {
-  .main-container {
-    grid-template-rows: 1fr auto 4fr;
+  .greeting h2 {
+    margin: 20px;
+    font-size: 72px;
   }
   .inner h2 {
-    margin: 20px;
+    margin-bottom: 30px;
+    font-size: 24px;
   }
   .external-links {
     grid-template-columns: 1fr auto;
@@ -145,7 +154,11 @@ h2 {
 }
 
 footer {
-  font-size: 18px;
+  grid-area: footer;
+  height: 100%;
+  font-size: 16px;
+  text-align: right;
+  font-weight: 200;
 }
 
 .cornell {
@@ -154,6 +167,16 @@ footer {
 
 .bold {
   font-weight: 500;
+}
+
+.shown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 #no_javascript_msg {
