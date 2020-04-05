@@ -3,3 +3,5 @@ scripts/_*.js
 .DS_Store
 images/favicon_full_res.jpg
 css/_*.css
+heydavidkim.cert.pem
+private.key
