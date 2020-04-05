@@ -1,6 +1,6 @@
 /**-----------------------------------------------------------
- * name: index.js
- * purpose: jQuery scripts for animations on the main page
+ * name: main.js
+ * purpose: jQuery scripts for animations on the website
  * author: david kim
  * last revised: april 4th, 2020
  * Copyright 2020 David Kim. All rights reserved.
@@ -20,18 +20,20 @@ $(document).ready(function () {
     // Doesn't use toggle functions directly, because
     // "toggle" always means "hide" when stopped mid-animation
     if (closed) {
-      $("nav").stop(true, false).animate({ width: 'show' }, 400); // Big screens
+      $("nav").stop(true, false).animate({ width: 'show' }, 400);
       $(".contents").addClass("pushed");
+      $(".main-container").stop(true, false).fadeTo(400, 0.5);
       closed = false;
     } else {
-      $("nav").stop(true, false).animate({ width: 'hide' }, 400); // Big screens
+      $("nav").stop(true, false).animate({ width: 'hide' }, 400);
       $(".contents").removeClass("pushed");
+      $(".main-container").stop(true, false).fadeTo(400, 1);
       closed = true;
     }
   });
 
+  /** Index page animation for the n word blocks */
   let i;
-  // Index page animation for the n word blocks
   let n = 4;
   for (i = 0; i < n; i++) {
     let inner = "#inner";
@@ -40,7 +42,6 @@ $(document).ready(function () {
       $innerItem.removeClass("hidden").addClass("shown");
     }, (i + 1) * 1200);
   }
-
   // Fades the images in after the word blocks have completed loading, 
   // ordered using imgOrder's contents
   let imgOrder = [1, 3, 2];
@@ -51,9 +52,35 @@ $(document).ready(function () {
       $imgItem.removeClass("hidden").addClass("shown");
     }, (i + 1) * 1200 + (j * 200));
   }
+
+  /** Rainbowizes all elements with class "rainbow". */
+  const elements = document.querySelectorAll('.rainbow');
+  Array.from(elements).forEach((e, i) => {
+    rainbowize($(e));
+  });
 });
 
 // If screen size is 500px or greater, return true
 function checkSize() {
   return $("nav").css("--small") != 1;
+}
+
+// Colors your word into a beautiful rainbow. Very !important function.
+// You can pass in any element with text, but do keep in mind that it 
+// converts your text into a nested span element.
+function rainbowize($element) {
+  let rainbow = ["#ff4136", "#ff851b", "#ffdc00", "#2ecc40", "#0074d9", "#001f3f", "#b10dc9"];
+  text = $element.text();
+  $rainbowResult = $("<span class='rainbowized'>"
+    + "<!-- Rainbowized by David's script --></span>"); // David wuz here
+  for (let i = 0; i < text.length; i++) {
+    let $colorfulLetter = $("<span></span>")
+      .text(text.charAt(i))
+      .attr("style", "color:" + rainbow[i % 7]);
+    $rainbowResult.append($colorfulLetter);
+  }
+
+  $element.html($rainbowResult);
+  // this is preferred, but unfortunately removes other classes
+  // $element.replaceWith($rainbowResult); 
 }

@@ -14,6 +14,15 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Because I don't like purple links :P */
+
+* a {
+  color: blue;
 }
 
 html {
@@ -25,7 +34,6 @@ html {
 /* Font set is same as the dashboard app Momentum */
 
 body {
-  background-color: #f2f2f2;
   font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #1a1a1a;
@@ -42,6 +50,21 @@ h2 {
   font-weight: inherit;
 }
 
+/* Needed to set screen dimming effect on navbar toggle */
+
+.black-bg {
+  background-color: black;
+}
+
+/* main style, inclusive of everything(!!) on every page. */
+
+.main-container {
+  background-color: #f2f2f2;
+  /* 60px offset for the header on top */
+  height: calc(100vh - 60px);
+  overflow-x: hidden;
+}
+
 footer {
   grid-area: footer;
   height: 100%;
@@ -53,11 +76,16 @@ footer {
 /* General styles */
 
 .cornell {
+  /* The official Cornell color! */
   color: #b31b1b;
 }
 
 .bold {
   font-weight: 500;
+}
+
+.ital {
+  font-style: italic;
 }
 
 /* Used for jQuery animations */

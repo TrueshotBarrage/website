@@ -2,7 +2,7 @@
  * name: nav-header.css
  * purpose: css styles for the navigation bar & header
  * author: david kim
- * last revised: april 4th, 2020
+ * last revised: april 5th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -108,9 +108,9 @@ header a {
 
 nav {
   display: none;
-  /* TODO: change this to #f2f2f2 later!? */
   font-size: 1.5em;
-  background-color: #fff;
+  background-color: #f7f7f7;
+  border-right: 1px solid #f2f2f2;
   position: fixed;
   height: 100%;
   top: 60px;
