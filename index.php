@@ -34,22 +34,24 @@ $title = "homepage";
     </div>
   </noscript>
 
+  <!-- Header -->
+  <header>
+    <?php include("includes/header.php"); ?>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav>
+    <?php include("includes/nav.php"); ?>
+  </nav>
+
   <div class="main-container">
-    <!-- Header -->
-    <header>
-      <?php include("includes/header.php"); ?>
-    </header>
-
-    <!-- Navigation bar -->
-    <nav>
-      <?php include("includes/nav.php"); ?>
-    </nav>
-
     <!-- Contents -->
-    <div class="greeting hidden" id="inner1">
-      <h2>Hello</h2>
+    <div class="contents">
+      <div class="greeting hidden" id="inner1">
+        <h2>Hello</h2>
+      </div>
     </div>
-    <div class="outer">
+    <div class="contents outer">
       <div class="inner hidden" id="inner2">
         <h2>I'm David Kim, a sophomore at <span class="cornell bold">Cornell University.</span></h2>
       </div>

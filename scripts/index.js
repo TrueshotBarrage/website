@@ -7,19 +7,17 @@
  -----------------------------------------------------------*/
 
 $(document).ready(function () {
-  var $nav = $("nav");
-  var leftToRight = checkSize();
+  // Not particularly useful atm, since the original idea, with 
+  // different nav behavior based on window size, got scrapped.
+  var windowIsBig = checkSize();
   $(window).resize(() => {
-    leftToRight = checkSize();
+    windowIsBig = checkSize();
   });
 
   // Toggles the nav bar when clicking the nav-intersect icon.
   $("#nav-intersect").click(() => {
-    if (leftToRight) {
-      $nav.animate({ width: 'toggle' }, 350); // Big screens
-    } else {
-      $nav.slideToggle(350); // Small screens
-    }
+    $("nav").animate({ width: 'toggle' }, 350); // Big screens
+    $(".contents").toggleClass("pushed");
   });
 
   let i;
