@@ -2,7 +2,7 @@
 function create_external_link_divs($l, $img)
 {
   for ($i = 0; $i < count($l); $i++) { ?>
-    <div class="image" id="image<?php echo ($i + 1) ?>">
+    <div class="image hidden" id="image<?php echo ($i + 1) ?>">
       <a href="<?php echo $l[$i] ?>" target="_blank">
         <img src="<?php echo $img[$i] ?>" />
       </a>
@@ -23,6 +23,6 @@ $images = array(
 );
 ?>
 
-<div class="external-links hidden">
+<div class="external-links">
   <?php create_external_link_divs($links, $images); ?>
 </div>
