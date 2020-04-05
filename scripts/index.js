@@ -15,9 +15,19 @@ $(document).ready(function () {
   });
 
   // Toggles the nav bar when clicking the nav-intersect icon.
+  var closed = true;
   $("#nav-intersect").click(() => {
-    $("nav").animate({ width: 'toggle' }, 350); // Big screens
-    $(".contents").toggleClass("pushed");
+    // Doesn't use toggle functions directly, because
+    // "toggle" always means "hide" when stopped mid-animation
+    if (closed) {
+      $("nav").stop(true, false).animate({ width: 'show' }, 400); // Big screens
+      $(".contents").addClass("pushed");
+      closed = false;
+    } else {
+      $("nav").stop(true, false).animate({ width: 'hide' }, 400); // Big screens
+      $(".contents").removeClass("pushed");
+      closed = true;
+    }
   });
 
   let i;

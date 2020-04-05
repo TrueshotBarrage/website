@@ -23,6 +23,23 @@ header a {
   color: inherit;
 }
 
+/* The intersect at the top left corner, between the header and the nav bar */
+
+#nav-intersect {
+  margin: 8px 0;
+  grid-column: 1 / span 1;
+  justify-self: left;
+  align-self: center;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#nav-intersect h1 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 200;
+}
+
 /* Center logo in the header */
 
 #logo {
@@ -47,22 +64,6 @@ header a {
 
 #logo h1 .initials {
   font-weight: 800;
-}
-
-/* The intersect at the top left corner, between the header and the nav bar */
-
-#nav-intersect {
-  margin: 8px 0;
-  grid-column: 1 / span 1;
-  justify-self: center;
-  align-self: center;
-  cursor: pointer;
-}
-
-#nav-intersect h1 {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 200;
 }
 
 /* The project nav at the top right corner */
