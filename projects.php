@@ -52,9 +52,6 @@ $title = "projects";
       </footer>
     </div>
   </div>
-
-  <!-- Google Firebase setup -->
-  <?php include("includes/firebase.php"); ?>
 </body>
 
 </html>
