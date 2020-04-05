@@ -16,6 +16,7 @@ $title = "homepage";
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="stylesheet" type="text/css" href="css/nav-header.css">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -25,14 +26,7 @@ $title = "homepage";
 
 <body>
   <!-- If browser has JS disabled -->
-  <noscript>
-    <div id="no_javascript_msg">
-      <p>
-        Uh oh... Looks like JavaScript is disabled for your browser. If you want
-        to see the full awesomeness this website contains, consider turning it on!
-      </p>
-    </div>
-  </noscript>
+  <?php include("includes/noscript.php"); ?>
 
   <!-- Header -->
   <header>
@@ -56,10 +50,10 @@ $title = "homepage";
         <h2>I'm David Kim, a sophomore at <span class="cornell bold">Cornell University.</span></h2>
       </div>
       <div class="inner hidden" id="inner3">
-        <h2>Here, you can learn about my <a href="profile">academic pursuits,</a></h2>
+        <h2>Here, you can learn about my <a href="profile.php">academic pursuits,</a></h2>
       </div>
       <div class="inner hidden" id="inner4">
-        <h2>or see <a href="projects">what gets me going</a> when I wake up in the morning.</h2>
+        <h2>or see <a href="projects.php">what gets me going</a> when I wake up in the morning.</h2>
       </div>
     </div>
 
