@@ -3,7 +3,7 @@
  * name: main.css
  * purpose: baseline css framework used for the whole website
  * author: david kim
- * last revised: april 4th, 2020
+ * last revised: april 5th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -86,6 +86,10 @@ footer {
 
 .ital {
   font-style: italic;
+}
+
+.xx {
+  text-decoration: line-through;
 }
 
 /* Used for jQuery animations */

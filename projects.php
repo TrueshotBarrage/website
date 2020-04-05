@@ -1,7 +1,7 @@
 <?php
 include("includes/init.php");
 
-$title = "homepage";
+$title = "projects";
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ $title = "homepage";
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/projects.css">
   <link rel="stylesheet" type="text/css" href="css/nav-header.css">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -40,26 +40,11 @@ $title = "homepage";
 
   <div class="black-bg">
     <div class="main-container">
-      <!-- Contents -->
-      <div class="contents">
-        <div class="greeting hidden" id="inner1">
-          <h2>Hello</h2>
-        </div>
+      <!-- Coming soon! -->
+      <div class="coming-soon contents">
+        <h2>Projects section coming soon! Currently redesigning the entire
+          website, so hang tight during this COVID-19 season. Good things are coming.</h2>
       </div>
-      <div class="contents outer">
-        <div class="inner hidden" id="inner2">
-          <h2>I'm David Kim, a sophomore at <span class="cornell bold">Cornell University.</span></h2>
-        </div>
-        <div class="inner hidden" id="inner3">
-          <h2>Here, you can learn about my <a href="profile.php">academic pursuits,</a></h2>
-        </div>
-        <div class="inner hidden" id="inner4">
-          <h2>or see <a href="projects.php">what gets me going</a> when I wake up in the morning.</h2>
-        </div>
-      </div>
-
-      <!-- Links to GitHub, LinkedIn, and Spotify profiles -->
-      <?php include("includes/external-links.php"); ?>
 
       <!-- Footer -->
       <footer>
