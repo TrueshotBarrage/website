@@ -14,7 +14,7 @@ header {
   background-color: #101010;
   letter-spacing: 0.3em;
   display: grid;
-  grid-template-columns: 200px auto 200px;
+  grid-template-columns: 300px auto 300px;
 }
 
 /* Needed to make sure links don't purple out */
@@ -28,7 +28,7 @@ header a {
 #nav-intersect {
   margin: 8px 0;
   grid-column: 1 / span 1;
-  justify-self: left;
+  justify-self: start;
   align-self: center;
   cursor: pointer;
   margin-left: 20px;
@@ -71,8 +71,9 @@ header a {
 #project-nav {
   margin: 8px 0;
   grid-column: 3 / span 1;
-  justify-self: center;
+  justify-self: end;
   align-self: center;
+  margin-right: 20px;
 }
 
 #project-nav h1 {
