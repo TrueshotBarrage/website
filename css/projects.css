@@ -3,6 +3,18 @@
  * name: projects.css
  * purpose: styles used for projects.php
  * author: david kim
- * last revised: april 5th, 2020
+ * last revised: april 6th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
+
+.coming-soon {
+  padding: 30px;
+}
+
+.coming-soon img {
+  width: 20%;
+  height: auto;
+  padding-top: 50px;
+  margin-left: 40%;
+  margin-right: 40%;
+}

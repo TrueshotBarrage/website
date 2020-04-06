@@ -51,6 +51,7 @@
   align-self: center;
   text-align: center;
   transition: opacity 1.5s;
+  padding: 0 20px;
 }
 
 .inner h2 {

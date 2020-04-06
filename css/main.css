@@ -3,7 +3,7 @@
  * name: main.css
  * purpose: baseline css framework used for the whole website
  * author: david kim
- * last revised: april 5th, 2020
+ * last revised: april 6th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -46,7 +46,7 @@ article, aside, footer, header, nav, section {
 
 /* Use h2 (not h1!!) for "big" texts! h1 reserved for header & nav. */
 
-h2 {
+h2, h3 {
   font-weight: inherit;
 }
 
