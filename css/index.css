@@ -3,7 +3,7 @@
  * name: index.css
  * purpose: styles for the home page
  * author: david kim
- * last revised: april 4th, 2020
+ * last revised: april 6th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -23,7 +23,7 @@
   grid-area: greet;
   justify-self: center;
   align-self: center;
-  transition: opacity 1.5s;
+  transition: opacity 1.5s, transform 0.5s ease;
 }
 
 .greeting h2 {

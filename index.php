@@ -41,10 +41,8 @@ $title = "homepage";
   <div class="black-bg">
     <div class="main-container">
       <!-- Contents -->
-      <div class="contents">
-        <div class="greeting hidden" id="inner1">
-          <h2>Hello</h2>
-        </div>
+      <div class="contents greeting hidden" id="inner1">
+        <h2>Hello</h2>
       </div>
       <div class="contents outer">
         <div class="inner hidden" id="inner2">
