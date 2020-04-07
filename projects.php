@@ -2,6 +2,30 @@
 include("includes/init.php");
 
 $title = "projects";
+
+function create_project_entries($p)
+{
+  $sizes = array("medium", "small", "big", "small", "big", "medium", "big", "big", "small");
+  for ($i = 0; $i < count($p); $i++) { ?>
+    <div class="project contents <?php echo $sizes[$i % 9]; ?>" id="p<?php echo ($i + 1); ?>">
+      <div class="container">
+        <div class="inner-container">
+          <h2><?php echo $p[$i]; ?></h2>
+        </div>
+      </div>
+    </div>
+<?php }
+}
+
+$projects = array(
+  "Project Tempo",
+  "MIDI Visualizer",
+  "LED Tetris",
+  "Crawl-o-Bot",
+  "StudyBuddy",
+  "Sir Mix-A-Lot",
+  "GPA Calculator",
+);
 ?>
 
 <!DOCTYPE html>
@@ -40,15 +64,8 @@ $title = "projects";
 
   <div class="black-bg">
     <div class="main-container">
-      <!-- Coming soon! -->
-      <div class="contents projects">
-        <h2>Projects section coming soon! Currently redesigning the entire
-          website, so hang tight during this COVID-19 season. Good things are coming.</h2>
-        <h3>For now, check out my full list of projects on my
-          <a href="https://github.com/TrueshotBarrage" target="_blank">
-            <span class="rainbow">~GitHub~</span>
-          </a>
-        </h3>
+      <div class="projects">
+        <?php create_project_entries($projects); ?>
       </div>
 
       <!-- Footer -->
