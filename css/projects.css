@@ -18,3 +18,17 @@
   margin-left: 40%;
   margin-right: 40%;
 }
+
+.projects {
+  background-color: #f2f2f2;
+  display: grid;
+  padding: 30px;
+}
+
+.projects img {
+  width: 20%;
+  height: auto;
+  padding-top: 50px;
+  margin-left: 40%;
+  margin-right: 40%;
+}

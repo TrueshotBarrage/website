@@ -7,6 +7,15 @@
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
+/* Basically, it allows us to make sure the header stays on top,
+but still "view" the contents as overflowing down. Otherwise,
+header flows with page scroll i.e. isn't fixed at top */
+
+.main-and-projects-wrapper-grid {
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+}
+
 /* main style, inclusive of everything(!!) on the page. Uses grid. */
 
 .main-container {
@@ -33,9 +42,9 @@
   font-size: 90px;
 }
 
-/* The outer box itself is both a grid ITEM and a grid CONTAINER! */
+/* The intro texts box itself is both a grid ITEM and a grid CONTAINER! */
 
-.outer {
+.intro-texts {
   grid-area: main;
   justify-self: center;
   align-self: center;
@@ -46,7 +55,7 @@
 
 /* And these are the subgrid boxes. */
 
-.inner {
+.intro-text {
   justify-self: center;
   align-self: center;
   text-align: center;
@@ -54,11 +63,11 @@
   padding: 0 20px;
 }
 
-.inner h2 {
+.intro-text h2 {
   font-size: 32px;
 }
 
-.inner h2 {
+.intro-text h2 {
   margin-bottom: 50px;
 }
 
@@ -96,7 +105,7 @@
     margin: 20px;
     font-size: 72px;
   }
-  .inner h2 {
+  .intro-text h2 {
     margin-bottom: 30px;
     font-size: 24px;
   }

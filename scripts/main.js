@@ -36,10 +36,10 @@ $(document).ready(function () {
   let i;
   let n = 4;
   for (i = 0; i < n; i++) {
-    let inner = "#inner";
-    let $innerItem = $(inner + String(i + 1));
+    let text = "#intro-text";
+    let $textItem = $(text + String(i + 1));
     setTimeout(() => {
-      $innerItem.removeClass("hidden").addClass("shown");
+      $textItem.removeClass("hidden").addClass("shown");
     }, (i + 1) * 1200);
   }
   // Fades the images in after the word blocks have completed loading, 
