@@ -7,15 +7,6 @@
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
-/* Basically, it allows us to make sure the header stays on top,
-but still "view" the contents as overflowing down. Otherwise,
-header flows with page scroll i.e. isn't fixed at top */
-
-.main-and-projects-wrapper-grid {
-  height: calc(100vh - 60px);
-  overflow-y: scroll;
-}
-
 /* main style, inclusive of everything(!!) on the page. Uses grid. */
 
 .main-container {

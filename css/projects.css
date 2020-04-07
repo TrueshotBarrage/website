@@ -7,6 +7,14 @@
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr 32px;
+  grid-template-areas: "greet" "main" "external" "footer";
+  column-gap: 10px;
+}
+
 .coming-soon {
   padding: 30px;
 }
@@ -21,14 +29,5 @@
 
 .projects {
   background-color: #f2f2f2;
-  display: grid;
   padding: 30px;
-}
-
-.projects img {
-  width: 20%;
-  height: auto;
-  padding-top: 50px;
-  margin-left: 40%;
-  margin-right: 40%;
 }
