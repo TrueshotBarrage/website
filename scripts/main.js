@@ -58,6 +58,8 @@ $(document).ready(function () {
   Array.from(elements).forEach((e, i) => {
     rainbowize($(e));
   });
+
+  animateProjectLoad();
 });
 
 // If screen size is 500px or greater, return true
@@ -83,4 +85,15 @@ function rainbowize($element) {
   $element.html($rainbowResult);
   // this is preferred, but unfortunately removes other classes
   // $element.replaceWith($rainbowResult); 
+}
+
+function animateProjectLoad() {
+  for (let i = 0; i < 7; i++) {
+    let project = "#p";
+    let $projectItem = $(project + String(i + 1));
+    setTimeout(() => {
+      $projectItem.removeClass("hidden").addClass("shown");
+      console.log($projectItem);
+    }, (i + 1) * 200);
+  }
 }

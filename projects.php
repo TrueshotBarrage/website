@@ -7,7 +7,7 @@ function create_project_entries($p)
 {
   $sizes = array("medium", "small", "big", "small", "big", "medium", "big", "big", "small");
   for ($i = 0; $i < count($p); $i++) { ?>
-    <div class="project contents <?php echo $sizes[$i % 9]; ?>" id="p<?php echo ($i + 1); ?>">
+    <div class="contents hidden project <?php echo $sizes[$i % 9]; ?>" id="p<?php echo ($i + 1); ?>">
       <div class="container">
         <div class="inner-container">
           <h2><?php echo $p[$i]; ?></h2>
