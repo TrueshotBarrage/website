@@ -47,7 +47,7 @@ $title = "about me";
             <h2>Hello!</h2>
           </div>
           <div id="about-me-photo">
-            <img src="images/background.jpg" alt="Photo of David" />
+            <img src="images/aboutme.jpg" alt="Photo of David" />
           </div>
           <div id="about-me-text">
             <p>I'm David Kim, a sophomore studying Computer Science and Electrical
