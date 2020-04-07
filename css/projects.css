@@ -41,6 +41,8 @@ individual sections together separately */
   align-items: center;
 }
 
+/* Make the inner container a grid to easily set picture width/position */
+
 .inner-container {
   padding: 2rem;
   display: grid;
@@ -58,6 +60,13 @@ individual sections together separately */
   width: 100%;
   border: 1px solid #ccc;
   transition: opacity 0.6s ease, transform 0.5s ease;
+}
+
+/* For the links */
+
+.container>a {
+  color: #000;
+  cursor: pointer;
 }
 
 .project::before {
