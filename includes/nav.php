@@ -1,11 +1,11 @@
 <ul>
   <li>
-    <a href="index.php">
+    <a href="index">
       <span <?php echo ($title == "homepage") ? "class=\"xx\"" : "" ?>>Homepage</span>
     </a>
   </li>
   <li>
-    <a href="projects.php">
+    <a href="projects">
       <span <?php echo ($title == "projects") ? "class=\"xx\"" : "" ?>>Projects</span>
     </a>
   </li>

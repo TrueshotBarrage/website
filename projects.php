@@ -36,7 +36,7 @@ $links = array(
   "https://github.com/TrueshotBarrage/led-tetris",
   "https://github.com/TrueshotBarrage/crawl-o-bot",
   "https://github.com/TrueshotBarrage/studybuddy",
-  "",
+  "#",
   "https://docs.google.com/spreadsheets/d/13gFiOqcAMy0oDZBiwmrRTxWc00Ag2eL9FyFD5U3VnsA/"
 );
 ?>
