@@ -6,11 +6,13 @@ $title = "projects";
 function create_project_entries($p)
 {
   $sizes = array("medium", "small", "big", "small", "big", "medium", "big", "big", "small");
+  $colors = array("#E9D2D2", "#ACD9F2", "#E1D4E8", "#FFC09A", "#E2F8BD", "#C8CDF0", "#B1F2EC", "#FFCF99", "#F3EAED");
   for ($i = 0; $i < count($p); $i++) { ?>
     <div class="contents hidden project <?php echo $sizes[$i % 9]; ?>" id="p<?php echo ($i + 1); ?>">
-      <div class="container">
+      <div class="container" <?php echo " style=\"background-color:" . $colors[$i % 9] . "\"" ?>>
         <div class="inner-container">
           <h2><?php echo $p[$i]; ?></h2>
+          <img src="images/projects/p<?php echo ($i + 1); ?>.png" />
         </div>
       </div>
     </div>

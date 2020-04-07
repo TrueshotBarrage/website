@@ -94,6 +94,6 @@ function animateProjectLoad() {
     setTimeout(() => {
       $projectItem.removeClass("hidden").addClass("shown");
       console.log($projectItem);
-    }, (i + 1) * 200);
+    }, (i + 1) * 200 + 500);
   }
 }

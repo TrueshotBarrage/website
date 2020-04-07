@@ -43,6 +43,14 @@ individual sections together separately */
 
 .inner-container {
   padding: 2rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.inner-container img {
+  width: 50%;
+  height: auto;
 }
 
 .project {
