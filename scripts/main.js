@@ -14,21 +14,42 @@ $(document).ready(function () {
     windowIsBig = checkSize();
   });
 
-  // Toggles the nav bar when clicking the nav-intersect icon.
-  var closed = true;
+  /** Toggles the nav bar when clicking the nav-intersect icon. */
+  var navClosed = true;
   $("#nav-intersect").click(() => {
     // Doesn't use toggle functions directly, because
     // "toggle" always means "hide" when stopped mid-animation
-    if (closed) {
-      $("nav").stop(true, false).animate({ width: 'show' }, 400);
-      $(".contents").addClass("pushed");
-      $(".main-container").stop(true, false).fadeTo(400, 0.5);
-      closed = false;
-    } else {
-      $("nav").stop(true, false).animate({ width: 'hide' }, 400);
-      $(".contents").removeClass("pushed");
-      $(".main-container").stop(true, false).fadeTo(400, 1);
-      closed = true;
+    if (pnavClosed) { // if project nav is open, do nothing
+      if (navClosed) {
+        $("nav").stop(true, false).animate({ width: 'show' }, 400);
+        $(".contents").addClass("pushed");
+        $(".main-container").stop(true, false).fadeTo(400, 0.5);
+        navClosed = false;
+      } else {
+        $("nav").stop(true, false).animate({ width: 'hide' }, 400);
+        $(".contents").removeClass("pushed");
+        $(".main-container").stop(true, false).fadeTo(400, 1);
+        navClosed = true;
+      }
+    }
+  });
+
+  /** Toggles the project nav when the projects text is clicked. */
+  var pnavClosed = true;
+  $("#project-nav-intersect").click(() => {
+    if (navClosed) { // if nav is open, do nothing
+      if (pnavClosed) {
+        $("#project-nav").stop(true, false).animate({ width: 'show' }, 400);
+        $(".contents").addClass("pulled");
+        $(".main-container").stop(true, false).fadeTo(400, 0.5);
+        pnavClosed = false;
+      }
+      else {
+        $("#project-nav").stop(true, false).animate({ width: 'hide' }, 400);
+        $(".contents").removeClass("pulled");
+        $(".main-container").stop(true, false).fadeTo(400, 1);
+        pnavClosed = true;
+      }
     }
   });
 

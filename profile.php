@@ -38,6 +38,11 @@ $title = "about me";
     <?php include("includes/nav.php"); ?>
   </nav>
 
+  <!-- Project navigation bar -->
+  <div id="project-nav">
+    <?php include("includes/project-nav.php"); ?>
+  </div>
+
   <div class="black-bg">
     <div class="main-container">
       <!-- About me section -->

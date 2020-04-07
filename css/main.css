@@ -3,7 +3,7 @@
  * name: main.css
  * purpose: baseline css framework used for the whole website
  * author: david kim
- * last revised: april 6th, 2020
+ * last revised: april 7th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -112,6 +112,10 @@ footer {
 
 .pushed {
   transform: translate(110px, 0);
+}
+
+.pulled {
+  transform: translate(-110px, 0);
 }
 
 .contents {

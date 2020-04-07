@@ -2,7 +2,7 @@
  * name: nav-header.css
  * purpose: css styles for the navigation bar & header
  * author: david kim
- * last revised: april 5th, 2020
+ * last revised: april 7th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -32,12 +32,18 @@ header a {
   align-self: center;
   cursor: pointer;
   margin-left: 20px;
+  height: 44px;
 }
 
-#nav-intersect h1 {
+/* Grid to align the nav-intersect icon and label */
+
+.button-label-grid {
   color: #fff;
   font-size: 20px;
   font-weight: 200;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
 }
 
 /* Center logo in the header */
@@ -50,7 +56,7 @@ header a {
   height: 44px;
 }
 
-/* For apple.png. Or any image logo. */
+/* For apple.png. Or coffee.png. Or any image logo. */
 
 #logo>h1>a>img {
   height: 44px;
@@ -68,15 +74,17 @@ header a {
 
 /* The project nav at the top right corner */
 
-#project-nav {
+#project-nav-intersect {
   margin: 8px 0;
   grid-column: 3 / span 1;
   justify-self: end;
   align-self: center;
+  cursor: pointer;
   margin-right: 20px;
+  height: 44px;
 }
 
-#project-nav h1 {
+#project-nav-intersect h1 {
   color: #fff;
   font-size: 20px;
   font-weight: 200;
@@ -96,7 +104,7 @@ header a {
   #logo {
     display: none;
   }
-  #project-nav {
+  #project-nav-intersect {
     display: none;
   }
   #nav-intersect {
@@ -130,5 +138,35 @@ nav ul {
 }
 
 nav li {
+  margin-bottom: 20px;
+}
+
+/* Finally, project navigation bar: */
+
+#project-nav {
+  display: none;
+  font-size: 1.5em;
+  background-color: #f7f7f7;
+  border-left: 1px solid #f2f2f2;
+  position: fixed;
+  height: 100%;
+  top: 60px;
+  right: 0;
+  z-index: 1;
+  --small: 0;
+}
+
+#project-nav>ul {
+  width: 220px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#project-nav ul {
+  padding: 40px 20px;
+}
+
+#project-nav li {
   margin-bottom: 20px;
 }

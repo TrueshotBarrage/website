@@ -38,6 +38,11 @@ $title = "homepage";
     <?php include("includes/nav.php"); ?>
   </nav>
 
+  <!-- Project navigation bar -->
+  <div id="project-nav">
+    <?php include("includes/project-nav.php"); ?>
+  </div>
+
   <div class="black-bg">
     <!-- The main contents: greeting, intro texts, ext. links, and footer -->
     <div class="main-container">
