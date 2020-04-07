@@ -57,7 +57,7 @@ $links = array(
   <link rel="stylesheet" type="text/css" href="css/nav-header.css">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/main.js?2"></script>
   <!-- Keywords, names, properties go here later -->
 </head>
 
