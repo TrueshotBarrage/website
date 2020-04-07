@@ -73,6 +73,10 @@ footer {
   font-weight: 200;
 }
 
+.copyright {
+  height: 100%;
+}
+
 /* General styles */
 
 .cornell {
