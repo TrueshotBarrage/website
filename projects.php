@@ -52,9 +52,9 @@ $links = array(
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/projects.css">
-  <link rel="stylesheet" type="text/css" href="css/nav-header.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css?2">
+  <link rel="stylesheet" type="text/css" href="css/projects.css?2">
+  <link rel="stylesheet" type="text/css" href="css/nav-header.css?2">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="scripts/main.js?2"></script>
