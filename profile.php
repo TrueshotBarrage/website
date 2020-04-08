@@ -95,8 +95,8 @@ $title = "about me";
               Languages
             </div>
             <p class="skills-text">
-              Java &bull; Python &bull; JavaScript &bull; TypeScript &bull; PHP
-              &bull; SQL &bull; HTML/CSS &bull; C/C++ &bull; OCaml &bull; Swift
+              Java &bull; Python &bull; JavaScript &bull; TypeScript &bull;
+              HTML/CSS &bull; PHP &bull; SQL &bull; OCaml &bull; C/C++ &bull; Swift
             </p>
           </div>
           <br>
