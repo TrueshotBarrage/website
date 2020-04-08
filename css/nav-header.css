@@ -2,7 +2,7 @@
  * name: nav-header.css
  * purpose: css styles for the navigation bar & header
  * author: david kim
- * last revised: april 7th, 2020
+ * last revised: april 8th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -138,7 +138,12 @@ nav ul {
 }
 
 nav li {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+nav li a {
+  color: #000;
 }
 
 /* Finally, project navigation bar: */
@@ -168,5 +173,9 @@ nav li {
 }
 
 #project-nav li {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+#project-nav li a {
+  color: #000;
 }
