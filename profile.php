@@ -67,9 +67,9 @@ $title = "about me";
               memory accesses for CNN (convolutional neural network) accelerators.</p><br>
             <p>I love teaching! In the past, I have TA'd <span class="ital">ECE 2300</span> (digital
               logic) and <span class="ital">PHYS 1112</span> (intro mechanics).</p><br>
-            <p>In my free time, I like to bike
-              around campus, practice piano or guitar, and play board games with
-              friends. I also love Star Wars!</p>
+            <p>In my free time, I like to bike around campus, practice piano or
+              guitar, and play board games or RPGs with friends. I am also a
+              huge Star Wars nerd.</p>
           </div>
         </div>
       </div>
@@ -95,7 +95,8 @@ $title = "about me";
               Languages
             </div>
             <p class="skills-text">
-              Java &bull; Python &bull; JavaScript &bull; TypeScript &bull; PHP &bull; C/C++ &bull; OCaml &bull; Swift
+              Java &bull; Python &bull; JavaScript &bull; TypeScript &bull; PHP
+              &bull; SQL &bull; HTML/CSS &bull; C/C++ &bull; OCaml &bull; Swift
             </p>
           </div>
           <br>
