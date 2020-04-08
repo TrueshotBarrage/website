@@ -117,8 +117,7 @@ header a {
 nav {
   display: none;
   font-size: 1.5em;
-  background-color: #f7f7f7;
-  border-right: 1px solid #f2f2f2;
+  background-color: #191919;
   position: fixed;
   height: 100%;
   top: 60px;
@@ -143,7 +142,7 @@ nav li {
 }
 
 nav li a {
-  color: #000;
+  color: #fff;
 }
 
 /* Finally, project navigation bar: */
@@ -151,8 +150,7 @@ nav li a {
 #project-nav {
   display: none;
   font-size: 1.5em;
-  background-color: #f7f7f7;
-  border-left: 1px solid #f2f2f2;
+  background-color: #191919;
   position: fixed;
   height: 100%;
   top: 60px;
@@ -177,5 +175,5 @@ nav li a {
 }
 
 #project-nav li a {
-  color: #000;
+  color: #fff;
 }
