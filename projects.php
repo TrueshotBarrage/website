@@ -8,12 +8,12 @@ function create_project_entries($p, $l)
   $sizes = array("medium", "small", "big", "small", "big", "medium", "big", "big", "small");
   $colors = array("#E9D2D2", "#ACD9F2", "#E1D4E8", "#FFC09A", "#E2F8BD", "#C8CDF0", "#B1F2EC", "#FFCF99", "#F3EAED");
   for ($i = 0; $i < count($p); $i++) { ?>
-    <div class="contents hidden project <?php echo $sizes[$i % 9]; ?>" id="p<?php echo ($i + 1); ?>">
+    <div class="contents project hidden <?php echo $sizes[$i % 9]; ?>" id="p<?php echo ($i + 1); ?>">
       <div class="container" <?php echo " style=\"background-color:" . $colors[$i % 9] . "\"" ?>>
         <a href="<?php echo $l[$i] ?>" target="_blank">
           <div class="inner-container">
             <h2><?php echo $p[$i]; ?></h2>
-            <img src="images/projects/p<?php echo ($i + 1); ?>.png" />
+            <img data-src="images/projects/p<?php echo ($i + 1); ?>.png" />
           </div>
         </a>
       </div>
@@ -55,8 +55,9 @@ $links = array(
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/projects.css">
   <link rel="stylesheet" type="text/css" href="css/nav-header.css">
-  <!-- jQuery -->
+  <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
   <!-- Keywords, names, properties go here later -->
 </head>

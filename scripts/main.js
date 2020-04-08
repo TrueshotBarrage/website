@@ -2,17 +2,17 @@
  * name: main.js
  * purpose: jQuery scripts for animations on the website
  * author: david kim
- * last revised: april 4th, 2020
+ * last revised: april 7th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
 $(document).ready(function () {
   // Not particularly useful atm, since the original idea, with 
   // different nav behavior based on window size, got scrapped.
-  var windowIsBig = checkSize();
-  $(window).resize(() => {
-    windowIsBig = checkSize();
-  });
+  // var windowIsBig = checkSize();
+  // $(window).resize(() => {
+  //   windowIsBig = checkSize();
+  // });
 
   /** Toggles the nav bar when clicking the nav-intersect icon. */
   var navClosed = true;
@@ -80,6 +80,62 @@ $(document).ready(function () {
     rainbowize($(e));
   });
 
+  /** Used for lazy loading elements on a page */
+  // Throttle ensures that we don't scroll way too often
+  var settings = {
+    throttle: 200
+  };
+  var lazyElts = [];
+
+  $.fn.viewport = function (options) {
+    $.extend(settings, options);
+    lazyElts = this;
+
+    return lazyElts.each(function () {
+      $(this).data("visible", $(this).visible());
+    });
+  };
+
+  /** Usage: $(element).visible() -> boolean */
+  $.fn.visible = function () {
+    var rect = this[0].getBoundingClientRect();
+    let $window = $(window);
+    let $mainContainer = $(".main-container")
+
+    let vis = (
+      rect.top <= $mainContainer.height()
+      && rect.right >= 0
+      && rect.bottom >= 0
+      && rect.left <= $mainContainer.width()
+    );
+    return vis;
+  };
+
+  var timer;
+  let $mainContainer = $(".main-container");
+  // Triggered on main container load
+  $mainContainer.ready(() => {
+    $.each(lazyElts, function () {
+      var visible = $(this).visible();
+      if (visible) {
+        $(this).data("visible", visible);
+        $(this).trigger("enter", event);
+        $(this).trigger("readyToShow"); // flag: don't load ctr preemptively
+      }
+    });
+  });
+  // Triggered on scroll every 200ms (or settings.throttle)
+  let $window = $(window);
+  $mainContainer.scroll(() => {
+    triggerOnVisible(timer, settings, lazyElts);
+  });
+  $window.resize(() => {
+    triggerOnVisible(timer, settings, lazyElts);
+  });
+  $window.on("orientationChange", () => {
+    triggerOnVisible(timer, settings, lazyElts);
+  });
+
   animateProjectLoad();
 });
 
@@ -108,13 +164,48 @@ function rainbowize($element) {
   // $element.replaceWith($rainbowResult); 
 }
 
+/** Animates the loading of the projects by lazy loading + waiting. */
 function animateProjectLoad() {
+  lazyLoadImages($(".project"));
   for (let i = 0; i < 7; i++) {
     let project = "#p";
     let $projectItem = $(project + String(i + 1));
-    setTimeout(() => {
-      $projectItem.removeClass("hidden").addClass("shown");
-      console.log($projectItem);
-    }, (i + 1) * 200 + 500);
+    $projectItem.on("readyToShow", () => {
+      $projectItem.imagesLoaded(() => {
+        $projectItem.removeClass("hidden").addClass("shown");
+      });
+    });
   }
+}
+
+function triggerOnVisible(timer, settings, elements) {
+  if (!timer) {
+    timer = setTimeout(function () {
+      $.each(elements, function () {
+        var visible = $(this).visible();
+        if (visible) {
+          if (!$(this).data("visible")) {
+            $(this).data("visible", visible);
+            $(this).trigger("enter", event); // Tells image to start loading
+            $(this).trigger("readyToShow"); // flag: don't load ctr preemptively
+          }
+        } else if ($(this).data("visible")) {
+          $(this).data("visible", visible);
+          $(this).trigger("leave", event); // We don't use this; good anyways
+        }
+      });
+      timer = null;
+    }, settings.throttle);
+  }
+}
+
+/** Lazy loads images by replacing "data-src" with "src" for img tags. */
+function lazyLoadImages($elt) {
+  $elt.viewport().on("enter", function () {
+    let $dataSrcAttr = $(this).find("img[data-src]");
+    $dataSrcAttr.each((i, img) => {
+      var $img = $(img);
+      $img.attr("src", $img.attr("data-src")).removeAttr("data-src");
+    });
+  });
 }
