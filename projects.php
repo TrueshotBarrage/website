@@ -5,7 +5,7 @@ $title = "projects";
 
 function create_project_entries($p, $l)
 {
-  $sizes = array("medium", "small", "big", "small", "big", "medium", "big", "big", "small");
+  $sizes = array("medium", "small", "big", "small", "big", "medium", "big", "small", "medium");
   $colors = array("#E9D2D2", "#ACD9F2", "#E1D4E8", "#FFC09A", "#E2F8BD", "#C8CDF0", "#B1F2EC", "#FFCF99", "#F3EAED");
   for ($i = 0; $i < count($p); $i++) { ?>
     <div class="contents project hidden <?php echo $sizes[$i % 9]; ?>" id="p<?php echo ($i + 1); ?>">
@@ -37,7 +37,7 @@ $links = array(
   "https://github.com/TrueshotBarrage/crawl-o-bot",
   "https://github.com/TrueshotBarrage/studybuddy",
   "#",
-  "https://docs.google.com/spreadsheets/d/13gFiOqcAMy0oDZBiwmrRTxWc00Ag2eL9FyFD5U3VnsA/"
+  "https://docs.google.com/spreadsheets/d/13gFiOqcAMy0oDZBiwmrRTxWc00Ag2eL9FyFD5U3VnsA/",
 );
 ?>
 

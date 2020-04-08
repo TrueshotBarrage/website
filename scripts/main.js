@@ -166,8 +166,9 @@ function rainbowize($element) {
 
 /** Animates the loading of the projects by lazy loading + waiting. */
 function animateProjectLoad() {
-  lazyLoadImages($(".project"));
-  for (let i = 0; i < 7; i++) {
+  let $project = $(".project");
+  lazyLoadImages($project);
+  for (let i = 0; i < $project.length; i++) {
     let project = "#p";
     let $projectItem = $(project + String(i + 1));
     $projectItem.on("readyToShow", () => {
