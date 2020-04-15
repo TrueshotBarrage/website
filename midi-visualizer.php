@@ -1,7 +1,7 @@
 <?php
 include("includes/init.php");
 
-$title = "midi visualizer";
+$title = "MIDI visualizer";
 ?>
 
 <!DOCTYPE html>

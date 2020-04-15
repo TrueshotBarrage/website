@@ -10,7 +10,7 @@ function create_project_entries($p, $l)
   for ($i = 0; $i < count($p); $i++) { ?>
     <div class="contents project hidden <?php echo $sizes[$i % 9]; ?>" id="p<?php echo ($i + 1); ?>">
       <div class="container" <?php echo " style=\"background-color:" . $colors[$i % 9] . "\"" ?>>
-        <a href="<?php echo $l[$i] ?>" target="_blank">
+        <a href="<?php echo $l[$i] ?>">
           <div class="inner-container">
             <h2><?php echo $p[$i]; ?></h2>
             <img data-src="images/projects/p<?php echo ($i + 1); ?>.png" />
