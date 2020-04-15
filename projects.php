@@ -31,12 +31,12 @@ $projects = array(
   "GPA Calculator",
 );
 $links = array(
-  "https://github.com/TrueshotBarrage/project-tempo",
-  "https://github.com/TrueshotBarrage/midi-visualizer",
-  "https://github.com/TrueshotBarrage/led-tetris",
+  "project-tempo.php",
+  "midi-visualizer.php",
+  "led-tetris.php",
   "https://github.com/TrueshotBarrage/crawl-o-bot",
   "https://github.com/TrueshotBarrage/studybuddy",
-  "#",
+  "sir-mix-a-lot.php",
   "https://docs.google.com/spreadsheets/d/13gFiOqcAMy0oDZBiwmrRTxWc00Ag2eL9FyFD5U3VnsA/",
 );
 ?>
