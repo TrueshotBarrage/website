@@ -36,7 +36,7 @@ $descriptions = array(
   "Joined Hearthstone A Team, Korean Church at Cornell, Society of Physics 
   Students, and Math Club",
   "Taught Introductory Mechanics as a T.A. for PHYS 1112",
-  "Started work on <a href=\"projects/project-tempo.php\">Project Tempo</a>",
+  "Started work on <a href=\"project-tempo.php\">Project Tempo</a>",
   "Developed <a href=\"https://github.com/TrueshotBarrage/studybuddy\" 
   target=\"_blank\"> StudyBuddy</a>, an iOS app to coordinate schedules 
   with peers",
@@ -49,9 +49,9 @@ $descriptions = array(
   "Joined <a href=\"https://cornelldata.science/\" target=\"_blank\">
   Cornell Data Science</a>, a competitive CS project team<br>
   <ul><li>Data Engineering Subteam member</li>",
-  "Designed and coded an <a href=\"projects/led-tetris\">LED Tetris game</a> 
+  "Designed and coded an <a href=\"led-tetris.php\">LED Tetris game</a> 
   for Arduino Mega 2560",
-  "Developed <a href=\"projects/midi-visualizer\">MIDI Visualizer</a>, a fully 
+  "Developed <a href=\"midi-visualizer.php\">MIDI Visualizer</a>, a fully 
   modularized d3.js app for browsers that reads and processes MIDI files",
   "Scrapped old website and launched this <span class=\"rainbow\">beauty</span>
   <ul><li>A delicious blend of HTML5, CSS, JavaScript (jQuery), and PHP</li>"
