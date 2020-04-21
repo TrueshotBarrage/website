@@ -7,7 +7,7 @@
  -----------------------------------------------------------*/
 
 $(document).ready(function () {
-  // Not particularly useful atm, since the original idea, with 
+  // Not particularly useful atm, since the original idea, with
   // different nav behavior based on window size, got scrapped.
   // var windowIsBig = checkSize();
   // $(window).resize(() => {
@@ -63,7 +63,7 @@ $(document).ready(function () {
       $textItem.removeClass("hidden").addClass("shown");
     }, (i + 1) * 1200);
   }
-  // Fades the images in after the word blocks have completed loading, 
+  // Fades the images in after the word blocks have completed loading,
   // ordered using imgOrder's contents
   let imgOrder = [1, 3, 2];
   for (let j = 0; j < imgOrder.length; j++) {
@@ -145,7 +145,7 @@ function checkSize() {
 }
 
 // Colors your word into a beautiful rainbow. Very !important function.
-// You can pass in any element with text, but do keep in mind that it 
+// You can pass in any element with text, but do keep in mind that it
 // converts your text into a nested span element.
 function rainbowize($element) {
   let rainbow = ["#ff4136", "#ff851b", "#ffdc00", "#2ecc40", "#0074d9", "#001f3f", "#b10dc9"];
@@ -161,7 +161,7 @@ function rainbowize($element) {
 
   $element.html($rainbowResult);
   // this is preferred, but unfortunately removes other classes
-  // $element.replaceWith($rainbowResult); 
+  // $element.replaceWith($rainbowResult);
 }
 
 /** Animates the loading of the projects by lazy loading + waiting. */
@@ -169,8 +169,7 @@ function animateProjectLoad() {
   let $project = $(".project");
   lazyLoadImages($project);
   for (let i = 0; i < $project.length; i++) {
-    let project = "#p";
-    let $projectItem = $(project + String(i + 1));
+    let $projectItem = $("#" + $project[i].id);
     $projectItem.on("readyToShow", () => {
       $projectItem.imagesLoaded(() => {
         $projectItem.removeClass("hidden").addClass("shown");
