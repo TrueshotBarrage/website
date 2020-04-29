@@ -21,8 +21,12 @@
 
 /* Because I don't like purple links :P */
 
-* a {
+a {
   color: blue;
+}
+
+a:hover {
+  opacity: .60;
 }
 
 html {
