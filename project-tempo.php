@@ -21,6 +21,7 @@ $title = "project tempo";
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
+  <?php include("includes/gtm.php"); ?>
   <!-- Keywords, names, properties go here later -->
   <!-- Redirect for now -->
   <meta http-equiv="refresh" content="0; url=https://github.com/TrueshotBarrage/project-tempo">
