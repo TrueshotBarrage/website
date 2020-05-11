@@ -47,6 +47,7 @@ individual sections together separately */
   display: grid;
   justify-items: center;
   align-items: center;
+  font-family: "Avenir";
 }
 
 .inner-container img {
