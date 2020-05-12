@@ -25,9 +25,9 @@ $title = "cypria";
   <?php include("includes/gtm.php"); ?>
   <!-- Keywords, names, properties go here later -->
   <!-- Redirect for now -->
-  <meta http-equiv="refresh" content="0; url=http://cypria-frontend.herokuapp.com">
+  <meta http-equiv="refresh" content="0; url=http://cypriaql.com">
   <script type="text/javascript">
-    window.location.href = "http://cypria-frontend.herokuapp.com"
+    window.location.href = "http://cypriaql.com"
   </script>
 </head>
 
@@ -55,7 +55,7 @@ $title = "cypria";
     <div class="main-container">
 
       If you are not redirected automatically, follow this
-      <a href="http://cypria-frontend.herokuapp.com">link to the website</a>!
+      <a href="http://cypriaql.com">link to the website</a>!
       <!-- Footer -->
       <footer>
         <?php include("includes/footer.php"); ?>
