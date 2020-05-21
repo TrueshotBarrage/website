@@ -60,18 +60,15 @@ $title = "about me";
           <div id="about-me-text">
             <p>I'm David Kim, a sophomore studying Computer Science and Electrical
               and Computer Engineering at <span class="cornell bold">Cornell University</span>.</p><br>
-            <p>At Cornell, I take
-              pride in being a member of <span class="bold">Cornell Data Science</span>, a competitive project
-              team whose focus is on pushing out really cool data-driven solutions
-              to unique problems.</p><br>
-            <p>I am also involved in research in the <span class="bold">Suh Research
-                Group</span>, where I work on developing algorithms for efficient and secure
-              memory accesses for CNN (convolutional neural network) accelerators.</p><br>
-            <p>I love teaching! In the past, I have TA'd <span class="ital">ECE 2300</span> (digital
-              logic) and <span class="ital">PHYS 1112</span> (intro mechanics).</p><br>
-            <p>In my free time, I like to bike around campus, practice piano or
-              guitar, and play board games or RPGs with friends. I am also a
-              huge Star Wars nerd.</p>
+
+            <p>Some of my hobbies include biking around campus, playing board games
+              with friends, and reading. I am also a huge Star Wars nerd and
+              love to read up on the lore on the wiki. In addition, music is an integral part
+              of who I am, and I love watching tutorials on YouTube to teach myself
+              guitar and to get better at piano improvisation for jazz & gospel style music.</p><br>
+
+            <p>Here you can look at my condensed resume, some courses I have taken,
+              programming languages, and contact info.</p>
           </div>
         </div>
       </div>
