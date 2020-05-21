@@ -64,7 +64,7 @@ $title = "about me";
             <p>Some of my hobbies include biking around campus, playing board games
               with friends, and reading. I am also a huge Star Wars nerd and
               love to read up on the lore on the wiki. In addition, music is an integral part
-              of who I am, and I love watching tutorials on YouTube to teach myself
+              of who I am, and I enjoy watching YouTube tutorials to teach myself
               guitar and to get better at piano improvisation for jazz & gospel style music.</p><br>
 
             <p>Here you can look at my condensed resume, some courses I have taken,
