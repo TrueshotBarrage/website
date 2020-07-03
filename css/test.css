@@ -29,7 +29,7 @@
   padding: 10px 14px;
 }
 
-.code-box {
+#code-box {
   font-family: Menlo, DejaVu Sans Mono, Consolas, Lucida Console, monospace;
   font-weight: 400;
   color: #72FE44;
