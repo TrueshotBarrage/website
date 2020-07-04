@@ -23,6 +23,7 @@
   align-self: center;
   display: block;
   height: 60vh;
+  min-height: 550px;
   width: 80vw;
   min-width: 350px;
   max-width: 1000px;
@@ -60,9 +61,17 @@
   color: #ff00ff;
 }
 
-/* Screens smaller than 800px */
+/* Screens smaller than 600px width and 400px height */
 
 @media only screen and (max-width: 600px) {
+  .terminal {
+    align-self: start;
+    height: 90vh;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-height: 400px) {
   .terminal {
     align-self: start;
     height: 90vh;
