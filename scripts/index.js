@@ -2,13 +2,13 @@
  * name: index.js
  * purpose: jQuery scripts for terminal effect on index.php
  * author: david kim
- * last revised: july 3rd, 2020
+ * last revised: july 4th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
 $(document).ready(function () {
   setTimeout(() => {
-    $("#code-box").writer("Starting up terminal", () => {
+    $("#code-box").writer("Powering up website", () => {
       $("#code-box").typewriter("...\n", 500, () => {
         $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage</span> ➜ `, () => {
           $("#code-box").typewriter(`cowsay Welcome to my website! | lolcat\n`, 50, () => {
