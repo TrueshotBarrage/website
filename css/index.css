@@ -45,8 +45,12 @@
 }
 
 .pseudo-links {
-  color: #6cdaff;
+  color: #9fe6fd;
   cursor: pointer;
+}
+
+.pseudo-links:hover {
+  color: #43c8f5;
 }
 
 .timestamp {

@@ -32,7 +32,7 @@ $(document).ready(function () {
           }, 500)
         }, 1000)
       }, 500)
-    }, 1000);
+    }, 2000);
   }
 });
 
@@ -106,11 +106,15 @@ function pseudoLinksActivator() {
   switch (this.id) {
     case "about-pl":
       $("#code-box").typewriter(`cd AboutMe\n`, 50, () => {
-        $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage/AboutMe</span> ➜ \n`, () => {
-          $("#code-box").writer(`Loading`, () => {
-            $("#code-box").typewriter("...\n", 500, () => {
-              window.location.href = "profile.php";
-            }, 100)
+        $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage/AboutMe</span> ➜ `, () => {
+          $("#code-box").typewriter(`exit 0\n`, 50, () => {
+            $("#code-box").writer(`[Process completed]\n`, () => {
+              $("#code-box").writer(`Loading`, () => {
+                $("#code-box").typewriter("...\n", 500, () => {
+                  window.location.href = "profile.php";
+                }, 100)
+              }, 500)
+            }, 700)
           }, 500)
         }, 700)
       }, 500)
@@ -118,11 +122,15 @@ function pseudoLinksActivator() {
 
     case "projects-pl":
       $("#code-box").typewriter(`cd Projects\n`, 50, () => {
-        $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage/Projects</span> ➜ \n`, () => {
-          $("#code-box").writer(`Loading`, () => {
-            $("#code-box").typewriter("...\n", 500, () => {
-              window.location.href = "projects.php";
-            }, 100)
+        $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage/Projects</span> ➜ `, () => {
+          $("#code-box").typewriter(`exit 0\n`, 50, () => {
+            $("#code-box").writer(`[Process completed]\n`, () => {
+              $("#code-box").writer(`Loading`, () => {
+                $("#code-box").typewriter("...\n", 500, () => {
+                  window.location.href = "projects.php";
+                }, 100)
+              }, 500)
+            }, 700)
           }, 500)
         }, 700)
       }, 500)
@@ -130,11 +138,15 @@ function pseudoLinksActivator() {
 
     case "github-pl":
       $("#code-box").typewriter(`cd GitHub\n`, 50, () => {
-        $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage/GitHub</span> ➜ \n`, () => {
-          $("#code-box").writer(`Loading`, () => {
-            $("#code-box").typewriter("...\n", 500, () => {
-              window.location.href = "https://github.com/TrueshotBarrage";
-            }, 100)
+        $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage/GitHub</span> ➜ `, () => {
+          $("#code-box").typewriter(`exit 0\n`, 50, () => {
+            $("#code-box").writer(`[Process completed]\n`, () => {
+              $("#code-box").writer(`Loading`, () => {
+                $("#code-box").typewriter("...\n", 500, () => {
+                  window.location.href = "https://github.com/TrueshotBarrage";
+                }, 100)
+              }, 500)
+            }, 700)
           }, 500)
         }, 700)
       }, 500)
@@ -142,11 +154,15 @@ function pseudoLinksActivator() {
 
     case "linkedin-pl":
       $("#code-box").typewriter(`cd LinkedIn\n`, 50, () => {
-        $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage/LinkedIn</span> ➜ \n`, () => {
-          $("#code-box").writer(`Loading`, () => {
-            $("#code-box").typewriter("...\n", 500, () => {
-              window.location.href = "https://www.linkedin.com/in/davidkim2106/";
-            }, 100)
+        $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage/LinkedIn</span> ➜ `, () => {
+          $("#code-box").typewriter(`exit 0\n`, 50, () => {
+            $("#code-box").writer(`[Process completed]\n`, () => {
+              $("#code-box").writer(`Loading`, () => {
+                $("#code-box").typewriter("...\n", 500, () => {
+                  window.location.href = "https://www.linkedin.com/in/davidkim2106/";
+                }, 100)
+              }, 500)
+            }, 700)
           }, 500)
         }, 700)
       }, 500)
