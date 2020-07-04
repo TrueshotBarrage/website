@@ -262,7 +262,7 @@ the course ids on the left and the course names on the right. */
 @media only screen and (max-width: 800px) {
   .triple-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 100% 50px auto;
+    grid-template-rows: 1fr 50px auto;
     grid-template-areas: "photo" "header" "text";
   }
   .about-me {
