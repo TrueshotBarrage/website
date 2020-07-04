@@ -8,7 +8,8 @@ $title = "homepage";
 <html lang="en">
 
 <head>
-  <?php include("includes/gtm-head.php"); ?>
+  <?php include("includes/gtm-head.php");
+  ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo ucwords($title) ?> | David Kim</title>
@@ -23,7 +24,9 @@ $title = "homepage";
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
-  <?php include("includes/gtm.php"); ?>
+  <script type="text/javascript" src="scripts/index.js"></script>
+  <?php include("includes/gtm.php");
+  ?>
   <!-- Keywords, names, properties go here later -->
 </head>
 
@@ -47,25 +50,11 @@ $title = "homepage";
   </div>
 
   <div class="black-bg">
-    <!-- The main contents: greeting, intro texts, ext. links, and footer -->
+    <!-- The main contents: console and footer -->
     <div class="main-container">
-      <div class="contents greeting hidden" id="intro-text1">
-        <h2>Hello</h2>
+      <div class="terminal contents">
+        <pre id="code-box"></pre>
       </div>
-      <div class="contents intro-texts">
-        <div class="intro-text hidden" id="intro-text2">
-          <h2>I'm David Kim, a sophomore at <span class="cornell bold">Cornell University.</span></h2>
-        </div>
-        <div class="intro-text hidden" id="intro-text3">
-          <h2>Here, you can learn about my <a href="profile.php">academic pursuits,</a></h2>
-        </div>
-        <div class="intro-text hidden" id="intro-text4">
-          <h2>or see <a href="projects.php">what gets me going</a> when I wake up in the morning.</h2>
-        </div>
-      </div>
-
-      <!-- Links to GitHub, LinkedIn, and Spotify profiles -->
-      <?php include("includes/external-links.php"); ?>
 
       <!-- Footer -->
       <footer>

@@ -9,7 +9,7 @@
       </g>
     </svg>
     <div id="nav-intersect-text">
-      <?php echo $title ?>
+      <!-- Placeholder -->
     </div>
   </h1>
 </div>
