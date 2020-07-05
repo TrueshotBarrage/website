@@ -200,3 +200,9 @@ article, aside, footer, header, nav, section {
     size: 8.5in 11in;
   }
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #ffffff;
+  }
+}
