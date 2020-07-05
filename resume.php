@@ -228,6 +228,8 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
       </div>
     </div>
   </div>
+
+  <div id="bottom-padding"></div>
 </body>
 
 </html>

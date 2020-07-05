@@ -199,6 +199,10 @@ article, aside, footer, header, nav, section {
   white-space: nowrap;
 }
 
+#bottom-padding {
+  display: none;
+}
+
 @media print {
   @page {
     size: 8.5in 11in;
@@ -209,7 +213,8 @@ article, aside, footer, header, nav, section {
   body {
     background-color: #ffffff;
   }
-  .main-container {
+  #bottom-padding {
+    display: block;
     margin-bottom: 3rem;
   }
 }
