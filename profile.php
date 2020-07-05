@@ -61,14 +61,13 @@ $title = "about me";
             <p>I'm David Kim, a sophomore studying Computer Science and Electrical
               and Computer Engineering at <span class="cornell bold">Cornell University</span>.</p><br>
 
-            <p>Some of my hobbies include biking around campus, playing board games
-              with friends, and reading. I am also a huge Star Wars nerd and
-              love to read up on the lore on the wiki. In addition, music is an integral part
-              of who I am, and I enjoy watching YouTube tutorials to teach myself
-              guitar and to get better at piano improvisation for jazz & gospel style music.</p><br>
+            <p>Here you can look at my <a href="resume.php">resume</a>, some courses I have taken,
+              programming languages, and contact info.</p><br>
 
-            <p>Here you can look at my condensed resume, some courses I have taken,
-              programming languages, and contact info.</p>
+            <p>Aside from that, some of my hobbies include biking around campus, playing board games
+              with friends, and reading. I am also a huge Star Wars nerd and
+              love to read up on the lore on the wiki. In addition, I enjoy teaching myself
+              guitar and improv piano for jazz & gospel style music.</p>
           </div>
         </div>
       </div>
@@ -94,9 +93,8 @@ $title = "about me";
               Languages
             </div>
             <p class="skills-text">
-              Java &bull; Python &bull; JavaScript &bull; TypeScript &bull;
-              HTML/CSS &bull; PHP &bull; SQL &bull; OCaml &bull; Golang &bull;
-              C/C++ &bull; Swift
+              Java &bull; Python &bull; JavaScript &bull; PHP &bull;
+              OCaml &bull; SQL &bull; Go &bull; CSS
             </p>
           </div>
           <br>
@@ -105,7 +103,8 @@ $title = "about me";
               Frameworks & Envs
             </div>
             <p class="skills-text">
-              Git &bull; Node &bull; d3.js &bull; CLI &bull; VSCode
+              Git &bull; Linux &bull; Docker &bull; Swagger &bull; Grafana
+              &bull; ClickHouse
             </p>
           </div>
           <br>

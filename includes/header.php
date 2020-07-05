@@ -18,8 +18,9 @@
   <h1>
     <a href=".">
       <!-- <span class="initials">d</span><span class="not-initials">avid</span><span class="initials">k</span><span class="not-initials">im</span> -->
+      <span class="not-initials">D</span><span class="initials">k</span>
       <!-- <img src="images/apple.png" /> -->
-      <img src="images/coffee.png" />
+      <!-- <img src="images/coffee.png" /> -->
     </a>
   </h1>
 </div>

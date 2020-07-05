@@ -27,23 +27,23 @@ $dates = array(
   "Sept 2019",
   "Dec 2019",
   "Mar 2020",
-  "Apr 2020"
+  "Apr 2020",
+  "May 2020"
 );
 $descriptions = array(
   "Began attending <span class=\"cornell\">Cornell University</span><br>
   <ul><li>B.S. in Computer Science</li>
   <li>B.S. in Electrical and Computer Engineering</li></ul>",
-  "Joined Hearthstone A Team, Korean Church at Cornell, Society of Physics 
-  Students, and Math Club",
+  "Joined Hearthstone Team, Korean Church at Cornell, and Society of Physics 
+  Students",
   "Taught Introductory Mechanics as a T.A. for PHYS 1112",
-  "Started work on <a href=\"project-tempo.php\">Project Tempo</a>",
+  "Started work on <a href=\"project-tempo.php\">Project Tempo</a>, a random 
+  music generator",
   "Developed <a href=\"https://github.com/TrueshotBarrage/studybuddy\" 
   target=\"_blank\"> StudyBuddy</a>, an iOS app to coordinate schedules 
   with peers",
   "Joined <a href=\"https://tsg.ece.cornell.edu/\" target=\"_blank\">
-  Suh Research Group</a> as a research assistant to simulate memory access 
-  traces with CNN accelerators and to develop a Python API for computing 
-  convolutions in small chunks",
+  Suh Research Group</a> as a research assistant for secure convolutional neural nets",
   "Taught Digital Logic and Computer Organization as a T.A. for ECE 2300<br>
   <ul><li>Received 4.79 / 5.00 for midterm teaching evaluation</li>",
   "Joined <a href=\"https://cornelldata.science/\" target=\"_blank\">
@@ -51,16 +51,18 @@ $descriptions = array(
   <ul><li>Data Engineering Subteam member</li>",
   "Designed and coded an <a href=\"led-tetris.php\">LED Tetris game</a> 
   for Arduino Mega 2560",
-  "Developed <a href=\"midi-visualizer.php\">MIDI Visualizer</a>, a fully 
-  modularized d3.js app for browsers that reads and processes MIDI files",
+  "Developed <a href=\"midi-visualizer.php\">MIDI Visualizer</a>, a d3.js web
+  app to animate music files",
   "Scrapped old website and launched this <span class=\"rainbow\">beauty</span>
-  <ul><li>A delicious blend of HTML5, CSS, JavaScript (jQuery), and PHP</li>"
+  <ul><li>A delicious blend of HTML5, CSS, JavaScript (jQuery), and PHP</li>",
+  "Started summer internship at <a class=\"wasabi\" href=\"https://wasabi.com\">
+  Wasabi</a>, the hot cloud storage company"
 );
 ?>
 
 <div class="container dual-grid">
   <div class="bold" id="resume-label">
-    <h2>Resume</h2>
+    <h2>Timeline</h2>
   </div>
   <div class="resume-text">
     <?php create_entries($dates, $descriptions); ?>

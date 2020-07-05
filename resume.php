@@ -205,15 +205,6 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>ECE 3140</div>
               <div>ECE 2300</div>
             </div>
-            <div class="dots">
-              <div>&#183;</div>
-              <div>&#183;</div>
-              <div>&#183;</div>
-              <div>&#183;</div>
-              <div>&#183;</div>
-              <div>&#183;</div>
-              <div>&#183;</div>
-            </div>
             <div class="course-names">
               <div>OOP and Data Structures</div>
               <div>Theory of Algorithms</div>

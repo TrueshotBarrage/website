@@ -141,6 +141,10 @@ the dates on the left and the description for that activity on the right. */
   content: "-\00a0\00a0";
 }
 
+.wasabi {
+  color: #1bc01b;
+}
+
 .courses {
   grid-area: courses;
   justify-self: center;

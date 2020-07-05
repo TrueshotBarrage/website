@@ -24,4 +24,9 @@
       <span>LinkedIn</span>
     </a>
   </li>
+  <li>
+    <a href="resume.php">
+      <span>Resume</span>
+    </a>
+  </li>
 </ul>

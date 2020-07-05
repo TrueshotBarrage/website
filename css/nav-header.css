@@ -2,7 +2,7 @@
  * name: nav-header.css
  * purpose: css styles for the navigation bar & header
  * author: david kim
- * last revised: april 8th, 2020
+ * last revised: july 5th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -11,7 +11,7 @@
 header {
   height: 60px;
   width: 100%;
-  background-color: #101010;
+  background-color: #213761;
   letter-spacing: 0.3em;
   display: grid;
   grid-template-columns: 300px auto 300px;
@@ -117,7 +117,7 @@ header a {
 nav {
   display: none;
   font-size: 1.5em;
-  background-color: #191919;
+  background-color: #1c2e52;
   position: fixed;
   height: 100%;
   top: 60px;
@@ -152,7 +152,7 @@ nav li a {
 #project-nav {
   display: none;
   font-size: 1.5em;
-  background-color: #191919;
+  background-color: #1c2e52;
   position: fixed;
   height: 100%;
   top: 60px;

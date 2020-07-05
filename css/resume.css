@@ -179,16 +179,12 @@ article, aside, footer, header, nav, section {
   display: grid;
   justify-items: stretch;
   align-items: center;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   column-gap: 2mm;
 }
 
 .course-codes {
-  text-align: right;
-}
-
-.dots {
-  text-align: center;
+  text-align: left;
 }
 
 .course-names {
