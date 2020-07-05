@@ -2,7 +2,7 @@
  * name: index.js
  * purpose: jQuery scripts for terminal effect on index.php
  * author: david kim
- * last revised: july 4th, 2020
+ * last revised: july 5th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -25,7 +25,7 @@ $(document).ready(function () {
   function tooManyCallbacksAtThisPoint() {
     $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage</span> ➜ `, () => {
       $("#code-box").typewriter(`ls -1\n`, 50, () => {
-        $("#code-box").writer(`<span class="pseudo-links" id="about-pl">AboutMe</span>\n<span class="pseudo-links" id="projects-pl">Projects</span>\n<span class="pseudo-links" id="github-pl">GitHub</span>\n<span class="pseudo-links" id="linkedin-pl">LinkedIn</span>\n`, () => {
+        $("#code-box").writer(`<span class="pseudo-links" id="about-pl">AboutMe</span>\n<span class="pseudo-links" id="projects-pl">Projects</span>\n<span class="pseudo-links" id="github-pl">GitHub</span>\n<span class="pseudo-links" id="linkedin-pl">LinkedIn</span>\n<span class="pseudo-links" id="resume-pl">HTMLResume</span>\n`, () => {
           $("#code-box").writer(`(Try clicking these!)\n<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage</span> ➜ <span id="cursor">&#9608</span>`, () => {
             blinkCursor(500);
             $(".pseudo-links").on("click", pseudoLinksActivator);
@@ -160,6 +160,22 @@ function pseudoLinksActivator() {
               $("#code-box").writer(`Loading`, () => {
                 $("#code-box").typewriter("...\n", 500, () => {
                   window.location.href = "https://www.linkedin.com/in/davidkim2106/";
+                }, 100)
+              }, 500)
+            }, 700)
+          }, 500)
+        }, 700)
+      }, 500)
+      break
+
+    case "resume-pl":
+      $("#code-box").typewriter(`cd HTMLResume\n`, 50, () => {
+        $("#code-box").writer(`<span class="timestamp">[${new Date().toLocaleString()}]</span> <span class="pwd">/Homepage/HTMLResume</span> ➜ `, () => {
+          $("#code-box").typewriter(`exit 0\n`, 50, () => {
+            $("#code-box").writer(`[Process completed]\n`, () => {
+              $("#code-box").writer(`Loading`, () => {
+                $("#code-box").typewriter("...\n", 500, () => {
+                  window.location.href = "resume.php";
                 }, 100)
               }, 500)
             }, 700)

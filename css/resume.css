@@ -24,6 +24,7 @@ a {
 }
 
 a:hover {
+  color: #39d839;
   opacity: .60;
 }
 
@@ -161,7 +162,7 @@ article, aside, footer, header, nav, section {
 }
 
 .project-title:hover {
-  text-decoration: underline;
+  text-decoration: #73da73 underline;
 }
 
 #work-experience {

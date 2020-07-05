@@ -3,10 +3,14 @@ include("includes/init.php");
 
 $title = "resume";
 
-function work_gen($company, $role, $datestr, $location, $description_array)
-{ ?>
+function work_gen($company, $opt_link = "", $role, $datestr, $location, $description_array)
+{
+  $link_provided = $opt_link != "";
+?>
   <div class="project-title">
-    <span class="bold"><?php echo $company; ?> &#183;</span>
+    <<?php echo $link_provided ? "a href=\"" . $opt_link . "\"" : "span"; ?> class="bold">
+      <?php echo $company; ?> &#183;
+    </<?php echo $link_provided ? "a" : "span"; ?>>
     <span class="smaller"><?php echo $role; ?></span>
   </div>
   <div class="subtitle">
@@ -82,23 +86,35 @@ function work_gen($company, $role, $datestr, $location, $description_array)
         </div>
         <div id="selected-projects">
           <div class="section-title">Selected Projects</div>
-          <div class="project-title">MIDI Visualizer</div>
+          <div class="project-title">
+            <a href="midi-visualizer.php">MIDI Visualizer</a>
+          </div>
           MIDI file parser. Synthesizes sound and generates real-time piano
           keypress effects using JavaScript.
-          <div class="project-title">Cypria</div>
+          <div class="project-title">
+            <a href="cypria.php">Cypria</a>
+          </div>
           Programming language: developed in OCaml, interprets to SQL.
           Headache-proofs complicated queries with functional constructs:
           map and reduce.
-          <div class="project-title">Project Tempo</div>
+          <div class="project-title">
+            <a href="project-tempo.php">Project Tempo</a>
+          </div>
           Algorithm-driven, music-composing Python program that randomly
           generates "good" music.
-          <div class="project-title">LED Tetris</div>
+          <div class="project-title">
+            <a href="led-tetris.php">LED Tetris</a>
+          </div>
           Full LED Tetris game for the Arduino Mega 2560. Organized with a
           finite state machine.
-          <div class="project-title">Crawl-o-Bot</div>
+          <div class="project-title">
+            <a href="https://github.com/TrueshotBarrage/crawl-o-bot">Crawl-o-Bot</a>
+          </div>
           Data scraper in PHP that decides where to crawl using a
           randomized DFS algorithm.
-          <div class="project-title">The resume you're looking at</div>
+          <div class="project-title">
+            <a href="index.php">The resume you're looking at</a>
+          </div>
           Completely custom built with lots and lots of CSS grid.
           No satisfaction guarantee with Internet Explorer.
         </div>
@@ -121,7 +137,7 @@ function work_gen($company, $role, $datestr, $location, $description_array)
         <div id="work-experience">
           <div class="section-title">Relevant Employment</div>
           <div class="project-title">
-            <span class="bold">Wasabi Technologies, Inc. &#183;</span>
+            <a class="bold" href="https://wasabi.com/">Wasabi Technologies, Inc. &#183;</a>
             <span class="smaller">SWE Intern</span>
           </div>
           <div class="subtitle">
@@ -140,6 +156,7 @@ function work_gen($company, $role, $datestr, $location, $description_array)
           <div class="spaced"></div>
           <?php work_gen(
             "Cornell Engineering",
+            "",
             "Teaching Assistant",
             "Jan. 2019 - Dec. 2019",
             "Ithaca, NY",
@@ -153,6 +170,7 @@ function work_gen($company, $role, $datestr, $location, $description_array)
           <div class="section-title">Extracurriculars</div>
           <?php work_gen(
             "Cornell Data Science",
+            "https://cornelldata.science",
             "Team Member",
             "Sept. '19 - Current",
             "Ithaca, NY",
@@ -163,6 +181,7 @@ function work_gen($company, $role, $datestr, $location, $description_array)
           );
           work_gen(
             "Suh Research Group",
+            "https://tsg.ece.cornell.edu/",
             "Research Assistant",
             "May '19 - May '20",
             "Ithaca, NY",
