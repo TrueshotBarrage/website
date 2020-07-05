@@ -7,7 +7,7 @@ function work_gen($company, $role, $datestr, $location, $description_array)
 { ?>
   <div class="project-title">
     <span class="bold"><?php echo $company; ?> &#183;</span>
-    <?php echo $role; ?>
+    <span class="smaller"><?php echo $role; ?></span>
   </div>
   <div class="subtitle">
     <span class="unset"><?php echo $datestr; ?>&#8192;&#9702;</span>
@@ -27,7 +27,7 @@ function work_gen($company, $role, $datestr, $location, $description_array)
 <html lang="en">
 
 <head>
-  <?php //include("includes/gtm-head.php"); 
+  <?php include("includes/gtm-head.php");
   ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,41 +36,14 @@ function work_gen($company, $role, $datestr, $location, $description_array)
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- CSS -->
-  <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
   <link rel="stylesheet" type="text/css" href="css/resume.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/nav-header.css"> -->
   <!-- Scripts -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-  <!-- <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script> -->
-  <!-- <script type="text/javascript" src="scripts/main.js"></script> -->
-  <?php //include("includes/gtm.php"); 
+  <?php include("includes/gtm.php");
   ?>
   <!-- Keywords, names, properties go here later -->
 </head>
 
 <body>
-  <!-- If browser has JS disabled -->
-  <?php //include("includes/noscript.php"); 
-  ?>
-
-  <!-- Header -->
-  <!-- <header> -->
-  <?php //include("includes/header.php"); 
-  ?>
-  <!-- </header> -->
-
-  <!-- Navigation bar -->
-  <!-- <nav> -->
-  <?php //include("includes/nav.php"); 
-  ?>
-  <!-- </nav> -->
-
-  <!-- Project navigation bar -->
-  <!-- <div id="project-nav"> -->
-  <?php //include("includes/project-nav.php"); 
-  ?>
-  <!-- </div> -->
-
   <div class="main-container">
     <div class="heading">
       <div id="name">David Kim</div>
@@ -98,21 +71,14 @@ function work_gen($company, $role, $datestr, $location, $description_array)
       <div class="left-column">
         <div id="education">
           <div class="section-title">Education</div>
-          <div id="school"><span class="bold bigger">Cornell University</span>
-            <span> &#183; Aug. '18 - May '22</span></div>
+          <div id="school" class="bold bigger">Cornell University</div>
+          <div class="subtitle">
+            <span class="unset">Aug. '18 - May '22&#8192;&#9702;</span>
+            &#8192;Ithaca, NY
+          </div>
           <div>B.S. Computer Science</div>
           <div>B.S. Electrical and Computer Engineering</div>
           <div>GPA: 3.575</div>
-        </div>
-        <div id="skills">
-          <div class="section-title">Skills</div>
-          <div class="bold">Programming Languages:</div>
-          <div class="subtitle">Proficient with</div>
-          <div>Java, Python, JavaScript, PHP, OCaml, Go</div>
-          <div class="subtitle">Have experience with</div>
-          <div class="spaced">TypeScript, C, Verilog, Ruby, Swift</div>
-          <div><span class="bold">Other: </span>Git, Node.js,
-            Linux (Ubuntu/WSL), Docker, Swagger, Grafana, ClickHouse</div>
         </div>
         <div id="selected-projects">
           <div class="section-title">Selected Projects</div>
@@ -136,13 +102,27 @@ function work_gen($company, $role, $datestr, $location, $description_array)
           Completely custom built with lots and lots of CSS grid.
           No satisfaction guarantee with Internet Explorer.
         </div>
+        <div id="skills">
+          <div class="section-title">Skills</div>
+          <div class="bold">Programming Languages:</div>
+          <div class="subtitle">Confident with</div>
+          <div class="smaller">Java, Python, JavaScript, PHP, OCaml, SQL, Go, CSS</div>
+          <div class="subtitle">Have experience with</div>
+          <div class="smaller spaced">TypeScript, C, Verilog, Ruby, Swift</div>
+          <div>
+            <div class="bold">Other: </div>
+            <span class="smaller">
+              Git, Linux, Docker, Swagger, Grafana, ClickHouse
+            </span>
+          </div>
+        </div>
       </div>
       <div class="right-column">
         <div id="work-experience">
           <div class="section-title">Relevant Employment</div>
           <div class="project-title">
             <span class="bold">Wasabi Technologies, Inc. &#183;</span>
-            SWE Intern
+            <span class="smaller">SWE Intern</span>
           </div>
           <div class="subtitle">
             <span class="unset">May 2020 - Current&#8192;&#9702;</span>&#8192;Boston, MA
@@ -160,7 +140,7 @@ function work_gen($company, $role, $datestr, $location, $description_array)
           <div class="spaced"></div>
           <?php work_gen(
             "Cornell Engineering",
-            "TA",
+            "Teaching Assistant",
             "Jan. 2019 - Dec. 2019",
             "Ithaca, NY",
             array(
@@ -171,9 +151,60 @@ function work_gen($company, $role, $datestr, $location, $description_array)
         </div>
         <div id="extracurriculars">
           <div class="section-title">Extracurriculars</div>
+          <?php work_gen(
+            "Cornell Data Science",
+            "Team Member",
+            "Sept. '19 - Current",
+            "Ithaca, NY",
+            array(
+              "Designed and led deployment of Cypria frontend, including a code 
+              playground to test out the language in the browser."
+            )
+          );
+          work_gen(
+            "Suh Research Group",
+            "Research Assistant",
+            "May '19 - May '20",
+            "Ithaca, NY",
+            array(
+              "Designed a method to compute partial convolutions of CNNs 
+              (convolutional neural nets) with PyTorch.",
+              "Implemented a protection scheme for CNN accelerators that 
+              hides memory access traces."
+            )
+          ); ?>
         </div>
         <div id="relevant-coursework">
           <div class="section-title">Relevant Coursework</div>
+          <div class="courses-grid">
+            <div class="course-codes">
+              <div>CS 2110</div>
+              <div>CS 4820</div>
+              <div>CS 3110</div>
+              <div>INFO 2300</div>
+              <div>INFO 3300</div>
+              <div>ECE 3140</div>
+              <div>ECE 2300</div>
+            </div>
+            <div class="dots">
+              <div>&#183;</div>
+              <div>&#183;</div>
+              <div>&#183;</div>
+              <div>&#183;</div>
+              <div>&#183;</div>
+              <div>&#183;</div>
+              <div>&#183;</div>
+            </div>
+            <div class="course-names">
+              <div>OOP and Data Structures</div>
+              <div>Theory of Algorithms</div>
+              <div>Functional Programming</div>
+              <div>Web Design & Programming</div>
+              <div>Data-Driven Web Apps & Viz.</div>
+              <div>Embedded Systems</div>
+              <div>Digital Logic & Computer Org.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

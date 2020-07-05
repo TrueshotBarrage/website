@@ -55,8 +55,12 @@ article, aside, footer, header, nav, section {
   font-size: 120%;
 }
 
+.smaller {
+  font-size: 85%;
+}
+
 .spaced {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4cm;
 }
 
 .subtitle {
@@ -71,7 +75,6 @@ article, aside, footer, header, nav, section {
 .main-container {
   width: 8.5in;
   height: 11in;
-  /* padding: 0.5in; */
   margin: 0 auto;
   background-color: white;
 }
@@ -136,25 +139,17 @@ article, aside, footer, header, nav, section {
   height: 100%;
 }
 
-.left-column {
-  /* grid-area: col1; */
-}
+.left-column {}
 
-.right-column {
-  /* grid-area: col2; */
-}
+.right-column {}
 
-#education {
-  /* grid-area: sec11; */
-}
+#education {}
 
 #school>span {
   vertical-align: middle;
 }
 
-#skills {
-  /* grid-area: sec12; */
-}
+#skills {}
 
 #selected-projects {
   font-size: 0.8em;
@@ -162,7 +157,7 @@ article, aside, footer, header, nav, section {
 
 .project-title {
   font-size: 1.25em;
-  margin-top: 0.2em;
+  margin-top: 0.3cm;
 }
 
 .project-title:hover {
@@ -174,18 +169,27 @@ article, aside, footer, header, nav, section {
 }
 
 #extracurriculars {
-  /* grid-area: sec22; */
+  font-size: 0.9em;
 }
 
-#relevant-coursework {
-  /* grid-area: sec23; */
+#relevant-coursework {}
+
+.courses-grid {
+  display: grid;
+  justify-items: stretch;
+  align-items: center;
+  grid-template-columns: auto auto auto;
+  column-gap: 2mm;
 }
 
-/* 
-@media print {
-  body {
-    width: 21cm;
-    height: 29.7cm;
-    margin: 50mm 50mm 50mm 50mm;
-  }
-} */
+.course-codes {
+  text-align: right;
+}
+
+.dots {
+  text-align: center;
+}
+
+.course-names {
+  text-align: left;
+}
