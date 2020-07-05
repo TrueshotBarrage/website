@@ -209,4 +209,7 @@ article, aside, footer, header, nav, section {
   body {
     background-color: #ffffff;
   }
+  .main-container {
+    margin: 2rem;
+  }
 }
