@@ -210,6 +210,6 @@ article, aside, footer, header, nav, section {
     background-color: #ffffff;
   }
   .main-container {
-    margin: 2rem;
+    margin-bottom: 3rem;
   }
 }
