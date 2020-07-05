@@ -193,6 +193,9 @@ article, aside, footer, header, nav, section {
 
 .course-names {
   text-align: left;
+}
+
+.course-codes, .course-names {
   white-space: nowrap;
 }
 
