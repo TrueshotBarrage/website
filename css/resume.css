@@ -193,6 +193,7 @@ article, aside, footer, header, nav, section {
 
 .course-names {
   text-align: left;
+  white-space: nowrap;
 }
 
 @media print {
