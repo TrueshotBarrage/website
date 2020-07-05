@@ -193,3 +193,9 @@ article, aside, footer, header, nav, section {
 .course-names {
   text-align: left;
 }
+
+@media print {
+  @page {
+    size: 8.5in 11in;
+  }
+}
