@@ -10,7 +10,7 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style: inside "- ";
   text-decoration: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -41,11 +41,31 @@ body {
   color: #1a1a1a;
   /* Simulate a PDF as typically loaded in browsers */
   background-color: #404040;
-  border: 3px solid red;
 }
 
 article, aside, footer, header, nav, section {
   display: block;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.bigger {
+  font-size: 120%;
+}
+
+.spaced {
+  margin-bottom: 0.5em;
+}
+
+.subtitle {
+  color: #a0a0a0;
+  font-style: italic;
+}
+
+.unset {
+  font-style: normal;
 }
 
 .main-container {
@@ -53,18 +73,18 @@ article, aside, footer, header, nav, section {
   height: 11in;
   /* padding: 0.5in; */
   margin: 0 auto;
-  border: 3px solid yellow;
   background-color: white;
 }
 
 .heading {
   display: grid;
   align-items: center;
+  align-content: center;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
   column-gap: 0.5in;
-  height: auto;
-  padding: 5mm;
+  height: 1in;
+  padding: 0.15in;
   background-color: #e8f0e8;
 }
 
@@ -76,7 +96,7 @@ article, aside, footer, header, nav, section {
 #contact {
   justify-self: center;
   font-size: 1.2rem;
-  height: 0.6in;
+  height: auto;
   text-align: justify;
 }
 
@@ -91,11 +111,74 @@ article, aside, footer, header, nav, section {
 
 .contents {
   display: grid;
-  justify-items: center;
-  align-items: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 32px;
-  grid-template-areas: "heading" "contents";
+  justify-items: stretch;
+  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1.2cm;
+  height: 10in;
+  padding: 0.5cm 1cm;
+  font-size: 1.2rem;
+}
+
+.section-title {
+  color: #82ce82;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #82ce82;
+  margin-bottom: 3mm;
+}
+
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.left-column {
+  /* grid-area: col1; */
+}
+
+.right-column {
+  /* grid-area: col2; */
+}
+
+#education {
+  /* grid-area: sec11; */
+}
+
+#school>span {
+  vertical-align: middle;
+}
+
+#skills {
+  /* grid-area: sec12; */
+}
+
+#selected-projects {
+  font-size: 0.8em;
+}
+
+.project-title {
+  font-size: 1.25em;
+  margin-top: 0.2em;
+}
+
+.project-title:hover {
+  text-decoration: underline;
+}
+
+#work-experience {
+  font-size: 0.9em;
+}
+
+#extracurriculars {
+  /* grid-area: sec22; */
+}
+
+#relevant-coursework {
+  /* grid-area: sec23; */
 }
 
 /* 
