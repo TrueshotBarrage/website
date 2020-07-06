@@ -175,8 +175,9 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Sept. '19 - Current",
             "Ithaca, NY",
             array(
-              "Designed and led deployment of Cypria frontend, including a code 
-              playground to test out the language in the browser."
+              "Designed and led deployment of Cypria frontend, including 
+              <a href=\"http://cypriaql.com/playground.php\">a code playground</a> to 
+              test out the language in the browser."
             )
           );
           work_gen(
