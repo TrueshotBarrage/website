@@ -18,17 +18,15 @@ $title = "MIDI visualizer";
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/nav-header.css">
+  <link rel="stylesheet" type="text/css" href="midi-visualizer/style.css">
   <!-- Scripts -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="midi-visualizer/readMidi.js"></script>
   <?php include("includes/gtm.php"); ?>
   <!-- Keywords, names, properties go here later -->
-  <!-- Redirect for now -->
-  <meta http-equiv="refresh" content="0; url=https://github.com/TrueshotBarrage/midi-visualizer">
-  <script type="text/javascript">
-    window.location.href = "https://github.com/TrueshotBarrage/midi-visualizer"
-  </script>
 </head>
 
 <body>
@@ -53,9 +51,16 @@ $title = "MIDI visualizer";
   <div class="black-bg">
     <!-- The main contents: greeting, intro texts, ext. links, and footer -->
     <div class="main-container">
+      <!-- d3.js frame -->
+      <div id="pianoContainer">
+        <div id="piano" class="centered stacked">
+          <script type="module" src="midi-visualizer/piano.js"></script>
+          <!-- MIDIjs used with permission from midijs.net, used to play the song. -->
+          <script type="text/javascript" src="midi-visualizer/midi.js"></script>
+        </div>
+        <input type="file" />
+      </div>
 
-      If you are not redirected automatically, follow this
-      <a href="https://github.com/TrueshotBarrage/midi-visualizer">link to my GitHub</a>!
       <!-- Footer -->
       <footer>
         <?php include("includes/footer.php"); ?>
