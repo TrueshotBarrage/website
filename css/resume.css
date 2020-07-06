@@ -3,7 +3,7 @@
  * name: resume.css
  * purpose: styles for the single resume page
  * author: david kim
- * last revised: july 4th, 2020
+ * last revised: july 5th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -32,11 +32,11 @@ html {
   font-family: -apple-system, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 14px;
 }
 
 body {
-  /* Font set is same as the dashboard app Momentum */
-  font-family: Calibri;
+  font-family: "Open Sans", Calibri, -apple-system;
   font-weight: 400;
   font-size: 12px;
   color: #1a1a1a;

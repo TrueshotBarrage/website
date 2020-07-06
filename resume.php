@@ -31,8 +31,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
 <html lang="en">
 
 <head>
-  <?php include("includes/gtm-head.php");
-  ?>
+  <?php include("includes/gtm-head.php"); ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo ucwords($title) ?> | David Kim</title>
@@ -41,9 +40,10 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/resume.css">
+  <!-- Fonts -->
+  <link href="fonts/fonts.css" rel="stylesheet">
   <!-- Scripts -->
-  <?php include("includes/gtm.php");
-  ?>
+  <?php include("includes/gtm.php"); ?>
   <!-- Keywords, names, properties go here later -->
 </head>
 
