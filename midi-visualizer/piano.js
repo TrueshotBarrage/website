@@ -23,9 +23,16 @@ const selectRandomSong = function () {
 }
 
 const loadMIDI = async function () {
-  selectRandomSong();
-  music = await parse(csvFile);
-  // console.log(music);
+  let userInput = document.getElementById("midi-csv").innerHTML;
+  if (userInput) {
+    music = await parse("", userInput);
+    // TODO: Something like: 
+    // midiFile = input midi file
+  } else {
+    selectRandomSong();
+    music = await parse(csvFile);
+  }
+  console.log(music);
   notes = music.filter(
     d => d.type === "Note_on_c" || d.type === "Note_off_c");
   // console.log(notes);
