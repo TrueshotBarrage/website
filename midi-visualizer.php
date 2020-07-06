@@ -10,7 +10,7 @@ $messages = array();
 const MAX_FILE_SIZE = 6000000100;
 
 $csv = shell_exec("./midi-visualizer/music/midicsv ./midi-visualizer/music/midi/random_chords.mid");
-$test_dump = shell_exec("ls ./midi-visualizer/music");
+$test_dump = shell_exec("ls -l ./midi-visualizer/music");
 var_dump($test_dump);
 
 if (isset($_POST["submit_upload"])) {
