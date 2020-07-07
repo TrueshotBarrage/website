@@ -2,7 +2,7 @@
  * name: nav-header.css
  * purpose: css styles for the navigation bar & header
  * author: david kim
- * last revised: july 5th, 2020
+ * last revised: july 6th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -32,7 +32,6 @@ header a {
   align-self: center;
   cursor: pointer;
   margin-left: 20px;
-  height: 44px;
 }
 
 /* Grid to align the nav-intersect icon and label */
@@ -81,21 +80,13 @@ header a {
   align-self: center;
   cursor: pointer;
   margin-right: 20px;
-  height: 44px;
 }
 
 #project-nav-intersect h1 {
   color: #fff;
   font-size: 20px;
   font-weight: 200;
-}
-
-/* Screens smaller than 1300px */
-
-@media only screen and (min-width: 800px) and (max-width: 1300px) {
-  #logo h1 .not-initials {
-    display: none;
-  }
+  vertical-align: middle;
 }
 
 /* Screens smaller than 800px */
@@ -114,7 +105,7 @@ header a {
 
 /* Now, navigation bar: */
 
-nav {
+nav, #project-nav {
   display: none;
   font-size: 1.5em;
   background-color: #1c2e52;
@@ -125,14 +116,15 @@ nav {
   --small: 0;
 }
 
-nav>ul {
+nav>ul, #project-nav>ul {
   width: 220px;
   height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-nav ul {
+nav ul, #project-nav ul {
   padding: 40px 20px;
 }
 
@@ -143,41 +135,18 @@ nav li {
   margin-left: 20px;
 }
 
-nav li a {
+nav li a, #project-nav li a {
   color: #fff;
 }
 
 /* Finally, project navigation bar: */
 
 #project-nav {
-  display: none;
-  font-size: 1.5em;
-  background-color: #1c2e52;
-  position: fixed;
-  height: 100%;
-  top: 60px;
   right: 0;
-  z-index: 1;
-  --small: 0;
-}
-
-#project-nav>ul {
-  width: 220px;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-#project-nav ul {
-  padding: 40px 20px;
 }
 
 #project-nav li {
   margin-bottom: 50px;
   text-align: right;
   margin-right: 10px;
-}
-
-#project-nav li a {
-  color: #fff;
 }

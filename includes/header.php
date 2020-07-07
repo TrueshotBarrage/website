@@ -3,9 +3,9 @@
   <h1 class="button-label-grid">
     <svg width="40" height="32">
       <g stroke-width="1" stroke="white" fill="white">
-        <rect x="5" y="7" width="30" height="4" rx="2" />
-        <rect x="5" y="16" width="30" height="4" rx="2" />
-        <rect x="5" y="25" width="30" height="4" rx="2" />
+        <rect x="5" y="5" width="30" height="4" rx="2" />
+        <rect x="5" y="14" width="30" height="4" rx="2" />
+        <rect x="5" y="23" width="30" height="4" rx="2" />
       </g>
     </svg>
     <div id="nav-intersect-text">
