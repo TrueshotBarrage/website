@@ -121,7 +121,7 @@ nav>ul, #project-nav>ul {
   height: 100%;
   position: relative;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 nav ul, #project-nav ul {
