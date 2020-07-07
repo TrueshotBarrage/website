@@ -81,8 +81,8 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             &#8192;Ithaca, NY
           </div>
           <div class="bold">Double Major</div>
-          <div>B.S. Computer Science</div>
           <div>B.S. Electrical and Computer Engineering</div>
+          <div>B.S. Computer Science</div>
           <div>GPA: 3.575</div>
         </div>
         <div id="selected-projects">
@@ -129,7 +129,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div>
             <div class="bold">Other: </div>
             <span class="smaller">
-              Git, Linux, Docker, Swagger, Grafana, ClickHouse
+              Git, Linux, Docker, 5G, Swagger, Grafana, Arduino
             </span>
           </div>
         </div>
@@ -189,7 +189,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Ithaca, NY",
             array(
               "Designed a method to compute partial convolutions of CNNs 
-              (convolutional neural nets) with PyTorch.",
+              with PyTorch.",
               "Implemented a protection scheme for CNN accelerators that 
               hides memory access traces."
             )
@@ -199,22 +199,28 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div class="section-title">Relevant Coursework</div>
           <div class="courses-grid">
             <div class="course-codes">
+              <div>ECE 4750</div>
+              <div>CS 4410</div>
+              <div>ECE 4450</div>
+              <div class="spaced">ECE 3140</div>
+
               <div>CS 2110</div>
               <div>CS 4820</div>
               <div>CS 3110</div>
               <div>INFO 2300</div>
               <div>INFO 3300</div>
-              <div>ECE 3140</div>
-              <div>ECE 2300</div>
             </div>
             <div class="course-names">
+              <div>Computer Architecture</div>
+              <div>Operating Systems</div>
+              <div>Comp. Networks & Telecomm.</div>
+              <div class="spaced">Embedded Systems</div>
+
               <div>OOP and Data Structures</div>
               <div>Theory of Algorithms</div>
               <div>Functional Programming</div>
               <div>Web Design & Programming</div>
               <div>Data-Driven Web Apps & Viz.</div>
-              <div>Embedded Systems</div>
-              <div>Digital Logic & Computer Org.</div>
             </div>
           </div>
         </div>

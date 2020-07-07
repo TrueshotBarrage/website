@@ -3,7 +3,7 @@
  * name: resume.css
  * purpose: styles for the single resume page
  * author: david kim
- * last revised: july 5th, 2020
+ * last revised: july 7th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -54,6 +54,10 @@ article, aside, footer, header, nav, section {
 
 .bigger {
   font-size: 120%;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .smaller {
@@ -173,7 +177,9 @@ article, aside, footer, header, nav, section {
   font-size: 0.9em;
 }
 
-#relevant-coursework {}
+#relevant-coursework {
+  font-size: 0.9em;
+}
 
 .courses-grid {
   display: grid;

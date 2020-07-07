@@ -129,7 +129,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div>
             <div class="bold">Other: </div>
             <span class="smaller">
-              Git, Linux, Docker, Swagger, Grafana, ClickHouse
+              Git, Linux, Docker, Swagger, Grafana
             </span>
           </div>
         </div>
@@ -189,7 +189,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Ithaca, NY",
             array(
               "Designed a method to compute partial convolutions of CNNs 
-              (convolutional neural nets) with PyTorch.",
+              with PyTorch.",
               "Implemented a protection scheme for CNN accelerators that 
               hides memory access traces."
             )
@@ -203,18 +203,24 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>CS 4820</div>
               <div>CS 3110</div>
               <div>INFO 2300</div>
-              <div>INFO 3300</div>
+              <div class="spaced">INFO 3300</div>
+
+              <div>ECE 4750</div>
+              <div>CS 4410</div>
+              <div>ECE 4450</div>
               <div>ECE 3140</div>
-              <div>ECE 2300</div>
             </div>
             <div class="course-names">
               <div>OOP and Data Structures</div>
               <div>Theory of Algorithms</div>
               <div>Functional Programming</div>
               <div>Web Design & Programming</div>
-              <div>Data-Driven Web Apps & Viz.</div>
+              <div class="spaced">Data-Driven Web Apps & Viz.</div>
+
+              <div>Computer Architecture</div>
+              <div>Operating Systems</div>
+              <div>Networks & Telecommunication</div>
               <div>Embedded Systems</div>
-              <div>Digital Logic & Computer Org.</div>
             </div>
           </div>
         </div>
