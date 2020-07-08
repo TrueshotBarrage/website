@@ -9,8 +9,8 @@ $messages = array();
 // Set maximum file size in bytes for uploaded files.
 const MAX_FILE_SIZE = 6000000100;
 
-$csv = shell_exec("./midi-visualizer/music/midicsv-1.1/midicsv ./midi-visualizer/music/midi/random_chords.mid");
-$test_dump = shell_exec("ls -l ./midi-visualizer/music");
+$csv = shell_exec("./midicsv ./midi-visualizer/music/midi/random_chords.mid");
+$test_dump = shell_exec("ls -l");
 var_dump($test_dump);
 
 if (isset($_POST["submit_upload"])) {
