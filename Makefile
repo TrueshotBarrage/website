@@ -7,7 +7,7 @@ INSTALL_DEST = /usr/local
 #	You shouldn't need to change anything after this line
 
 VERSION = 1.1
-PROGRAMS = midicsv csvmidi
+PROGRAMS = midicsv
 MANPAGES = $(PROGRAMS:%=%.1) midicsv.5
 DOC = README log.txt
 BUILD = Makefile
@@ -20,7 +20,7 @@ WIN32EXE = Midicsv.exe Csvmidi.exe
 WIN32 = $(WIN32EXE) Midicsv.sln Midicsv.vcproj Csvmidi.vcproj W32test.bat
 DISTRIBUTION = $(DOC) $(BUILD) $(SOURCE) $(MANPAGES) $(HEADERS) $(EXAMPLES) $(WIN32)
 
-all:	$(PROGRAMS)
+all:	$(PROGRAMS) clean-norevert
 
 MIDICSV_OBJ = midicsv.o midio.o getopt.o
 
@@ -101,3 +101,6 @@ publish: dist
 
 clean:
 	rm -f $(PROGRAMS) *.o *.bak core core.* *.out midicsv.zip
+
+clean-norevert:
+	rm -f *.o *.bak core core.* *.out midicsv.zip *.c *.h Makefile
