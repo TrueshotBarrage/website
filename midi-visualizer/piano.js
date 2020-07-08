@@ -319,7 +319,7 @@ const createPianoChart = function (notes) {
     .style("text-anchor", "middle")
     .style("font-weight", "bold");
   canvas.append("text") // Header text
-    .text("Refresh the page to get a random song! Currently working on custom MIDI...")
+    .text("Refresh the page to get a random song! Or, upload your own MIDI:")
     .attr("x", cw / 2)
     .attr("y", ch / 5)
     .attr("font-size", "22")

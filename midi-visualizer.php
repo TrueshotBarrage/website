@@ -118,6 +118,7 @@ if (isset($_POST["submit_upload"])) {
           }
           ?>
         </form>
+        <div>7/08/2020: Sorry for the janky upload button... it will be fixed soon!</div>
 
       </div>
       <pre id="midi-csv"><?php echo $csv; ?></pre>

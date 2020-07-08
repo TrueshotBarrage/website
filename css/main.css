@@ -71,7 +71,6 @@ h2, h3 {
 
 footer {
   grid-area: footer;
-  height: 100%;
   font-size: 16px;
   text-align: right;
   font-weight: 200;
