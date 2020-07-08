@@ -9,8 +9,8 @@ $messages = array();
 // Set maximum file size in bytes for uploaded files.
 const MAX_FILE_SIZE = 500000;
 
-if (file_exists("temp.mid")) {
-  unlink("temp.mid");
+foreach (glob("temp*.mid") as $file) {
+  unlink($file);
 }
 
 if (isset($_POST["submit_upload"])) {
@@ -40,8 +40,10 @@ if (isset($_POST["submit_upload"])) {
       // $midicsv is the executable that generates the CSV for the input MIDI.
       $midicsv = "./midi-visualizer/midicsv";
       $temp_file = $upload_info["tmp_name"];
-      move_uploaded_file($temp_file, "temp.mid");
-      $csv = shell_exec("$midicsv temp.mid");
+      $time = time();
+      $new_file_path = "temp$time.mid";
+      move_uploaded_file($temp_file, $new_file_path);
+      $csv = shell_exec("$midicsv $new_file_path");
     } else {
       array_push($messages, "Failed to upload file. Make sure your file is a .mid or .midi file!");
     }
@@ -119,6 +121,7 @@ if (isset($_POST["submit_upload"])) {
 
       </div>
       <pre id="midi-csv"><?php echo $csv; ?></pre>
+      <div id="target-midi">./<?php echo $new_file_path; ?></div>
 
       <!-- Footer -->
       <footer>

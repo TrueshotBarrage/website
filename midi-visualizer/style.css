@@ -14,6 +14,6 @@ html {
   /* width: 100px; */
 }
 
-#midi-csv {
+#midi-csv, #target-midi {
   display: none;
 }

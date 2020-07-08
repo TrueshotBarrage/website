@@ -27,7 +27,7 @@ const loadMIDI = async function () {
   if (userInput) {
     // Parse the user uploaded MIDI instead of the default random songs
     music = await parse("", userInput);
-    midiFile = "./temp.mid";
+    midiFile = document.getElementById("target-midi").innerText;
   } else {
     // Otherwise, choose a random song to play and animate
     selectRandomSong();
