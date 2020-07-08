@@ -7,59 +7,43 @@ $title = "MIDI visualizer";
 $messages = array();
 
 // Set maximum file size in bytes for uploaded files.
-const MAX_FILE_SIZE = 6000000100;
+const MAX_FILE_SIZE = 500000;
 
-$csv = shell_exec("./midi-visualizer/midicsv ./midi-visualizer/music/midi/random_chords.mid");
+if (file_exists("temp.mid")) {
+  unlink("temp.mid");
+}
 
 if (isset($_POST["submit_upload"])) {
-  // Filter input for the "image" and "tags" parameters.
-  $upload_info = $_FILES["image"];
+  $upload_info = $_FILES["midi"];
 
   // Display error messages for invalid uploads.
   if ($upload_info["error"] !== UPLOAD_ERR_OK) {
     array_push($messages, "Failed to upload file.");
     if ($upload_info["error"] === UPLOAD_ERR_FORM_SIZE) {
-      array_push($messages, "File exceeds 6GB.");
+      array_push($messages, "File exceeds 500KB.");
     } else if ($upload_info["error"] === UPLOAD_ERR_NO_FILE) {
       array_push($messages, "No file selected.");
     } else if ($upload_info["error"] === UPLOAD_ERR_PARTIAL) {
       array_push($messages, "Upload interrupted. Please try again.");
     }
-  } else {
-    // If the upload was successful, record the upload in the database
-    // and permanently store the uploaded file in the uploads directory.
+  } else { // On successful upload:
+
+    // Sanitize the string just in case
     $file_name = $upload_info["name"];
     $file_name_ext = strtolower(pathinfo($file_name)["extension"]);
-    $file_name_base = basename($file_name, "." . $file_name_ext);
-
-    // Filters the image name to prevent SQL injection.
     $file_name_ext = filter_var($file_name_ext, FILTER_SANITIZE_STRING);
-    $file_name_base = filter_var($file_name_base, FILTER_SANITIZE_STRING);
 
-    // Check whether the uploaded file is a common image file extension.
-    if (
-      $file_name_ext == "jpeg" || $file_name_ext == "jpg"
-      || $file_name_ext == "png" || $file_name_ext == "gif"
-      || $file_name_ext == "raw" || $file_name_ext == "tiff"
-      || $file_name_ext == "svg" || $file_name_ext == "heic"
-      || $file_name_ext == "bmp"
-    ) {
-      // Inserts image record into site database
-      $upload_query = "INSERT INTO images (file_name, file_ext) VALUES (:base, :ext)";
-      $params = array(
-        ':base' => $file_name_base,
-        ':ext' => $file_name_ext
-      );
-      exec_sql_query($db, $upload_query, $params);
+    // Check whether the uploaded file is a MIDI file.
+    if ($file_name_ext == "mid" || $file_name_ext == "midi") {
+      array_push($messages, "Successfully uploaded MIDI file.");
 
-      // Moves the image into the uploads directory.
-      $image_id = $db->lastInsertId("images_id_seq"); // previously "id" for SQLite
-      $temp_file = $_FILES["image"]["tmp_name"];
-      $new_path = $upload_path . $image_id . "." . $file_name_ext;
-      move_uploaded_file($temp_file, $new_path);
-      array_push($messages, "Successfully uploaded image.");
+      // $midicsv is the executable that generates the CSV for the input MIDI.
+      $midicsv = "./midi-visualizer/midicsv";
+      $temp_file = $upload_info["tmp_name"];
+      move_uploaded_file($temp_file, "temp.mid");
+      $csv = shell_exec("$midicsv temp.mid");
     } else {
-      array_push($messages, "Failed to upload file. Make sure your image is a valid image format!");
+      array_push($messages, "Failed to upload file. Make sure your file is a .mid or .midi file!");
     }
   }
 }
@@ -119,7 +103,20 @@ if (isset($_POST["submit_upload"])) {
           <!-- MIDIjs used with permission from midijs.net, used to play the song. -->
           <script type="text/javascript" src="midi-visualizer/midi.js"></script>
         </div>
-        <input type="file" />
+
+        <form enctype="multipart/form-data" action="midi-visualizer.php" method="POST">
+          <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
+          <input type="file" name="midi" />
+          <button name="submit_upload" type="submit">Upload MIDI</button>
+
+          <?php
+          // Write out any feedback messages to the user.
+          foreach ($messages as $message) {
+            echo "<p><strong>" . htmlspecialchars($message) . "</strong></p>\n";
+          }
+          ?>
+        </form>
+
       </div>
       <pre id="midi-csv"><?php echo $csv; ?></pre>
 

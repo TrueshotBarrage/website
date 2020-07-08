@@ -19,23 +19,23 @@ const selectRandomSong = function () {
   let chosenSong = songList[Math.floor(Math.random() * songList.length)];
   csvFile = csvDir + chosenSong + ".csv";
   midiFile = musicDir + chosenSong + ".mid";
-  // console.log(csvFile);
 }
 
 const loadMIDI = async function () {
+  // Check whether the user uploaded a MIDI file.
   let userInput = document.getElementById("midi-csv").innerHTML;
   if (userInput) {
+    // Parse the user uploaded MIDI instead of the default random songs
     music = await parse("", userInput);
-    // TODO: Something like: 
-    // midiFile = input midi file
+    midiFile = "./temp.mid";
   } else {
+    // Otherwise, choose a random song to play and animate
     selectRandomSong();
     music = await parse(csvFile);
   }
-  console.log(music);
+
   notes = music.filter(
     d => d.type === "Note_on_c" || d.type === "Note_off_c");
-  // console.log(notes);
 
   let md = createPianoChart(notes);
 
@@ -124,7 +124,6 @@ const fetchDependencies = async function () {
   MIDIjs.message_callback = function (msg) {
     let promise = new Promise((resolve) => {
       if (msg.substring(0, 7) === "Playing") {
-        // console.log(msg);
         resolve("Ready!");
       }
     })
@@ -147,13 +146,11 @@ const setButtonReady = function () {
   button.select("text#buttonText")
     .transition().duration(100)
     .text("Ready!");
-  // console.log("Button ready!");
 }
 
 // Starts the MIDI file.
 const play = function (notes, tempo, div) {
   MIDIjs.resume();
-  // console.log("Start!");
 
   setTimeout(() => {
     notes.forEach(row => {
