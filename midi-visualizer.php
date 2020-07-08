@@ -44,6 +44,9 @@ if (isset($_POST["submit_upload"])) {
       $new_file_path = "temp$time.mid";
       move_uploaded_file($temp_file, $new_file_path);
       $csv = shell_exec("$midicsv $new_file_path");
+      if (!isset($csv)) {
+        array_push($messages, "Unknown error! Perhaps your MIDI file is malformed...");
+      }
     } else {
       array_push($messages, "Failed to upload file. Make sure your file is a .mid or .midi file!");
     }
