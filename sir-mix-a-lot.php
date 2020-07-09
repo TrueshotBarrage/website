@@ -18,6 +18,8 @@ $title = "sir Mix-A-Lot";
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/nav-header.css">
+  <!-- Fonts -->
+  <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
@@ -48,7 +50,7 @@ $title = "sir Mix-A-Lot";
   <div class="black-bg">
     <!-- The main contents: greeting, intro texts, ext. links, and footer -->
     <div class="main-container">
-      Page coming soon!
+      <h2 style="text-align: center; margin: 43vh auto;">Page in development</h2>
       <!-- Footer -->
       <footer>
         <?php include("includes/footer.php"); ?>

@@ -69,6 +69,8 @@ if (isset($_POST["submit_upload"])) {
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/nav-header.css">
   <link rel="stylesheet" type="text/css" href="midi-visualizer/style.css">
+  <!-- Fonts -->
+  <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
   <!-- Scripts -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

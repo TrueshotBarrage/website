@@ -41,7 +41,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/resume.css">
   <!-- Fonts -->
-  <link href="fonts/fonts.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
   <!-- Scripts -->
   <?php include("includes/gtm.php"); ?>
   <!-- Keywords, names, properties go here later -->

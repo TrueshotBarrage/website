@@ -3,7 +3,7 @@
  * name: projects.css
  * purpose: styles used for projects.php
  * author: david kim
- * last revised: july 3rd, 2020
+ * last revised: july 8th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -47,7 +47,6 @@ individual sections together separately */
   display: grid;
   justify-items: center;
   align-items: center;
-  font-family: "Trebuchet MS";
 }
 
 .inner-container img {

@@ -3,7 +3,7 @@
  * name: main.css
  * purpose: baseline css framework used for the whole website
  * author: david kim
- * last revised: april 7th, 2020
+ * last revised: july 8th, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -35,10 +35,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Font set is same as the dashboard app Momentum */
+/* Font set is Open Sans, then same as the dashboard app Momentum */
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #1a1a1a;
   line-height: 1.8;
