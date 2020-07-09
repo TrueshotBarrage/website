@@ -8,14 +8,12 @@ $title = "homepage";
 <html lang="en">
 
 <head>
-  <?php include("includes/gtm-head.php");
-  ?>
+  <?php include("includes/gtm-head.php"); ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo ucwords($title) ?> | David Kim</title>
   <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <?php include("includes/favicon.php"); ?>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/nav-header.css">
@@ -27,8 +25,7 @@ $title = "homepage";
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
   <script type="text/javascript" src="scripts/index.js"></script>
-  <?php include("includes/gtm.php");
-  ?>
+  <?php include("includes/gtm.php"); ?>
   <!-- Keywords, names, properties go here later -->
 </head>
 

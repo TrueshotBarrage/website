@@ -36,8 +36,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo ucwords($title) ?> | David Kim</title>
   <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <?php include("includes/favicon.php"); ?>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/resume.css">
   <!-- Fonts -->
