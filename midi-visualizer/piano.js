@@ -204,11 +204,11 @@ const noteOn = function (note, track) {
   let n = d3.select("#note" + note);
   if (n.attr("class") == "white") {
     n.selectAll("rect")
-      .transition().duration(50)
+      .transition().duration(1)
       .attr("fill", colors[track % 7][0]);
   } else {
     n.selectAll("rect")
-      .transition().duration(50)
+      .transition().duration(1)
       .attr("fill", colors[track % 7][1]);
   }
 }
@@ -218,11 +218,11 @@ const noteOff = function (note) {
   let n = d3.select("#note" + note);
   if (n.attr("class") == "white") {
     n.selectAll("rect")
-      .transition().duration(100)
+      .transition().duration(1)
       .attr("fill", "white");
   } else {
     n.selectAll("rect")
-      .transition().duration(100)
+      .transition().duration(1)
       .attr("fill", "black");
   }
 }
