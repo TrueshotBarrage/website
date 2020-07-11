@@ -159,6 +159,11 @@ const play = function (notes, tempo, div) {
   // delay of the visual animation.
   let delay = Math.floor((music.length) / 16) < 1000
     ? Math.floor((music.length) / 16) : 250;
+  let offset;
+  if (navigator.browserInfo.browser == "Edge") offset = 250
+  else if (navigator.browserInfo.browser == "Chrome") offset = 250;
+  else offset = 0;
+  delay += offset;
 
   setTimeout(() => {
     notes.forEach(row => {
@@ -402,3 +407,24 @@ const makeRequest = function (method, url) {
 }
 
 loadMIDI();
+
+// Browser detection
+navigator.browserInfo = (function () {
+  var ua = navigator.userAgent, tem,
+    M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+  if (/trident/i.test(M[1])) {
+    tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+    return { 'browser': 'IE', 'version': (tem[1] || '') };
+  }
+  if (M[1] === 'Chrome') {
+    tem = ua.match(/\b(OPR|Edge?)\/(\d+)/);
+    if (tem != null)
+      return {
+        'browser': tem.slice(1)[0].replace('OPR', 'Opera').replace('Edg', 'Edge'),
+        'version': tem.slice(1)[1]
+      };
+  }
+  M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+  if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
+  return { 'browser': M[0], 'version': M[1] };
+})();
