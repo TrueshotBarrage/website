@@ -7,12 +7,15 @@ var div;
 var music;
 
 // Default CSV/MIDI file.
-var csvFile = "./midi-visualizer/music/csv/psalm_139.csv";
-var midiFile = "./midi-visualizer/music/midi/psalm_139.mid";
+var csvFile = "./midi-visualizer/music/csv/pokemon.csv";
+var midiFile = "./midi-visualizer/music/midi/pokemon.mid";
 
 // Selects a random song from the music directory.
 const selectRandomSong = function () {
-  let songList = ["psalm_139", "holy_is_the_lord", "fur_elise", "dont_be_afraid"];
+  let songList = [
+    "across_the_stars", "pokemon", "psalm_139",
+    "holy_is_the_lord", "fur_elise", "dont_be_afraid"
+  ];
   let csvDir = "./midi-visualizer/music/csv/";
   let musicDir = "./midi-visualizer/music/midi/";
 
