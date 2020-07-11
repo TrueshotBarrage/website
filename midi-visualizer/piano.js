@@ -194,7 +194,7 @@ const noteOn = function (note, track) {
   let colors = {
     0: ["#d3d3d3", "#a9a9a9", "grey"],
     1: ["#ff9999", "#ff6666", "red"],
-    2: ["#77d2ff", "#6898ff", "blue"],
+    2: ["#77d2ff", "#4db7ff", "blue"],
     3: ["#99ffaa", "#66ffaa", "green"],
     4: ["#fcff90", "#e3e839", "yellow"],
     5: ["#ec99ff", "#e052ff", "magenta"],

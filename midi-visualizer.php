@@ -23,7 +23,8 @@ if (isset($_POST["submit_upload"])) {
       array_push($messages, "File exceeds 500KB.");
     } else if ($upload_info["error"] === UPLOAD_ERR_NO_FILE) {
       array_push($messages, "No file selected.");
-    } else if ($upload_info["error"] === UPLOAD_ERR_PARTIAL) {
+    }
+    else if ($upload_info["error"] === UPLOAD_ERR_PARTIAL) {
       array_push($messages, "Upload interrupted. Please try again.");
     }
   } else { // On successful upload:
@@ -110,19 +111,30 @@ if (isset($_POST["submit_upload"])) {
           <script type="text/javascript" src="midi-visualizer/midi.js"></script>
         </div>
 
-        <form enctype="multipart/form-data" action="midi-visualizer.php" method="POST">
+        <form class="upload-form" enctype="multipart/form-data" action="midi-visualizer.php" method="POST">
           <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
-          <input type="file" name="midi" />
-          <button name="submit_upload" type="submit">Upload MIDI</button>
-
-          <?php
-          // Write out any feedback messages to the user.
-          foreach ($messages as $message) {
-            echo "<p><strong>" . htmlspecialchars($message) . "</strong></p>\n";
-          }
-          ?>
+          <div class="upload-btn-wrapper">
+            <script>
+              // A hack to make the cursor on hover a pointer in Chrome
+              // Long story short: z-index of the file input is -1, so the 
+              // button covers up the file upload.
+              function clickUpload() {
+                document.getElementById("file-input").click();
+              };
+            </script>
+            <button type="button" class="upload-btn" onclick="clickUpload()">Upload MIDI</button>
+            <input id="file-input" type="file" name="midi" />
+          </div>
+          <button class="submit-btn" name="submit_upload" type="submit">&#8679;</button>
         </form>
-        <div>7/08/2020: Sorry for the janky upload button... it will be fixed soon!</div>
+
+        <br><br>
+        <?php
+        // Write out any feedback messages to the user.
+        foreach ($messages as $message) {
+          echo "<p style='color:red'><strong>" . htmlspecialchars($message) . "</strong></p>\n";
+        }
+        ?>
 
       </div>
       <pre id="midi-csv"><?php echo $csv; ?></pre>

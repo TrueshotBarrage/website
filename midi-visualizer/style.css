@@ -21,3 +21,55 @@ html {
 #midi-csv, #target-midi {
   display: none;
 }
+
+.upload-form {
+  display: inline-flex;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px 0px 0px 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn:hover {
+  cursor: pointer;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.upload-btn-wrapper input[type=file]:hover {
+  cursor: pointer;
+}
+
+.submit-btn {
+  border: 2px solid gray;
+  border-left: none;
+  color: gray;
+  background-color: white;
+  padding: 8px 15px;
+  border-radius: 0px 8px 8px 0px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+}
