@@ -2,6 +2,10 @@ html {
   text-align: center;
 }
 
+.main-container {
+  overflow-x: scroll;
+}
+
 #piano>#notes>.black {
   color: black;
 }

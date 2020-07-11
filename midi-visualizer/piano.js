@@ -155,6 +155,11 @@ const setButtonReady = function () {
 const play = function (notes, tempo, div) {
   MIDIjs.resume();
 
+  // This value here should be adjusted with more precision to help with the 
+  // delay of the visual animation.
+  let delay = Math.floor((music.length) / 16) < 1000
+    ? Math.floor((music.length) / 16) : 250;
+
   setTimeout(() => {
     notes.forEach(row => {
       setTimeout(() => {
@@ -164,7 +169,7 @@ const play = function (notes, tempo, div) {
           if (row.velocity == 0) {
             noteOff(row.note);
           } else {
-            noteOn(row.note);
+            noteOn(row.note, row.track);
           }
         } else {
           console.log("Done!");
@@ -173,8 +178,7 @@ const play = function (notes, tempo, div) {
       // Long story short, some calculations were done based on the MIDICSV 
       // documentation's info about "Tempo", "Header", and the random_chords file.
     });
-  }, Math.floor((music.length) / 16)); // <-- This value here should be adjusted 
-  //         with more precision to help with the delay of the visual animation.
+  }, delay);
 
   // Disables button after starting the animation
   let button = d3.select("g#button")
@@ -185,16 +189,27 @@ const play = function (notes, tempo, div) {
 }
 
 // Changes the color of a note when pressed (played).
-const noteOn = function (note) {
+const noteOn = function (note, track) {
+
+  let colors = {
+    0: ["#d3d3d3", "#a9a9a9", "grey"],
+    1: ["#ff9999", "#ff6666", "red"],
+    2: ["#77d2ff", "#6898ff", "blue"],
+    3: ["#99ffaa", "#66ffaa", "green"],
+    4: ["#fcff90", "#e3e839", "yellow"],
+    5: ["#ec99ff", "#e052ff", "magenta"],
+    6: ["#ffb774", "#ff922b", "orange"]
+  }
+
   let n = d3.select("#note" + note);
   if (n.attr("class") == "white") {
     n.selectAll("rect")
       .transition().duration(50)
-      .attr("fill", "#ff9999");
+      .attr("fill", colors[track % 7][0]);
   } else {
     n.selectAll("rect")
       .transition().duration(50)
-      .attr("fill", "#ff6666");
+      .attr("fill", colors[track % 7][1]);
   }
 }
 
@@ -215,7 +230,7 @@ const noteOff = function (note) {
 const createPianoChart = function (notes) {
   // Chart specs
   let svg = d3.select("#piano").append("svg")
-    .attr("width", "1400")
+    .attr("width", "1200")
     .attr("height", "500");
   let w = svg.attr("width");
   let h = svg.attr("height");
