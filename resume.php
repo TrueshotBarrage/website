@@ -58,7 +58,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <img src="images/resume/chrome.svg" />heydavid.kim
         </a>
         <span>
-          <img src="images/resume/phone.svg" />334-430-7609
+          <img src="images/resume/phone.svg" />(334) 430-7609
         </span>
         <br>
         <a href="https://www.linkedin.com/in/davidkim2106/">
@@ -124,11 +124,11 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div class="subtitle">Confident with</div>
           <div class="smaller">Java, Python, JavaScript, PHP, OCaml, SQL, Go, CSS</div>
           <div class="subtitle">Have experience with</div>
-          <div class="smaller spaced">TypeScript, C, Verilog, Ruby, Swift</div>
+          <div class="smaller spaced">TypeScript, C, C++</div>
           <div>
             <div class="bold">Other: </div>
             <span class="smaller">
-              Git, Linux, Docker, Swagger, Grafana, ClickHouse
+              Git, Linux, Docker, SSH, Node, React
             </span>
           </div>
         </div>
@@ -151,6 +151,10 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             <li>
               Generated over twenty time-series charts with CDR data by
               writing optimized ClickHouse SQL queries on Grafana.
+            </li>
+            <li>
+              Scripted Python to export daily MySQL db data into CSV files, and
+              utilized AWS S3 services to import data onto different DBMS platforms.
             </li>
           </ul>
           <div class="spaced"></div>
@@ -188,9 +192,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Ithaca, NY",
             array(
               "Designed a method to compute partial convolutions of CNNs 
-              (convolutional neural nets) with PyTorch.",
-              "Implemented a protection scheme for CNN accelerators that 
-              hides memory access traces."
+              (convolutional neural nets) with PyTorch."
             )
           ); ?>
         </div>
