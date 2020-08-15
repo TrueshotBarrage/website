@@ -59,7 +59,7 @@ $title = "about me";
             <img src="images/aboutme.jpg" alt="Photo of David" />
           </div>
           <div id="about-me-text">
-            <p>I'm David Kim, a sophomore studying Computer Science and Electrical
+            <p>I'm David Kim, a junior studying Computer Science and Electrical
               and Computer Engineering at <span class="cornell bold">Cornell University</span>.</p><br>
 
             <p>Here you can look at my <a href="resume.php">resume</a>, some courses I have taken,
