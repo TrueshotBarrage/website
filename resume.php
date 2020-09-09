@@ -128,7 +128,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div>
             <div class="bold">Other: </div>
             <span class="smaller">
-              Git, Linux, Docker, SSH, Node, React
+              Git, Linux, Docker, SSH, Node
             </span>
           </div>
         </div>
@@ -205,8 +205,9 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>CS 3110</div>
               <div>INFO 2300</div>
               <div>INFO 3300</div>
+              <div>ECE 4750</div>
+              <div>ECE 4450</div>
               <div>ECE 3140</div>
-              <div>ECE 2300</div>
             </div>
             <div class="course-names">
               <div>OOP and Data Structures</div>
@@ -214,8 +215,9 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>Functional Programming</div>
               <div>Web Design & Programming</div>
               <div>Data-Driven Web Apps & Viz.</div>
+              <div>Computer Architecture</div>
+              <div>Networks and Telecomm.</div>
               <div>Embedded Systems</div>
-              <div>Digital Logic & Computer Org.</div>
             </div>
           </div>
         </div>
