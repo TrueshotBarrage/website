@@ -141,7 +141,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             <span class="smaller">SWE Intern</span>
           </div>
           <div class="subtitle">
-            <span class="unset">May 2020 - August 2020&#8192;&#9702;</span>&#8192;Boston, MA
+            <span class="unset">May '20 - Aug. '20&#8192;&#9702;</span>&#8192;Boston, MA
           </div>
           <ul>
             <li>
@@ -162,7 +162,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Cornell Engineering",
             "",
             "Teaching Assistant",
-            "Jan. 2019 - Dec. 2019",
+            "Jan. '19 - Dec. '19",
             "Ithaca, NY",
             array(
               "ECE 2300 - Digital Logic & Computer Org.",
