@@ -141,7 +141,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             <span class="smaller">SWE Intern</span>
           </div>
           <div class="subtitle">
-            <span class="unset">May 2020 - Current&#8192;&#9702;</span>&#8192;Boston, MA
+            <span class="unset">May 2020 - August 2020&#8192;&#9702;</span>&#8192;Boston, MA
           </div>
           <ul>
             <li>
