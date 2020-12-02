@@ -149,10 +149,6 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           </div>
           <ul>
             <li>
-              Developed Swagger API to generate server backend for company CDR
-              data using Go.
-            </li>
-            <li>
               Generated over twenty time-series charts with CDR data by
               writing optimized ClickHouse SQL queries on Grafana.
             </li>
@@ -205,7 +201,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Ithaca, NY",
             array(
               "Designed a method to compute partial convolutions of CNNs 
-              (convolutional neural nets) with PyTorch."
+              with PyTorch."
             )
           ); ?>
         </div>
