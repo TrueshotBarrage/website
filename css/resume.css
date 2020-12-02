@@ -60,6 +60,10 @@ article, aside, footer, header, nav, section {
   opacity: 0;
 }
 
+.inline {
+  padding-right: 2.1rem;
+}
+
 .smaller {
   font-size: 85%;
 }

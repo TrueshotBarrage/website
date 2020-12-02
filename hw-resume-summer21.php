@@ -58,7 +58,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <img src="images/resume/chrome.svg" />heydavid.kim
         </a>
         <span>
-          <img src="images/resume/phone.svg" />334-430-7609
+          <img src="images/resume/phone.svg" />(334) 430-7609
         </span>
         <br>
         <a href="https://www.linkedin.com/in/davidkim2106/">
@@ -80,9 +80,13 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             &#8192;Ithaca, NY
           </div>
           <div class="bold">Double Major</div>
-          <div>B.S. Electrical and Computer Engineering</div>
           <div>B.S. Computer Science</div>
-          <div>GPA: 3.575</div>
+          <div>B.S. Electrical and Computer Engineering</div>
+          <div>
+            <span class="inline">GPA: 3.575</span>
+            <span class="inline">CS: 3.820</span>
+            <span class="inline">ECE: 3.582</span>
+          </div>
         </div>
         <div id="selected-projects">
           <div class="section-title">Selected Projects</div>
@@ -98,20 +102,21 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           Headache-proofs complicated queries with functional constructs:
           map and reduce.
           <div class="project-title">
-            <a href="project-tempo.php">Project Tempo</a>
-          </div>
-          Algorithm-driven, music-composing Python program that randomly
-          generates "good" music.
-          <div class="project-title">
             <a href="led-tetris.php">LED Tetris</a>
           </div>
           Full LED Tetris game for the Arduino Mega 2560. Organized with a
           finite state machine.
           <div class="project-title">
-            <a href="https://github.com/TrueshotBarrage/crawl-o-bot">Crawl-o-Bot</a>
+            <a href="https://github.com/TrueshotBarrage/shock-detection">Shock Detection</a>
           </div>
-          Data scraper in PHP that decides where to crawl using a
-          randomized DFS algorithm.
+          Prototype developed for Make-A-Thon 2020. 
+          Uses gyroscope to detect when a person falls and can't get back up 
+          and sends alert signal.
+          <div class="project-title">
+            <a href="project-tempo.php">Project Tempo</a>
+          </div>
+          Algorithm-driven, music-composing Python program that randomly
+          generates "good" music.
           <div class="project-title">
             <a href="index.php">The resume you're looking at</a>
           </div>
@@ -122,13 +127,13 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div class="section-title">Skills</div>
           <div class="bold">Programming Languages:</div>
           <div class="subtitle">Confident with</div>
-          <div class="smaller">Java, Python, JavaScript, PHP, OCaml, SQL, Go, CSS</div>
+          <div class="smaller">Java, Python, JavaScript, PHP, OCaml, SQL, Go, C</div>
           <div class="subtitle">Have experience with</div>
-          <div class="smaller spaced">TypeScript, C, Verilog, Ruby, Swift</div>
+          <div class="smaller spaced">Verilog, C++</div>
           <div>
             <div class="bold">Other: </div>
             <span class="smaller">
-              Git, Linux, Docker, 5G, Swagger, Grafana, Arduino
+              Git, Linux, Arduino, Docker, Node
             </span>
           </div>
         </div>
@@ -141,7 +146,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             <span class="smaller">SWE Intern</span>
           </div>
           <div class="subtitle">
-            <span class="unset">May 2020 - Current&#8192;&#9702;</span>&#8192;Boston, MA
+            <span class="unset">May '20 - Aug. '20&#8192;&#9702;</span>&#8192;Boston, MA
           </div>
           <ul>
             <li>
@@ -152,13 +157,17 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               Generated over twenty time-series charts with CDR data by
               writing optimized ClickHouse SQL queries on Grafana.
             </li>
+            <li>
+              Scripted Python to export daily MySQL db data into CSV files, and
+              utilized AWS S3 services to import data onto different DBMS platforms.
+            </li>
           </ul>
           <div class="spaced"></div>
           <?php work_gen(
             "Cornell Engineering",
             "",
             "Teaching Assistant",
-            "Jan. 2019 - Dec. 2019",
+            "Jan. '19 - Dec. '19",
             "Ithaca, NY",
             array(
               "ECE 2300 - Digital Logic & Computer Org.",
@@ -188,9 +197,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Ithaca, NY",
             array(
               "Designed a method to compute partial convolutions of CNNs 
-              with PyTorch.",
-              "Implemented a protection scheme for CNN accelerators that 
-              hides memory access traces."
+              (convolutional neural nets) with PyTorch."
             )
           ); ?>
         </div>
@@ -199,10 +206,8 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div class="courses-grid">
             <div class="course-codes">
               <div>ECE 4750</div>
-              <div>CS 4410</div>
-              <div>ECE 4450</div>
-              <div class="spaced">ECE 3140</div>
-
+              <div>ECE 3140</div>
+              <div>ECE 3030</div>
               <div>CS 2110</div>
               <div>CS 4820</div>
               <div>CS 3110</div>
@@ -211,10 +216,8 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             </div>
             <div class="course-names">
               <div>Computer Architecture</div>
-              <div>Operating Systems</div>
-              <div>Comp. Networks & Telecomm.</div>
-              <div class="spaced">Embedded Systems</div>
-
+              <div>Embedded Systems</div>
+              <div>Electromagnetic Materials</div>
               <div>OOP and Data Structures</div>
               <div>Theory of Algorithms</div>
               <div>Functional Programming</div>

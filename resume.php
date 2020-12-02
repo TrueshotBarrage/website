@@ -82,7 +82,11 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div class="bold">Double Major</div>
           <div>B.S. Computer Science</div>
           <div>B.S. Electrical and Computer Engineering</div>
-          <div>GPA: 3.575</div>
+          <div>
+            <span class="inline">GPA: 3.575</span>
+            <!-- <span class="inline">CS: 3.820</span>
+            <span class="inline">ECE: 3.582</span> -->
+          </div>
         </div>
         <div id="selected-projects">
           <div class="section-title">Selected Projects</div>
@@ -128,7 +132,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div>
             <div class="bold">Other: </div>
             <span class="smaller">
-              Git, Linux, Docker, SSH, Node
+              Git, Linux, Docker, Node
             </span>
           </div>
         </div>
@@ -157,7 +161,6 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               utilized AWS S3 services to import data onto different DBMS platforms.
             </li>
           </ul>
-          <div class="spaced"></div>
           <?php work_gen(
             "Cornell Engineering",
             "",
@@ -167,6 +170,16 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             array(
               "ECE 2300 - Digital Logic & Computer Org.",
               "PHYS 1112 - Mechanics & Heat"
+            )
+          ); ?>
+          <?php work_gen(
+            "Amazon Robotics",
+            "https://amazonrobotics.com",
+            "Emb. Firmware Co-op",
+            "Jan. '21 - Jun. '21",
+            "Reading, MA",
+            array(
+              "Remote co-op at Ithaca in Embedded Firmware.",
             )
           ); ?>
         </div>
@@ -206,7 +219,6 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>INFO 2300</div>
               <div>INFO 3300</div>
               <div>ECE 4750</div>
-              <div>ECE 4450</div>
               <div>ECE 3140</div>
             </div>
             <div class="course-names">
@@ -216,7 +228,6 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>Web Design & Programming</div>
               <div>Data-Driven Web Apps & Viz.</div>
               <div>Computer Architecture</div>
-              <div>Networks and Telecomm.</div>
               <div>Embedded Systems</div>
             </div>
           </div>
