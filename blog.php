@@ -2,6 +2,45 @@
 include("includes/init.php");
 
 $title = "blog";
+
+// The results of querying the entire blog posts table
+$posts = exec_sql_query($db, "SELECT * FROM posts")->fetchAll(PDO::FETCH_ASSOC);
+
+// Generates caption text for a blog entry, with appropriate
+// css formatting applied
+function generate_caption($post)
+{
+  // TODO: Maybe sanitize the output?
+  $result = "by <span class='entry-author'>{$post['author']}</span> "
+    . "on <span class='entry-date'>{$post['date_cr']}</span> ";
+  // If the post was modified, also show that info
+  if (!is_null($post['date_mod'])) {
+    $result = $result
+      . "(last modified <span class='entry-date'>{$post['date_mod']}</span>)";
+  }
+  //echo htmlentities($result);
+  return $result;
+}
+
+// Creates a blog entry 
+function make_blog_entry($post)
+{ ?>
+  <div class="blog-entry">
+    <div class="blog-title">
+      <h2><?php echo $post["title"]; ?></h2>
+      <div class="content-preview">
+        <?php
+        if (strlen($post["content"]) > 400) {
+          echo substr($post["content"], 0, 400) . " [...]";
+        } else {
+          echo $post["content"];
+        }
+        ?>
+      </div>
+    </div>
+    <div class="blog-caption"><?php echo generate_caption($post); ?></div>
+  </div>
+<?php }
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +89,11 @@ $title = "blog";
   <div class="black-bg">
     <!-- The main contents: greeting, intro texts, ext. links, and footer -->
     <div class="main-container">
-      <h2>Blog coming soon</h2>
+      <div class="vb-100"></div>
+
+      <!-- Generate blog entries from the database -->
+      <?php foreach ($posts as $post) make_blog_entry($post); ?>
+
       <!-- Footer -->
       <footer>
         <?php include("includes/footer.php"); ?>

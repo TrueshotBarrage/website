@@ -3,6 +3,40 @@
  * name: blog.css
  * purpose: styles for the blog page
  * author: david kim
- * last revised: april 15th, 2020
+ * last revised: christmas day, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
+
+.vb-100 {
+  height: 50px;
+}
+
+.blog-entry {
+  display: grid;
+  /* two sections for now. 3 later w/ pic */
+  grid-template-rows: 200px auto;
+  width: 750px;
+  margin: 0 auto 40px;
+  padding: 25px;
+  height: 300px;
+  background-color: #fcfcfc;
+  border-radius: 7px;
+}
+
+.content-preview {
+  /* text-overflow: ellipsis; */
+  /* overflow: hidden; */
+}
+
+.blog-caption {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #bbb;
+  white-space: pre-wrap;
+}
+
+.entry-author {
+  font-weight: bold;
+}
+
+.entry-date {}

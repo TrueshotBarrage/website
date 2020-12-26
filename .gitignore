@@ -5,3 +5,6 @@ images/favicon_full_res.jpg
 css/_*.css
 heydavidkim.cert.pem
 private.key
+
+# Database config file
+psql-settings.ini
