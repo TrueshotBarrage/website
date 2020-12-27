@@ -60,7 +60,7 @@ function generate_caption($post)
 
   // If time_mod exists for the post, then also fill that in
   if (!<?php echo is_null($post["time_mod"]) ? "true" : "false"; ?>) {
-    var timeMod = convertTime("<?php echo $post["time_cr"]; ?>");
+    var timeMod = convertTime("<?php echo $post["time_mod"]; ?>");
     document.getElementById("date-mod<?php echo $num_dates; ?>").innerHTML = timeMod;
   }
 </script>
