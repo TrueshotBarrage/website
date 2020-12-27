@@ -7,8 +7,16 @@
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
-.vb-100 {
+.vb-50 {
   height: 50px;
+}
+
+.vb-100 {
+  height: 100px;
+}
+
+.vb-200 {
+  height: 200px;
 }
 
 .blog-entry {
@@ -17,7 +25,7 @@
   grid-template-rows: 200px auto;
   width: 750px;
   margin: 0 auto 40px;
-  padding: 25px;
+  padding: 25px 25px 5px 25px;
   height: 300px;
   background-color: #fcfcfc;
   border-radius: 7px;
@@ -40,3 +48,9 @@
 }
 
 .entry-date {}
+
+.blog-post {
+  width: 900px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
