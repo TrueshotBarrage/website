@@ -38,33 +38,32 @@ function generate_caption($post)
   $num_dates = $num_dates + 1;
 
   // Unfortunately, this mess of a code has to be all in one line for HTML
-?>
-  by <span class='entry-author'><?php echo $post['author']; ?></span> on <span class='entry-date' id='date-cr<?php echo $num_dates; ?>'></span> <?php if (!is_null($post["time_mod"])) { ?>(edited on <span class='entry-date' id='date-mod<?php echo $num_dates; ?>'></span>)<?php } ?>
-  <script>
-    /* Here we do the heavy lifting of converting the timestamp into local time */
+?>by <span class='entry-author'><?php echo $post['author']; ?></span> on <span class='entry-date' id='date-cr<?php echo $num_dates; ?>'></span> <?php if (!is_null($post["time_mod"])) { ?>(edited on <span class='entry-date' id='date-mod<?php echo $num_dates; ?>'></span>)<?php } ?>
+<script>
+  /* Here we do the heavy lifting of converting the timestamp into local time */
 
-    // Helper to convert time string into a nice looking, locale-adjusted time
-    function convertTime(timeString) {
-      let time = Date.parse(timeString);
-      let timeUTC = new Date();
-      timeUTC.setTime(time);
-      opts = {
-        hour: "2-digit",
-        minute: "2-digit"
-      }
-      return `${timeUTC.toLocaleDateString()} @ ${timeUTC.toLocaleTimeString([], opts)}`
+  // Helper to convert time string into a nice looking, locale-adjusted time
+  function convertTime(timeString) {
+    let time = Date.parse(timeString);
+    let timeUTC = new Date();
+    timeUTC.setTime(time);
+    opts = {
+      hour: "2-digit",
+      minute: "2-digit"
     }
+    return `${timeUTC.toLocaleDateString()} @ ${timeUTC.toLocaleTimeString([], opts)}`
+  }
 
-    // Always set the post creation time appropriately
-    var timeCreated = convertTime("<?php echo $post["time_cr"]; ?>");
-    document.getElementById("date-cr<?php echo $num_dates; ?>").innerHTML = timeCreated;
+  // Always set the post creation time appropriately
+  var timeCreated = convertTime("<?php echo $post["time_cr"]; ?>");
+  document.getElementById("date-cr<?php echo $num_dates; ?>").innerHTML = timeCreated;
 
-    // If time_mod exists for the post, then also fill that in
-    if (!<?php echo is_null($post["time_mod"]) ? "true" : "false"; ?>) {
-      var timeMod = convertTime("<?php echo $post["time_cr"]; ?>");
-      document.getElementById("date-mod<?php echo $num_dates; ?>").innerHTML = timeMod;
-    }
-  </script>
+  // If time_mod exists for the post, then also fill that in
+  if (!<?php echo is_null($post["time_mod"]) ? "true" : "false"; ?>) {
+    var timeMod = convertTime("<?php echo $post["time_cr"]; ?>");
+    document.getElementById("date-mod<?php echo $num_dates; ?>").innerHTML = timeMod;
+  }
+</script>
 <?php
 }
 
