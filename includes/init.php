@@ -74,6 +74,3 @@ function exec_sql_query($db, $sql, $params = array())
   }
   return null;
 }
-
-// Used for opening PostgreSQL DB
-$db = open_postgresql_db($local = false);

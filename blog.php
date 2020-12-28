@@ -1,11 +1,15 @@
 <?php
 include("includes/init.php");
 
+// Used for opening PostgreSQL DB
+$db = open_postgresql_db($local = false);
+
 $title = "blog";
 $err_msgs = array();
 
 // Metadata and other relevant configurations
-$posts = exec_sql_query($db, "SELECT * FROM posts")->fetchAll(PDO::FETCH_ASSOC);
+$posts = exec_sql_query($db, "SELECT * FROM posts ORDER BY time_cr DESC")
+  ->fetchAll(PDO::FETCH_ASSOC);
 $display_single_post = false;
 $num_dates = 0;
 
@@ -44,7 +48,12 @@ function generate_caption($post)
 
   // Helper to convert time string into a nice looking, locale-adjusted time
   function convertTime(timeString) {
-    let time = Date.parse(timeString);
+    function parseUTCDate(s) {
+      let b = s.split(/\D/);
+      --b[1]; // Adjust month number
+      return new Date(Date.UTC(...b));
+    }
+    let time = parseUTCDate(timeString);
     let timeUTC = new Date();
     timeUTC.setTime(time);
     opts = {
