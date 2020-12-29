@@ -41,8 +41,16 @@ function generate_caption($post)
   global $num_dates;
   $num_dates = $num_dates + 1;
 
-  // Unfortunately, this mess of a code has to be all in one line for HTML
-?>by <span class='entry-author'><?php echo $post['author']; ?></span> on <span class='entry-date' id='date-cr<?php echo $num_dates; ?>'></span> <?php if (!is_null($post["time_mod"])) { ?>(edited on <span class='entry-date' id='date-mod<?php echo $num_dates; ?>'></span>)<?php } ?>
+?>
+  <span>
+    by
+    <span class='entry-author'><?php echo $post['author']; ?></span>
+    on
+    <span class='entry-date' id='date-cr<?php echo $num_dates; ?>'></span>
+    <?php if (!is_null($post["time_mod"])) { ?>
+      (edited&nbsp;<span class='entry-date' id='date-mod<?php echo $num_dates; ?>'></span>)
+  </span>
+<?php } ?>
 <script>
   /* Here we do the heavy lifting of converting the timestamp into local time */
 
@@ -60,7 +68,7 @@ function generate_caption($post)
       hour: "2-digit",
       minute: "2-digit"
     }
-    return `${timeUTC.toLocaleDateString()} @ ${timeUTC.toLocaleTimeString([], opts)}`
+    return `${timeUTC.toLocaleDateString()}, ${timeUTC.toLocaleTimeString([], opts)}`
   }
 
   // Always set the post creation time appropriately
@@ -79,7 +87,7 @@ function generate_caption($post)
 // Creates a clickable blog entry 
 function make_blog_entry($post)
 { ?>
-  <div class="blog-entry">
+  <div class="blog-entry contents">
     <div class="blog-title">
       <a href="blog.php?<?php echo http_build_query(array('post_id' => $post["id"])); ?>">
         <h2><?php echo $post["title"]; ?></h2>
@@ -101,22 +109,18 @@ function make_blog_entry($post)
 // Creates a full-page blog post
 function make_blog_post($post)
 { ?>
-  <div class="blog-post">
-    <div class="blog-title">
-      <a href="blog.php?<?php echo http_build_query(array('post_id' => $post["id"])); ?>">
-        <h2><?php echo $post["title"]; ?></h2>
-      </a>
-      <div class="content-preview">
-        <?php
-        if (strlen($post["content"]) > 400) {
-          echo substr($post["content"], 0, 400) . " [...]";
-        } else {
-          echo $post["content"];
-        }
-        ?>
-      </div>
+  <div class="blog-post contents">
+    <a href="blog.php">back to posts</a>
+    <div class="blog-title bigger">
+      <h2><?php echo $post["title"]; ?></h2>
     </div>
-    <div class="blog-caption"><?php generate_caption($post); ?></div>
+    <div class="blog-caption noline"><?php generate_caption($post); ?></div>
+    <div class="blog-content"><?php
+                              $text_content = preg_replace('#\R+#', '</p><p>', $post["content"]);
+                              $text_content = trim(nl2br($text_content));
+                              echo "<span class='dropcap dropcap-style'>" . substr($text_content, 0, 1)
+                                . "</span>" . substr($text_content, 1); ?>
+    </div>
   </div>
 <?php }
 ?>
@@ -169,12 +173,13 @@ function make_blog_post($post)
     <div class="main-container">
       <div class="vb-50"></div>
 
-      <!-- Write out any feedback messages to the user -->
-      <?php foreach ($err_msgs as $message)
+      <?php // Write out any feedback messages to the user
+      foreach ($err_msgs as $message)
         echo "<p style='color:red;text-align:center'><strong>" . htmlspecialchars($message) . "</strong></p>\n"; ?>
 
-      <!-- Generate blog entries from the database -->
       <?php
+      /* Generate blog entries from the database */
+
       // All the blog entries
       if (!$display_single_post)
         foreach ($posts as $post) make_blog_entry($post);
