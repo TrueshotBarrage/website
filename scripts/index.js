@@ -26,7 +26,7 @@ $(document).ready(function () {
   function tooManyCallbacksAtThisPoint() {
     $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~</span>$ `, () => {
       $("#code-box").typewriter(`ls -1\n`, 50, () => {
-        $("#code-box").writer(`<span class="pseudo-links" id="about-pl">AboutMe</span>\n<span class="pseudo-links" id="projects-pl">Projects</span>\n<span class="pseudo-links" id="github-pl">GitHub</span>\n<span class="pseudo-links" id="linkedin-pl">LinkedIn</span>\n<span class="pseudo-links" id="resume-pl">HTMLResume</span>\n`, () => {
+        $("#code-box").writer(`<span class="pseudo-links" id="about-pl">about-me</span>\n<span class="pseudo-links" id="projects-pl">projects</span>\n<span class="pseudo-links" id="blog-pl">blog</span>\n<span class="pseudo-links" id="github-pl">github</span>\n<span class="pseudo-links" id="linkedin-pl">linkedin</span>\n<span class="pseudo-links" id="resume-pl">resume</span>\n`, () => {
           $("#code-box").writer(`(Try clicking these!)\n<span class="timestamp">${login}</span><span class="pwd">~</span>$ <span id="cursor">&#9608</span>`, () => {
             blinkCursor(500);
             $(".pseudo-links").on("click", pseudoLinksActivator);
@@ -107,8 +107,8 @@ function pseudoLinksActivator() {
 
   switch (this.id) {
     case "about-pl":
-      $("#code-box").typewriter(`cd AboutMe\n`, 50, () => {
-        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/AboutMe</span>$ `, () => {
+      $("#code-box").typewriter(`cd about-me\n`, 50, () => {
+        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/about-me</span>$ `, () => {
           $("#code-box").typewriter(`exit 0\n`, 50, () => {
             $("#code-box").writer(`[Process completed]\n`, () => {
               $("#code-box").writer(`Loading`, () => {
@@ -123,8 +123,8 @@ function pseudoLinksActivator() {
       break
 
     case "projects-pl":
-      $("#code-box").typewriter(`cd Projects\n`, 50, () => {
-        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/Projects</span>$ `, () => {
+      $("#code-box").typewriter(`cd projects\n`, 50, () => {
+        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/projects</span>$ `, () => {
           $("#code-box").typewriter(`exit 0\n`, 50, () => {
             $("#code-box").writer(`[Process completed]\n`, () => {
               $("#code-box").writer(`Loading`, () => {
@@ -138,9 +138,25 @@ function pseudoLinksActivator() {
       }, 500)
       break
 
+    case "blog-pl":
+      $("#code-box").typewriter(`cd blog\n`, 50, () => {
+        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/blog</span>$ `, () => {
+          $("#code-box").typewriter(`exit 0\n`, 50, () => {
+            $("#code-box").writer(`[Process completed]\n`, () => {
+              $("#code-box").writer(`Loading`, () => {
+                $("#code-box").typewriter("...\n", 500, () => {
+                  window.location.href = "blog.php";
+                }, 100)
+              }, 500)
+            }, 700)
+          }, 500)
+        }, 700)
+      }, 500)
+      break
+
     case "github-pl":
-      $("#code-box").typewriter(`cd GitHub\n`, 50, () => {
-        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/GitHub</span>$ `, () => {
+      $("#code-box").typewriter(`cd github\n`, 50, () => {
+        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/github</span>$ `, () => {
           $("#code-box").typewriter(`exit 0\n`, 50, () => {
             $("#code-box").writer(`[Process completed]\n`, () => {
               $("#code-box").writer(`Loading`, () => {
@@ -155,8 +171,8 @@ function pseudoLinksActivator() {
       break
 
     case "linkedin-pl":
-      $("#code-box").typewriter(`cd LinkedIn\n`, 50, () => {
-        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/LinkedIn</span>$ `, () => {
+      $("#code-box").typewriter(`cd linkedin\n`, 50, () => {
+        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/linkedin</span>$ `, () => {
           $("#code-box").typewriter(`exit 0\n`, 50, () => {
             $("#code-box").writer(`[Process completed]\n`, () => {
               $("#code-box").writer(`Loading`, () => {
@@ -171,8 +187,8 @@ function pseudoLinksActivator() {
       break
 
     case "resume-pl":
-      $("#code-box").typewriter(`cd HTMLResume\n`, 50, () => {
-        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/HTMLResume</span>$ `, () => {
+      $("#code-box").typewriter(`cd resume\n`, 50, () => {
+        $("#code-box").writer(`<span class="timestamp">${login}</span><span class="pwd">~/resume</span>$ `, () => {
           $("#code-box").typewriter(`exit 0\n`, 50, () => {
             $("#code-box").writer(`[Process completed]\n`, () => {
               $("#code-box").writer(`Loading`, () => {
