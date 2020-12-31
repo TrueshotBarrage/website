@@ -91,6 +91,64 @@ p {
   border-radius: 12px;
 }
 
+#blog-post-form {
+  display: flex;
+  flex-direction: column;
+  border: transparent;
+  border-radius: 12px;
+  margin: 50px auto;
+  width: 70vw;
+}
+
+#blog-post-form>h2 {
+  background-color: #fff;
+  padding: 10px 25px;
+  border-radius: 9px;
+}
+
+#blog-post-form textarea {
+  overflow: auto;
+  font-family: inherit;
+  resize: none;
+}
+
+#form-submit {
+  color: #fff;
+  background-color: #463939;
+  font-size: 20px;
+  font-family: inherit;
+  line-height: inherit;
+  border: transparent;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 15px;
+  width: 150px;
+  height: 100%;
+}
+
+#form-submit:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.form-input {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-family: inherit;
+  line-height: inherit;
+  margin-top: 20px;
+  padding: 20px 25px;
+  appearance: none;
+  border: transparent;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Dropcap styling copied from:
+http://lofter.youforest.net/demo1/2017/04/04/what-to-wear-to-a-concert/ */
+
 .dropcap {
   float: left;
   display: inline-block;
