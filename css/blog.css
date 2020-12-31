@@ -91,6 +91,34 @@ p {
   border-radius: 12px;
 }
 
+#blog-top-bar {
+  width: 750px;
+  margin: 0 auto;
+}
+
+#make-post-button {
+  color: #fff;
+  background-color: #463939;
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: center;
+  line-height: inherit;
+  border: transparent;
+  border-radius: 4px;
+  margin: 30px 0;
+  padding: 15px;
+  width: 200px;
+  float: right;
+}
+
+#make-post-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* Blog post form styling */
+
 #blog-post-form {
   display: flex;
   flex-direction: column;
@@ -122,8 +150,7 @@ p {
   border-radius: 4px;
   margin-top: 30px;
   padding: 15px;
-  width: 150px;
-  height: 100%;
+  width: 200px;
 }
 
 #form-submit:hover {
@@ -146,36 +173,18 @@ p {
   -moz-appearance: none;
 }
 
-/* Dropcap styling copied from:
-http://lofter.youforest.net/demo1/2017/04/04/what-to-wear-to-a-concert/ */
+/* Dropcap styling, off for now */
 
-.dropcap {
+/* .blog-content::first-letter {
   float: left;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  margin: .2em .5em .2em 0;
-  line-height: 2em;
-  text-align: center;
-  overflow: hidden;
-  text-transform: uppercase;
-  font-size: 1.5em;
-}
-
-.dropcap-style {
+  line-height: 35px;
+  font-size: 55px;
   color: #fff;
-  background: #45484d;
-  background: -moz-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(69, 72, 77, 1)), color-stop(100%, rgba(0, 0, 0, 1)));
-  background: -webkit-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  background: -o-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  background: -ms-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  background: linear-gradient(to bottom, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45484d', endColorstr='#000000', GradientType=0);
-  text-shadow: -1px -1px 0 #000;
-  -moz-text-shadow: -1px -1px 0 #000;
-  -webkit-text-shadow: -1px -1px 0 #000;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-}
+  background-color: rgba(0, 0, 0, 1);
+  border: transparent;
+  border-radius: 100px;
+  padding: 5px;
+  margin-right: 5px;
+  width: 50px;
+  height: 50px;
+} */

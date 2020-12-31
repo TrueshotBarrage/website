@@ -6,11 +6,10 @@ const octokit = new Octokit({
 });
 
 // Make a REST request to convert Markdown into HTML
-(async () => {
-  const { data: req } = await octokit.request("POST /markdown", {
-    text: "helloworld\n- text",
-
+let markdownToHTML = async function (md) {
+  const { data: resp } = await octokit.request("POST /markdown", {
+    text: md,
   })
-  console.log(req)
-  document.getElementById("demo").innerHTML = req;
-})()
+  console.log(resp)
+  document.getElementById("demo").innerHTML = resp;
+}

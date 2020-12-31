@@ -94,10 +94,11 @@ function make_blog_entry($post)
       </a>
       <div class="content-preview">
         <?php
-        if (strlen($post["content"]) > 400) {
-          echo substr($post["content"], 0, 400) . " [...]";
+        $content = strip_tags(trim($post["content"]));
+        if (strlen($content) > 400) {
+          echo substr($content, 0, 400) . " [...]";
         } else {
-          echo $post["content"];
+          echo $content;
         }
         ?>
       </div>
@@ -116,10 +117,13 @@ function make_blog_post($post)
     </div>
     <div class="blog-caption noline"><?php generate_caption($post); ?></div>
     <div class="blog-content"><?php
-                              $text_content = preg_replace('#\R+#', '</p><p>', $post["content"]);
-                              $text_content = trim(nl2br($text_content));
-                              echo "<span class='dropcap dropcap-style'>" . substr($text_content, 0, 1)
-                                . "</span>" . substr($text_content, 1); ?>
+                              // $text_content = preg_replace('#\R+#', '</p><p>', $post["content"]);
+                              // $text_content = trim(nl2br($text_content));
+                              $text_content = $post["content"];
+                              echo $text_content;
+                              // echo "<span class='dropcap dropcap-style'>" . substr($text_content, 0, 1)
+                              //   . "</span>" . substr($text_content, 1); 
+                              ?>
     </div>
   </div>
 <?php }
@@ -181,8 +185,12 @@ function make_blog_post($post)
       /* Generate blog entries from the database */
 
       // All the blog entries
-      if (!$display_single_post)
-        foreach ($posts as $post) make_blog_entry($post);
+      if (!$display_single_post) { ?>
+        <div id="blog-top-bar">
+          <a href="blog-post.php" class="contents" id="make-post-button">Make post</a>
+        </div>
+      <?php foreach ($posts as $post) make_blog_entry($post);
+      }
 
       // Single blog entry
       else { ?>
