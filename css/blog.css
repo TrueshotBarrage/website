@@ -20,6 +20,10 @@ p {
   margin-top: 10px;
 }
 
+del {
+  text-decoration: line-through;
+}
+
 .vb-50 {
   height: 50px;
 }
