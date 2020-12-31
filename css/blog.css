@@ -94,6 +94,7 @@ p {
 #blog-top-bar {
   width: 750px;
   margin: 0 auto;
+  height: 130px;
 }
 
 #make-post-button {
