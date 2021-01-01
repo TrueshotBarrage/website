@@ -172,8 +172,8 @@ function make_blog_post($post)
     <?php include("includes/project-nav.php"); ?>
   </div>
 
+  <!-- The main contents -->
   <div class="black-bg">
-    <!-- The main contents: greeting, intro texts, ext. links, and footer -->
     <div class="main-container">
       <div class="vb-50"></div>
 
