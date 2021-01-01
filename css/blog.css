@@ -50,13 +50,21 @@ del {
 .blog-entry {
   display: grid;
   /* two sections for now. 3 later w/ pic */
-  grid-template-rows: 200px auto;
+  grid-template-rows: auto 200px auto;
   width: 750px;
   margin: 0 auto 40px;
   padding: 25px 25px 5px 25px;
-  height: 300px;
+  height: auto;
   background-color: rgba(252, 252, 252, 0.95);
   border-radius: 7px;
+}
+
+.blog-picture img {
+  max-width: 100%;
+}
+
+.blog-picture>a:hover {
+  opacity: 1;
 }
 
 .content-preview {
@@ -68,13 +76,15 @@ del {
   display: flex;
   align-items: center;
   border-top: 1px solid #bbb;
+  padding: 20px 0;
   width: auto;
   overflow-x: visible;
 }
 
 .noline {
   border-top: none;
-  margin-bottom: 30px;
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 
 .entry-author {

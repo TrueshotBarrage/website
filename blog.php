@@ -88,6 +88,11 @@ function generate_caption($post)
 function make_blog_entry($post)
 { ?>
   <div class="blog-entry contents">
+    <div class="blog-picture">
+      <a href="blog.php?<?php echo http_build_query(array('post_id' => $post["id"])); ?>">
+        <img src="blog/1/1.jpg" />
+      </a>
+    </div>
     <div class="blog-title">
       <a href="blog.php?<?php echo http_build_query(array('post_id' => $post["id"])); ?>">
         <h2><?php echo $post["title"]; ?></h2>
@@ -116,14 +121,7 @@ function make_blog_post($post)
       <h2><?php echo $post["title"]; ?></h2>
     </div>
     <div class="blog-caption noline"><?php generate_caption($post); ?></div>
-    <div class="blog-content"><?php
-                              // $text_content = preg_replace('#\R+#', '</p><p>', $post["content"]);
-                              // $text_content = trim(nl2br($text_content));
-                              $text_content = $post["content"];
-                              echo $text_content;
-                              // echo "<span class='dropcap dropcap-style'>" . substr($text_content, 0, 1)
-                              //   . "</span>" . substr($text_content, 1); 
-                              ?>
+    <div class="blog-content"><?php echo $post["content"]; ?>
     </div>
   </div>
 <?php }
@@ -194,7 +192,6 @@ function make_blog_post($post)
 
       // Single blog entry
       else { ?>
-        <div class="vb-50"></div>
       <?php
         make_blog_post($posts[0]);
       }
