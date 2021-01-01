@@ -3,7 +3,7 @@
  * name: blog.css
  * purpose: styles for the blog page
  * author: david kim
- * last revised: december 31st, 2020
+ * last revised: january 1st, 2020
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -129,12 +129,13 @@ del {
 }
 
 #blog-top-bar {
-  width: 750px;
+  max-width: 750px;
   margin: 0 auto;
   height: 130px;
 }
 
 #make-post-button {
+  display: block;
   color: #fff;
   background-color: #463939;
   font-size: 20px;
@@ -229,6 +230,11 @@ del {
 
 @media screen and (max-width: 600px) {
   .blog-content img {
+    width: 100%;
+  }
+  #make-post-button {
+    float: unset;
+    margin: 15px auto 0;
     width: 100%;
   }
 }
