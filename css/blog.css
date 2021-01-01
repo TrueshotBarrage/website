@@ -49,9 +49,8 @@ del {
 
 .blog-entry {
   display: grid;
-  /* two sections for now. 3 later w/ pic */
-  grid-template-rows: auto 200px auto;
-  width: 750px;
+  grid-template-rows: auto minmax(200px, auto) auto;
+  max-width: 750px;
   margin: 0 auto 40px;
   padding: 25px 25px 5px 25px;
   height: auto;
@@ -164,7 +163,7 @@ del {
   border: transparent;
   border-radius: 12px;
   margin: 50px auto;
-  width: 70vw;
+  max-width: 900px;
 }
 
 #blog-post-form>h2 {
@@ -227,3 +226,9 @@ del {
   width: 50px;
   height: 50px;
 } */
+
+@media screen and (max-width: 600px) {
+  .blog-content img {
+    width: 100%;
+  }
+}
