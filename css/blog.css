@@ -95,6 +95,30 @@ del {
   border-radius: 12px;
 }
 
+/* Markdown-specific HTML styling */
+
+.blog-content h1 {
+  margin-top: 30px;
+}
+
+.blog-content h2 {
+  margin-top: 30px;
+}
+
+.blog-content h3 {
+  font-size: inherit;
+  margin-top: 10px;
+  margin-left: 30px;
+  border-left: 3px solid red;
+  padding-left: 5px;
+}
+
+.blog-content img {
+  display: block;
+  margin: 30px auto;
+  width: 80%;
+}
+
 #blog-top-bar {
   width: 750px;
   margin: 0 auto;
