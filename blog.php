@@ -27,7 +27,7 @@ if (!empty($post_select)) {
     );
     $posts = exec_sql_query($db, $query, $params)->fetchAll(PDO::FETCH_ASSOC);
     $display_single_post = true;
-    $title = $posts["title"];
+    $title = $posts[0]["title"];
   } catch (PDOException $e) {
     array_push($err_msgs, "Invalid post id!");
   }
