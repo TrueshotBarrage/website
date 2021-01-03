@@ -35,22 +35,27 @@ function httpPost(
 // the post into the db as a new blog entry.
 if (!empty($_POST)) {
   try {
-    // First, preprocess the input by stripping html tags
-    $_POST = array_map("htmlspecialchars", $_POST);
+    // TODO: We check by author name for now. Security will come later
+    if ($_POST["author"] !== "David Kim") {
+      array_push($err_msgs, "You don't have proper authorization to make a post.");
+    } else {
+      // First, preprocess the input by stripping html tags
+      $_POST = array_map("htmlspecialchars", $_POST);
 
-    // Now we want to convert our Markdown content into HTML 
-    $content = httpPost(json_encode(array("text" => $_POST["content"])));
+      // Now we want to convert our Markdown content into HTML 
+      $content = httpPost(json_encode(array("text" => $_POST["content"])));
 
-    // Finally, we can insert the post into the database
-    $query = "INSERT INTO posts (author, title, content)"
-      . " VALUES (:author, :title, :content)";
-    $params = array(
-      ":author" => $_POST["author"],
-      ":title" => $_POST["title"],
-      ":content" => $content
-    );
-    exec_sql_query($db, $query, $params);
-    array_push($err_msgs, "Successfully created post!");
+      // Finally, we can insert the post into the database
+      $query = "INSERT INTO posts (author, title, content)"
+        . " VALUES (:author, :title, :content)";
+      $params = array(
+        ":author" => $_POST["author"],
+        ":title" => $_POST["title"],
+        ":content" => $content
+      );
+      exec_sql_query($db, $query, $params);
+      array_push($err_msgs, "Successfully created post!");
+    }
   } catch (PDOException $e) {
     array_push($err_msgs, "Invalid request!");
   }
