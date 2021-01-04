@@ -22,10 +22,10 @@ $course_ids = array(
   "CS 2110",
   "INFO 3300",
   "INFO 2300",
+  "ECE 4750",
   "ECE 3140",
-  "ECE 2300",
-  "ECE 2100",
-  "ECE 2200",
+  "ECE 3030",
+  "ECE 3100",
   "PHYS 1116",
   "HAD 2230"
 );
@@ -35,10 +35,10 @@ $course_names = array(
   "Object-Oriented Programming and Data Structures (Java)",
   "Data-Driven Web Applications (d3.js)",
   "Intermediate Web Design (PHP, MySQL)",
-  "Embedded Systems (C, Assembly)",
-  "Digital Logic and Computer Organization (Verilog)",
-  "Electronic Circuits",
-  "Signals and Information",
+  "Computer Architecture (Verilog, Python)",
+  "Embedded Systems (C, assembly)",
+  "Electromagnetic Fields and Waves",
+  "Probability and Inference",
   "Honors Mechanics and Special Relativity",
   "Financial Accounting"
 );

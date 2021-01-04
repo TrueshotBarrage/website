@@ -62,8 +62,8 @@ $title = "about me";
             <p>I'm David Kim, a junior studying Computer Science and Electrical
               and Computer Engineering at <span class="cornell bold">Cornell University</span>.</p><br>
 
-            <p>Here you can look at my <a href="resume.php">resume</a>, some courses I have taken,
-              programming languages, and contact info.</p><br>
+            <p>Here you can find my <a href="resume.php">resume</a>, some courses I have taken,
+              my go-to programming languages, and how to reach me.</p><br>
 
             <p>Aside from that, some of my hobbies include biking around campus, playing board games
               with friends, and reading. I am also a huge Star Wars nerd and
@@ -104,8 +104,7 @@ $title = "about me";
               Frameworks & Envs
             </div>
             <p class="skills-text">
-              Git &bull; Linux &bull; Docker &bull; Swagger &bull; Grafana
-              &bull; ClickHouse
+              Git &bull; Linux &bull; Docker &bull; React &bull; Swagger
             </p>
           </div>
           <br>
@@ -115,7 +114,7 @@ $title = "about me";
             </div>
             <p class="skills-text">
               Frontend Development &bull; Communication &bull; Leadership &bull;
-              Teaching &bull; YouTube Content Creation &bull; Board Game Mastermind
+              Teaching &bull; Board Game Mastermind
             </p>
           </div>
         </div>

@@ -24,18 +24,20 @@ $dates = array(
   "Apr 2019",
   "May 2019",
   "Aug 2019",
-  "Sept 2019",
+  "Sep 2019",
   "Dec 2019",
   "Mar 2020",
   "Apr 2020",
-  "May 2020"
+  "May 2020",
+  "Dec 2020",
+  "Jan 2021",
+  "Jun 2021"
 );
 $descriptions = array(
   "Began attending <span class=\"cornell\">Cornell University</span><br>
   <ul><li>B.S. in Computer Science</li>
   <li>B.S. in Electrical and Computer Engineering</li></ul>",
-  "Joined Hearthstone Team, Korean Church at Cornell, and Society of Physics 
-  Students",
+  "Joined Hearthstone Team and Korean Church at Cornell",
   "Taught Introductory Mechanics as a T.A. for PHYS 1112",
   "Started work on <a href=\"project-tempo.php\">Project Tempo</a>, a random 
   music generator",
@@ -55,8 +57,13 @@ $descriptions = array(
   app to animate music files",
   "Scrapped old website and launched this <span class=\"rainbow\">beauty</span>
   <ul><li>A delicious blend of HTML5, CSS, JavaScript (jQuery), and PHP</li>",
-  "Started summer internship at <a class=\"wasabi\" href=\"https://wasabi.com\">
-  Wasabi</a>, the hot cloud storage company"
+  "Started summer internship at <a class=\"wasabi\" href=\"https://wasabi.com\" 
+  target=\"_blank\">Wasabi</a>, the hot cloud storage company",
+  "Launched new website <a href=\"blog.php\">blog</a>",
+  "Began spring co-op at <a class=\"amazon\" href=\"https://amazonrobotics.com\" 
+  target=\"_blank\">Amazon Robotics</a>, tinkering with embedded stuff",
+  "Stoked to start summer internship at <a class=\"amazon\" href=\"https://amazon.com\" 
+  target=\"_blank\">Amazon</a> as an SDE intern!"
 );
 ?>
 

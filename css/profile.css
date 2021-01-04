@@ -3,7 +3,7 @@
  * name: profile.css
  * purpose: styles for the profile "about me" page
  * author: david kim
- * last revised: july 3rd, 2020
+ * last revised: january 3rd, 2021
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
@@ -143,6 +143,10 @@ the dates on the left and the description for that activity on the right. */
 
 .wasabi {
   color: #1bc01b;
+}
+
+.amazon {
+  color: #ff9900;
 }
 
 .courses {
