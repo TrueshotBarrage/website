@@ -75,17 +75,17 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
         <div id="education">
           <div class="section-title">Education</div>
           <div id="school" class="bold bigger">Cornell University</div>
-          <div class="subtitle">
+          <div class="subtitle major-related">
             <span class="unset">Aug. '18 - May '22&#8192;&#9702;</span>
             &#8192;Ithaca, NY
           </div>
-          <div class="bold">Double Major</div>
           <div>B.S. Computer Science</div>
-          <div>B.S. Electrical and Computer Engineering</div>
-          <div>
-            <span class="inline">GPA: 3.575</span>
-            <!-- <span class="inline">CS: 3.820</span>
-            <span class="inline">ECE: 3.582</span> -->
+          <div class="major-related">B.S. Electrical and Computer Engineering</div>
+          <div>GPA:</div>
+          <div class="major-related smaller">
+            <span class="inline">Overall: 3.613</span>
+            <span class="inline">CS: 3.859</span>
+            <span class="inline">ECE: 3.647</span>
           </div>
         </div>
         <div id="selected-projects">
@@ -102,15 +102,15 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           Headache-proofs complicated queries with functional constructs:
           map and reduce.
           <div class="project-title">
-            <a href="project-tempo.php">Project Tempo</a>
-          </div>
-          Algorithm-driven, music-composing Python program that randomly
-          generates "good" music.
-          <div class="project-title">
             <a href="led-tetris.php">LED Tetris</a>
           </div>
           Full LED Tetris game for the Arduino Mega 2560. Organized with a
           finite state machine.
+          <div class="project-title">
+            <a href="project-tempo.php">Project Tempo</a>
+          </div>
+          Algorithm-driven, music-composing Python program that randomly
+          generates "good" music.
           <div class="project-title">
             <a href="https://github.com/TrueshotBarrage/crawl-o-bot">Crawl-o-Bot</a>
           </div>
@@ -132,7 +132,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div>
             <div class="bold">Other: </div>
             <span class="smaller">
-              Git, Linux, Docker, Node
+              Git, Linux, Docker, Node, React
             </span>
           </div>
         </div>
@@ -140,7 +140,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
       <div class="right-column">
         <div id="work-experience">
           <div class="section-title">Relevant Employment</div>
-          <div class="project-title">
+          <!-- <div class="project-title">
             <a class="bold" href="https://wasabi.com/">Wasabi Technologies, Inc. &#183;</a>
             <span class="smaller">SWE Intern</span>
           </div>
@@ -149,15 +149,33 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           </div>
           <ul>
             <li>
-              Generated over twenty time-series charts with CDR data by
-              writing optimized ClickHouse SQL queries on Grafana.
-            </li>
-            <li>
               Scripted Python to export daily MySQL db data into CSV files, and
               utilized AWS S3 services to import data onto different DBMS platforms.
             </li>
-          </ul>
-          <?php work_gen(
+          </ul> -->
+          <?php
+          work_gen(
+            "Amazon Robotics",
+            "https://amazonrobotics.com",
+            "Firmware Co-op",
+            "Jan. '21 - Current",
+            "Reading, MA",
+            array(
+              "Remote co-op at Ithaca in Embedded Firmware.",
+            )
+          );
+          work_gen(
+            "Wasabi Technologies, Inc.",
+            "https://wasabi.com/",
+            "SWE Intern",
+            "May '20 - Aug. '20",
+            "Boston, MA",
+            array(
+              "Scripted Python to export daily MySQL db data into CSV files, and
+              utilized AWS S3 services to import data onto different DBMS platforms."
+            )
+          );
+          work_gen(
             "Cornell Engineering",
             "",
             "Teaching Assistant",
@@ -166,16 +184,6 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             array(
               "ECE 2300 - Digital Logic & Computer Org.",
               "PHYS 1112 - Mechanics & Heat"
-            )
-          ); ?>
-          <?php work_gen(
-            "Amazon Robotics",
-            "https://amazonrobotics.com",
-            "Emb. Firmware Co-op",
-            "Jan. '21 - Jun. '21",
-            "Reading, MA",
-            array(
-              "Remote co-op at Ithaca in Embedded Firmware.",
             )
           ); ?>
         </div>
@@ -211,20 +219,22 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             <div class="course-codes">
               <div>CS 2110</div>
               <div>CS 4820</div>
+              <div>CS 4780</div>
               <div>CS 3110</div>
-              <div>INFO 2300</div>
               <div>INFO 3300</div>
               <div>ECE 4750</div>
               <div>ECE 3140</div>
+              <div>ECE 3030</div>
             </div>
             <div class="course-names">
               <div>OOP and Data Structures</div>
               <div>Theory of Algorithms</div>
+              <div>Machine Learning</div>
               <div>Functional Programming</div>
-              <div>Web Design & Programming</div>
               <div>Data-Driven Web Apps & Viz.</div>
               <div>Computer Architecture</div>
               <div>Embedded Systems</div>
+              <div>Electromagnetic Fields & Waves</div>
             </div>
           </div>
         </div>

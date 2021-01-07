@@ -3,18 +3,22 @@
  * name: resume.css
  * purpose: styles for the single resume page
  * author: david kim
- * last revised: july 7th, 2020
+ * last revised: january 6th, 2021
  * Copyright 2020 David Kim. All rights reserved.
  -----------------------------------------------------------*/
 
 * {
   margin: 0;
   padding: 0;
-  list-style: inside "- ";
+  list-style: none;
   text-decoration: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+ul li::before {
+  content: "- ";
 }
 
 /* Because I don't like purple links :P */
@@ -158,6 +162,10 @@ article, aside, footer, header, nav, section {
   vertical-align: middle;
 }
 
+.major-related {
+  margin-bottom: 0.5em;
+}
+
 #skills {}
 
 #selected-projects {
@@ -218,6 +226,9 @@ article, aside, footer, header, nav, section {
 @media screen and (max-width: 600px) {
   body {
     background-color: #ffffff;
+  }
+  .main-container {
+    height: auto;
   }
   #bottom-padding {
     display: block;
