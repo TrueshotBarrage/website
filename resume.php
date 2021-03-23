@@ -179,9 +179,10 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Cornell Engineering",
             "",
             "Teaching Assistant",
-            "Jan. '19 - Dec. '19",
+            "Jan. '19 - Current",
             "Ithaca, NY",
             array(
+              "CS 3110 - Func. Programming & Data Structures",
               "ECE 2300 - Digital Logic & Computer Org.",
               "PHYS 1112 - Mechanics & Heat"
             )
@@ -192,10 +193,11 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <?php work_gen(
             "Cornell Data Science",
             "https://cornelldata.science",
-            "Team Member",
+            "Team Lead",
             "Sept. '19 - Current",
             "Ithaca, NY",
             array(
+              "Currently lead and manage the Data Engineering Subteam.",
               "Designed and led deployment of Cypria frontend, including 
               <a href=\"http://cypriaql.com/playground.php\">a code playground</a> to 
               test out the language in the browser."
@@ -219,7 +221,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             <div class="course-codes">
               <div>CS 2110</div>
               <div>CS 4820</div>
-              <div>CS 4780</div>
+              <!-- <div>CS 4780</div> -->
               <div>CS 3110</div>
               <div>INFO 3300</div>
               <div>ECE 4750</div>
@@ -229,7 +231,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             <div class="course-names">
               <div>OOP and Data Structures</div>
               <div>Theory of Algorithms</div>
-              <div>Machine Learning</div>
+              <!-- <div>Machine Learning</div> -->
               <div>Functional Programming</div>
               <div>Data-Driven Web Apps & Viz.</div>
               <div>Computer Architecture</div>
