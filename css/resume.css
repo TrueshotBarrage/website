@@ -29,7 +29,7 @@ a {
 
 a:hover {
   color: #39d839;
-  opacity: .60;
+  opacity: 0.6;
 }
 
 html {
@@ -48,7 +48,12 @@ body {
   background-color: #404040;
 }
 
-article, aside, footer, header, nav, section {
+article,
+aside,
+footer,
+header,
+nav,
+section {
   display: block;
 }
 
@@ -140,25 +145,30 @@ article, aside, footer, header, nav, section {
 .section-title {
   color: #82ce82;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   border-bottom: 2px solid #82ce82;
   margin-bottom: 3mm;
 }
 
-.left-column, .right-column {
+.left-column,
+.right-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-.left-column {}
+.left-column {
+}
 
-.right-column {}
+.right-column {
+}
 
-#education {}
+#education {
+  font-size: 0.95em;
+}
 
-#school>span {
+#school > span {
   vertical-align: middle;
 }
 
@@ -166,7 +176,8 @@ article, aside, footer, header, nav, section {
   margin-bottom: 0.5em;
 }
 
-#skills {}
+#skills {
+}
 
 #selected-projects {
   font-size: 0.8em;
@@ -182,15 +193,15 @@ article, aside, footer, header, nav, section {
 }
 
 #work-experience {
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 #extracurriculars {
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 #relevant-coursework {
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 .courses-grid {
@@ -209,7 +220,8 @@ article, aside, footer, header, nav, section {
   text-align: left;
 }
 
-.course-codes, .course-names {
+.course-codes,
+.course-names {
   white-space: nowrap;
 }
 

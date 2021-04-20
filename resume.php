@@ -76,7 +76,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div class="section-title">Education</div>
           <div id="school" class="bold bigger">Cornell University</div>
           <div class="subtitle major-related">
-            <span class="unset">Aug. '18 - May '22&#8192;&#9702;</span>
+            <span class="unset">Aug. '18 - Dec '22&#8192;&#9702;</span>
             &#8192;Ithaca, NY
           </div>
           <div>B.S. Computer Science</div>
@@ -112,11 +112,11 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           Algorithm-driven, music-composing Python program that randomly
           generates "good" music.
           <div class="project-title">
-            <a href="https://github.com/TrueshotBarrage/crawl-o-bot">Crawl-o-Bot</a>
+            <a href="https://thymekeep.com">ThymeKeep</a>
           </div>
-          Data scraper in PHP that decides where to crawl using a
-          randomized DFS algorithm.
-          <div class="project-title">
+          (under development) Scheduling app for group events.
+          React frontend topped with Google Calendar API + OAuth backend.
+          <div class=" project-title">
             <a href="index.php">The resume you're looking at</a>
           </div>
           Completely custom built with lots and lots of CSS grid.
@@ -161,7 +161,10 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Jan. '21 - Current",
             "Reading, MA",
             array(
-              "Remote co-op at Ithaca in Embedded Firmware.",
+              "Led development of floor detection & removal algorithm for 3D 
+              point cloud data.",
+              "Designed Python script to process camera and radar sensor 
+              capture data to be visualized."
             )
           );
           work_gen(
@@ -198,9 +201,8 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Ithaca, NY",
             array(
               "Currently lead and manage the Data Engineering Subteam.",
-              "Designed and led deployment of Cypria frontend, including 
-              <a href=\"http://cypriaql.com/playground.php\">a code playground</a> to 
-              test out the language in the browser."
+              "Designed and led deployment of Cypria frontend and 
+              <a href='https://www.mycourseindex.com'>MyCourseIndex</a> backend."
             )
           );
           work_gen(
@@ -226,6 +228,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>INFO 3300</div>
               <div>ECE 4750</div>
               <div>ECE 3140</div>
+              <div>ECE 3100</div>
               <div>ECE 3030</div>
             </div>
             <div class="course-names">
@@ -236,6 +239,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>Data-Driven Web Apps & Viz.</div>
               <div>Computer Architecture</div>
               <div>Embedded Systems</div>
+              <div>Probability and Inference</div>
               <div>Electromagnetic Fields & Waves</div>
             </div>
           </div>
