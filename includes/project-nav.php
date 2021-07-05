@@ -5,6 +5,11 @@
     </a>
   </li>
   <li>
+    <a href="bible-planner.php">
+      <span>Bible Planner</span>
+    </a>
+  </li>
+  <li>
     <a href="midi-visualizer.php">
       <span>MIDI Visualizer</span>
     </a>

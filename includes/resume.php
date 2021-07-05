@@ -62,8 +62,8 @@ $descriptions = array(
   "Launched new website <a href=\"blog.php\">blog</a>",
   "Began spring co-op at <a class=\"amazon\" href=\"https://amazonrobotics.com\" 
   target=\"_blank\">Amazon Robotics</a>, tinkering with embedded stuff",
-  "Stoked to start summer internship at <a class=\"amazon\" href=\"https://amazon.com\" 
-  target=\"_blank\">Amazon</a> as an SDE intern!"
+  "Ran simulations for a summer internship at <a class=\"amazon\" href=\"https://amazon.com\" 
+  target=\"_blank\">Amazon</a> as an SDE intern for Last Mile Planning"
 );
 ?>
 

@@ -23,6 +23,7 @@ function create_project_entries($p, $l)
 
 $projects = array(
   "Project Tempo",
+  "Bible Planner",
   "MIDI Visualizer",
   "CypriaQL",
   "LED Tetris",
@@ -33,6 +34,7 @@ $projects = array(
 );
 $links = array(
   "project-tempo.php",
+  "bible-planner.php",
   "midi-visualizer.php",
   "cypria.php",
   "led-tetris.php",

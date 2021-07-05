@@ -59,15 +59,14 @@ $title = "about me";
             <img src="images/aboutme.jpg" alt="Photo of David" />
           </div>
           <div id="about-me-text">
-            <p>I'm David Kim, a junior studying Computer Science and Electrical
+            <p>I'm David Kim, a senior studying Computer Science and Electrical
               and Computer Engineering at <span class="cornell bold">Cornell University</span>.</p><br>
 
             <p>Here you can find my <a href="resume.php">resume</a>, some courses I have taken,
-              my go-to programming languages, and how to reach me.</p><br>
+              programming languages I use, and how to reach me.</p><br>
 
             <p>Aside from that, some of my hobbies include biking around campus, playing board games
-              with friends, and reading. I am also a huge Star Wars nerd and
-              love to read up on the lore on the wiki. In addition, I enjoy teaching myself
+              with friends, and cooking. I am also a huge Star Wars nerd. In addition, I enjoy practicing
               guitar and improv piano for jazz & gospel style music.</p>
           </div>
         </div>
@@ -101,10 +100,10 @@ $title = "about me";
           <br>
           <div class="dual-grid">
             <div class="skills-label">
-              Frameworks & Envs
+              Frameworks
             </div>
             <p class="skills-text">
-              Git &bull; Linux &bull; Docker &bull; React &bull; Swagger
+              Git &bull; Linux &bull; Docker &bull; React &bull; Heroku
             </p>
           </div>
           <br>
@@ -129,8 +128,8 @@ $title = "about me";
             </div>
             <div id="contact-info">
               <span class="bold">School</span><br>
-              451 Hans Bethe House<br>
-              Ithaca, NY 14853<br>
+              505 Wyckoff Rd Apt 6<br>
+              Ithaca, NY 14850<br>
               United States of America
             </div>
           </div>
