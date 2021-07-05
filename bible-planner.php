@@ -183,7 +183,7 @@ if (!empty($duration)) {
 
       <?php
       // If the POST request has been sent, then create a table of the plan
-      if (!empty($_POST)) { ?>
+      if (!empty($_POST) && !empty($_POST["duration"]) && !empty($_POST["start-date"])) { ?>
         <div class="vb-50"></div>
         <div id="plan-result">
           <h2>Reading Plan
