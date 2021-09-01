@@ -107,15 +107,15 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           Full LED Tetris game for the Arduino Mega 2560. Organized with a
           finite state machine.
           <div class="project-title">
-            <a href="project-tempo.php">Project Tempo</a>
+            <a href="https://github.com/TrueshotBarrage/oscrabbl">OScrabbl</a>
           </div>
-          Algorithm-driven, music-composing Python program that randomly
-          generates "good" music.
+          Fully-functional Scrabble game for the command-line interface,
+          written in OCaml.
           <div class="project-title">
             <a href="https://thymekeep.com">ThymeKeep</a>
           </div>
-          (under development) Scheduling app for group events.
-          React frontend topped with Google Calendar API + OAuth backend.
+          Scheduling app for group events. React frontend topped with Google
+          Calendar API + OAuth backend.
           <div class=" project-title">
             <a href="index.php">The resume you're looking at</a>
           </div>
@@ -155,11 +155,22 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           </ul> -->
           <?php
           work_gen(
+            "Amazon.com, Inc.",
+            "https://amazon.com",
+            "SDE Intern",
+            "Jun. '21 - Aug. '21",
+            "Nashville, TN",
+            array(
+              "Created API client to retrieve customer info 
+              and store the data into DynamoDB data lake.",
+            )
+          );
+          work_gen(
             "Amazon Robotics",
             "https://amazonrobotics.com",
             "Firmware Co-op",
-            "Jan. '21 - Current",
-            "Reading, MA",
+            "Jan. '21 - May '21",
+            "North Reading, MA",
             array(
               "Led development of floor detection & removal algorithm for 3D 
               point cloud data.",
@@ -182,12 +193,12 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Cornell Engineering",
             "",
             "Teaching Assistant",
-            "Jan. '19 - Current",
+            "Jan. '19 - May '21",
             "Ithaca, NY",
             array(
-              "CS 3110 - Func. Programming & Data Structures",
-              "ECE 2300 - Digital Logic & Computer Org.",
-              "PHYS 1112 - Mechanics & Heat"
+              "CS 3110: Functional Programming",
+              "ECE 2300: Digital Logic & Computer Org.",
+              "PHYS 1112: Intro Physics: Mechanics & Heat"
             )
           ); ?>
         </div>
@@ -200,9 +211,9 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Sept. '19 - Current",
             "Ithaca, NY",
             array(
-              "Currently lead and manage the Data Engineering Subteam.",
-              "Designed and led deployment of Cypria frontend and 
-              <a href='https://www.mycourseindex.com'>MyCourseIndex</a> backend."
+              "Lead and manage the Data Engineering team.",
+              "Designed Cypria frontend and 
+              <a href='https://www.mycourseindex.com'>MCI</a> backend."
             )
           );
           work_gen(
@@ -225,10 +236,8 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>CS 4820</div>
               <!-- <div>CS 4780</div> -->
               <div>CS 3110</div>
-              <div>INFO 3300</div>
               <div>ECE 4750</div>
               <div>ECE 3140</div>
-              <div>ECE 3100</div>
               <div>ECE 3030</div>
             </div>
             <div class="course-names">
@@ -236,10 +245,8 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
               <div>Theory of Algorithms</div>
               <!-- <div>Machine Learning</div> -->
               <div>Functional Programming</div>
-              <div>Data-Driven Web Apps & Viz.</div>
               <div>Computer Architecture</div>
               <div>Embedded Systems</div>
-              <div>Probability and Inference</div>
               <div>Electromagnetic Fields & Waves</div>
             </div>
           </div>
