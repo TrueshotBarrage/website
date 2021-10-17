@@ -2,7 +2,7 @@
 include("includes/init.php");
 
 // Used for opening PostgreSQL DB
-$db = open_postgresql_db($local = true);
+$db = open_postgresql_db($local = false);
 
 $title = "blog";
 $err_msgs = array();
