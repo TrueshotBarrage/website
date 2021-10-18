@@ -31,7 +31,8 @@ $dates = array(
   "May 2020",
   "Dec 2020",
   "Jan 2021",
-  "Jun 2021"
+  "Jun 2021",
+  "Aug 2021"
 );
 $descriptions = array(
   "Began attending <span class=\"cornell\">Cornell University</span><br>
@@ -63,7 +64,9 @@ $descriptions = array(
   "Began spring co-op at <a class=\"amazon\" href=\"https://amazonrobotics.com\" 
   target=\"_blank\">Amazon Robotics</a>, tinkering with embedded stuff",
   "Ran simulations for a summer internship at <a class=\"amazon\" href=\"https://amazon.com\" 
-  target=\"_blank\">Amazon</a> as an SDE intern for Last Mile Planning"
+  target=\"_blank\">Amazon</a> as an SDE intern for Last Mile Planning",
+  "Started building robots to improve the lives of people with disabilities at
+  <a href=\"https://emprise.cs.cornell.edu/\" target=\"_blank\">EmPRISE Lab</a>"
 );
 ?>
 

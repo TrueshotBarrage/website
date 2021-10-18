@@ -60,10 +60,11 @@ $title = "about me";
           </div>
           <div id="about-me-text">
             <p>I'm David Kim, a senior studying Computer Science and Electrical
-              and Computer Engineering at <span class="cornell bold">Cornell University</span>.</p><br>
-
-            <p>Here you can find my <a href="resume.php">resume</a>, some courses I have taken,
-              programming languages I use, and how to reach me.</p><br>
+              and Computer Engineering at <span class="cornell bold">Cornell University</span>.
+              Currently, I am an undergraduate researcher in the
+              <a href="https://emprise.cs.cornell.edu/" target="_blank">EmPRISE lab</a>, building
+              robots! My aim is to pursue a PhD in robotics.
+            </p><br>
 
             <p>Aside from that, some of my hobbies include biking around campus, playing board games
               with friends, and cooking. I am also a huge Star Wars nerd. In addition, I enjoy practicing
@@ -128,7 +129,7 @@ $title = "about me";
             </div>
             <div id="contact-info">
               <span class="bold">School</span><br>
-              505 Wyckoff Rd Apt 6<br>
+              810 E State St. Apt 2<br>
               Ithaca, NY 14850<br>
               United States of America
             </div>
