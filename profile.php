@@ -66,9 +66,10 @@ $title = "about me";
               robots! My aim is to pursue a PhD in robotics.
             </p><br>
 
-            <p>Aside from that, some of my hobbies include biking around campus, playing board games
-              with friends, and cooking. I am also a huge Star Wars nerd. In addition, I enjoy practicing
-              guitar and improv piano for jazz & gospel style music.</p>
+            <p>In my free time, I love playing board games, practicing jazz piano,
+              and drinking caramel latte. I'm also actively involved in my church (KCC)
+              and currently serving as president. Nowadays, I'm trying to brush
+              up on my League of Legends skills (and climb out of bronze league).</p>
           </div>
         </div>
       </div>
@@ -95,7 +96,7 @@ $title = "about me";
             </div>
             <p class="skills-text">
               Java &bull; Python &bull; JavaScript &bull; PHP &bull;
-              OCaml &bull; SQL &bull; Go &bull; CSS
+              OCaml &bull; SQL &bull; C/C++ &bull; CSS
             </p>
           </div>
           <br>
@@ -104,7 +105,7 @@ $title = "about me";
               Frameworks
             </div>
             <p class="skills-text">
-              Git &bull; Linux &bull; Docker &bull; React &bull; Heroku
+              Git &bull; Linux &bull; Docker &bull; React &bull; ROS
             </p>
           </div>
           <br>
@@ -113,7 +114,7 @@ $title = "about me";
               Miscellaneous
             </div>
             <p class="skills-text">
-              Frontend Development &bull; Communication &bull; Leadership &bull;
+              Web Development &bull; Communication &bull; Leadership &bull;
               Teaching &bull; Board Game Mastermind
             </p>
           </div>
@@ -130,8 +131,7 @@ $title = "about me";
             <div id="contact-info">
               <span class="bold">School</span><br>
               810 E State St. Apt 2<br>
-              Ithaca, NY 14850<br>
-              United States of America
+              Ithaca, NY 14850
             </div>
           </div>
           <div class="contact-entry dual-grid">

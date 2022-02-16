@@ -76,17 +76,19 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div class="section-title">Education</div>
           <div id="school" class="bold bigger">Cornell University</div>
           <div class="subtitle major-related">
-            <span class="unset">Aug. '18 - Dec '22&#8192;&#9702;</span>
+            <span class="unset">Aug. '18 - Dec. '22&#8192;&#9702;</span>
             &#8192;Ithaca, NY
           </div>
           <div>B.S. Computer Science</div>
           <div class="major-related">B.S. Electrical and Computer Engineering</div>
           <div>GPA:</div>
           <div class="major-related smaller">
-            <span class="inline">Overall: 3.613</span>
-            <span class="inline">CS: 3.859</span>
-            <span class="inline">ECE: 3.647</span>
+            <span class="inline">Overall: 3.697</span>
+            <span class="inline">CS: 3.949</span>
+            <span class="inline">ECE: 3.714</span>
           </div>
+          <div class="smaller">- Dean's List FA20 - FA21</div>
+          <div class="smaller">- SP22 ELI Undergraduate Research Scholar</div>
         </div>
         <div id="selected-projects">
           <div class="section-title">Selected Projects</div>
@@ -125,14 +127,11 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
         <div id="skills">
           <div class="section-title">Skills</div>
           <div class="bold">Programming Languages:</div>
-          <div class="subtitle">Confident with</div>
-          <div class="smaller">Java, Python, JavaScript, PHP, OCaml, SQL, Go, CSS</div>
-          <div class="subtitle">Have experience with</div>
-          <div class="smaller spaced">TypeScript, C, C++</div>
+          <div class="smaller spaced">Java, Python, JavaScript, PHP, OCaml, SQL, C/C++</div>
           <div>
             <div class="bold">Other: </div>
             <span class="smaller">
-              Git, Linux, Docker, Node, React
+              Git, Linux, Docker, Node, React, ROS
             </span>
           </div>
         </div>
@@ -161,8 +160,8 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Jun. '21 - Aug. '21",
             "Nashville, TN",
             array(
-              "Created API client to retrieve customer info 
-              and store the data into DynamoDB data lake.",
+              // "Created API client to retrieve customer info 
+              // and store the data into DynamoDB data lake.",
             )
           );
           work_gen(
@@ -172,10 +171,10 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Jan. '21 - May '21",
             "North Reading, MA",
             array(
-              "Led development of floor detection & removal algorithm for 3D 
-              point cloud data.",
-              "Designed Python script to process camera and radar sensor 
-              capture data to be visualized."
+              // "Led development of floor detection & removal algorithm for 3D 
+              // point cloud data.",
+              // "Designed Python script to process camera and radar sensor 
+              // capture data to be visualized."
             )
           );
           work_gen(
@@ -185,26 +184,39 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "May '20 - Aug. '20",
             "Boston, MA",
             array(
-              "Scripted Python to export daily MySQL db data into CSV files, and
-              utilized AWS S3 services to import data onto different DBMS platforms."
+              // "Scripted Python to export daily MySQL db data into CSV files, and
+              // utilized AWS S3 services to import data onto different DBMS platforms."
             )
           );
           work_gen(
             "Cornell Engineering",
             "",
             "Teaching Assistant",
-            "Jan. '19 - May '21",
+            "Jan. '19 - Current",
             "Ithaca, NY",
             array(
+              "CS 4780: Machine Learning",
               "CS 3110: Functional Programming",
               "ECE 2300: Digital Logic & Computer Org.",
+              "ECE 1210: Computing Technology in Smartphones",
               "PHYS 1112: Intro Physics: Mechanics & Heat"
             )
           ); ?>
         </div>
         <div id="extracurriculars">
           <div class="section-title">Extracurriculars</div>
-          <?php work_gen(
+          <?php
+          work_gen(
+            "EmPRISE Lab",
+            "https://emprise.cs.cornell.edu/",
+            "Research Assistant",
+            "Sept. '21 - Current",
+            "Ithaca, NY",
+            array(
+              "Developed a sensorized & actuated dental mouth model for testing feeding algorithms.",
+            )
+          );
+          work_gen(
             "Cornell Data Science",
             "https://cornelldata.science",
             "Team Lead",
@@ -232,22 +244,18 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div class="section-title">Relevant Coursework</div>
           <div class="courses-grid">
             <div class="course-codes">
-              <div>CS 2110</div>
               <div>CS 4820</div>
-              <!-- <div>CS 4780</div> -->
-              <div>CS 3110</div>
+              <div>CS 4780</div>
               <div>ECE 4750</div>
-              <div>ECE 3140</div>
-              <div>ECE 3030</div>
+              <div>ECE 5725</div>
+              <div>ECE 4960</div>
             </div>
             <div class="course-names">
-              <div>OOP and Data Structures</div>
               <div>Theory of Algorithms</div>
-              <!-- <div>Machine Learning</div> -->
-              <div>Functional Programming</div>
+              <div>Machine Learning</div>
               <div>Computer Architecture</div>
-              <div>Embedded Systems</div>
-              <div>Electromagnetic Fields & Waves</div>
+              <div>Embedded Operating Systems</div>
+              <div>Fast Robots</div>
             </div>
           </div>
         </div>

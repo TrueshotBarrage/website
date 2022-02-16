@@ -27,23 +27,23 @@ $course_ids = array(
   "ECE 4750",
   "ECE 3140",
   "ECE 5725",
+  "ECE 4960",
   "ECE 3030",
-  "ECE 3100",
   "PHYS 1116"
 );
 $course_names = array(
   "Introduction to Algorithms (Java)",
   "Functional Programming (OCaml)",
   "Object-Oriented Programming and Data Structures (Java)",
-  "Foundations of Robotics (ROS, Python)",
-  "Machine Learning (Python)",
+  "Foundations of Robotics (ROS)",
+  "Machine Learning (scikit-learn, pytorch)",
   "Data-Driven Web Applications (d3.js)",
   "Intermediate Web Design (PHP, MySQL)",
-  "Computer Architecture (Verilog, Python)",
+  "Computer Architecture (Verilog, PyMTL)",
   "Embedded Systems (C, assembly)",
   "Embedded Operating Systems (Raspberry Pi, Python)",
+  "Fast Robots (Arduino)",
   "Electromagnetic Fields and Waves",
-  "Probability and Inference (MATLAB)",
   "Honors Mechanics and Special Relativity",
 );
 ?>
