@@ -83,12 +83,12 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div class="major-related">B.S. Electrical and Computer Engineering</div>
           <div>GPA:</div>
           <div class="major-related smaller">
-            <span class="inline">Overall: 3.697</span>
-            <span class="inline">CS: 3.949</span>
-            <span class="inline">ECE: 3.714</span>
+            <span class="inline">Overall: 3.708</span>
+            <span class="inline">CS: 3.937</span>
+            <span class="inline">ECE: 3.680</span>
           </div>
-          <div class="smaller">- Dean's List FA20 - FA21</div>
-          <div class="smaller">- SP22 ELI Undergraduate Research Scholar</div>
+          <div class="smaller">- Dean's List FA20 - SP22</div>
+          <div class="smaller">- ELI Undergraduate Research Scholar</div>
         </div>
         <div id="selected-projects">
           <div class="section-title">Selected Projects</div>
