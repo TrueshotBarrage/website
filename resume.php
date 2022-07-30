@@ -74,19 +74,29 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
       <div class="left-column">
         <div id="education">
           <div class="section-title">Education</div>
-          <div id="school" class="bold bigger">Cornell University</div>
-          <div class="subtitle major-related">
-            <span class="unset">Aug. '18 - Dec. '22&#8192;&#9702;</span>
-            &#8192;Ithaca, NY
+
+          <div id="school" class="bold bigger">M.Eng. Computer Science</div>
+          <div class="smaller">
+            Cornell University
+            <span class="subtitle">&#8192;Aug 2022 - May 2023</span>
           </div>
-          <div>B.S. Computer Science</div>
-          <div class="major-related">B.S. Electrical and Computer Engineering</div>
-          <div>GPA:</div>
+          <div class="major-related"></div>
+
+          <div id="school" class="bold bigger">B.S. Computer Science</div>
+          <div id="school" class="bold bigger">B.S. Electrical and Computer Engineering</div>
+          <div class="smaller">
+            Cornell University
+            <span class="subtitle">&#8192;Aug 2018 - Dec 2022</span>
+          </div>
+          <div class="smaller">GPA: 3.708</div>
+          <div class="major-related"></div>
+
+          <!-- <div>GPA:</div>
           <div class="major-related smaller">
-            <span class="inline">Overall: 3.708</span>
-            <span class="inline">CS: 3.937</span>
-            <span class="inline">ECE: 3.680</span>
-          </div>
+            <span class="inline">Cumulative: 3.708</span> -->
+          <!-- <span class="inline">CS: 3.937</span>
+            <span class="inline">ECE: 3.680</span> -->
+          <!-- </div> -->
           <div class="smaller">- Dean's List FA20 - SP22</div>
           <div class="smaller">- ELI Undergraduate Research Scholar</div>
         </div>
@@ -131,7 +141,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
           <div>
             <div class="bold">Other: </div>
             <span class="smaller">
-              Git, Linux, Docker, Node, React, ROS
+              Git, Linux, Bash, Docker, Node, React, ROS
             </span>
           </div>
         </div>
@@ -157,7 +167,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Amazon.com, Inc.",
             "https://amazon.com",
             "SDE Intern",
-            "Jun. '21 - Aug. '21",
+            "Jun 2021 - Aug 2021",
             "Nashville, TN",
             array(
               // "Created API client to retrieve customer info 
@@ -168,7 +178,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Amazon Robotics",
             "https://amazonrobotics.com",
             "Firmware Co-op",
-            "Jan. '21 - May '21",
+            "Jan 2021 - May 2021",
             "North Reading, MA",
             array(
               // "Led development of floor detection & removal algorithm for 3D 
@@ -181,7 +191,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Wasabi Technologies, Inc.",
             "https://wasabi.com/",
             "SWE Intern",
-            "May '20 - Aug. '20",
+            "May 2020 - Aug 2020",
             "Boston, MA",
             array(
               // "Scripted Python to export daily MySQL db data into CSV files, and
@@ -192,7 +202,7 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "Cornell Engineering",
             "",
             "Teaching Assistant",
-            "Jan. '19 - Current",
+            "Jan 2019 - Current",
             "Ithaca, NY",
             array(
               "CS 4780: Machine Learning",
@@ -210,29 +220,31 @@ function work_gen($company, $opt_link = "", $role, $datestr, $location, $descrip
             "EmPRISE Lab",
             "https://emprise.cs.cornell.edu/",
             "Research Assistant",
-            "Sept. '21 - Current",
+            "Sept 2021 - Current",
             "Ithaca, NY",
             array(
-              "Developed a sensorized & actuated dental mouth model for testing feeding algorithms.",
+              // "Developed a sensorized & actuated dental mouth model for testing 
+              // feeding algorithms.",
+              "Developed an autonomous bathing system for disabled people with a
+              robotic arm and RGBD + thermal camera data."
             )
           );
           work_gen(
             "Cornell Data Science",
             "https://cornelldata.science",
             "Team Lead",
-            "Sept. '19 - Current",
+            "Sept 2019 - May 2022",
             "Ithaca, NY",
             array(
-              "Lead and manage the Data Engineering team.",
-              "Designed Cypria frontend and 
-              <a href='https://www.mycourseindex.com'>MCI</a> backend."
+              "Led and managed the Data Engineering team.",
+              "Designed Cypria frontend and MCI backend."
             )
           );
           work_gen(
             "Suh Research Group",
             "https://tsg.ece.cornell.edu/",
             "Research Assistant",
-            "May '19 - May '20",
+            "May 2019 - May 2020",
             "Ithaca, NY",
             array(
               "Designed a method to compute partial convolutions of CNNs 
