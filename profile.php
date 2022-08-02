@@ -59,17 +59,19 @@ $title = "about me";
             <img src="images/aboutme.jpg" alt="Photo of David" />
           </div>
           <div id="about-me-text">
-            <p>I'm David Kim, a senior studying Computer Science and Electrical
-              and Computer Engineering at <span class="cornell bold">Cornell University</span>.
-              Currently, I am an undergraduate researcher in the
-              <a href="https://emprise.cs.cornell.edu/" target="_blank">EmPRISE lab</a>, building
-              robots! My aim is to pursue a PhD in robotics.
+            <p>
+              I'm David Kim, a masters student in Computer Science at
+              <span class="cornell bold">Cornell University</span>,
+              and an undergraduate researcher in the
+              <a href="https://emprise.cs.cornell.edu/" target="_blank">EmPRISE lab</a>,
+              working with assistive robots.
+              Currently, I'm looking for full-time opportunities for after graduating this year.
             </p><br>
 
             <p>In my free time, I love playing board games, practicing jazz piano,
-              and drinking caramel latte. I'm also actively involved in my church (KCC)
-              and currently serving as president. Nowadays, I'm trying to brush
-              up on my League of Legends skills (and climb out of bronze league).</p>
+              and drinking caramel latte. I'm also actively involved with my
+              church (KCC). I really enjoy traveling around the United States
+              and meeting new people.</p>
           </div>
         </div>
       </div>
@@ -105,7 +107,8 @@ $title = "about me";
               Frameworks
             </div>
             <p class="skills-text">
-              Git &bull; Linux &bull; Docker &bull; React &bull; ROS
+              Git &bull; Linux &bull; Bash &bull; Docker &bull; Node &bull;
+              React &bull; ROS
             </p>
           </div>
           <br>
@@ -130,7 +133,7 @@ $title = "about me";
             </div>
             <div id="contact-info">
               <span class="bold">School</span><br>
-              810 E State St. Apt 2<br>
+              806 E State St. Apt 2<br>
               Ithaca, NY 14850
             </div>
           </div>
