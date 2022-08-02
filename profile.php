@@ -60,9 +60,9 @@ $title = "about me";
           </div>
           <div id="about-me-text">
             <p>
-              I'm David Kim, a masters student in Computer Science at
+              I'm David Kim, a Masters student in Computer Science at
               <span class="cornell bold">Cornell University</span>,
-              and an undergraduate researcher in the
+              and a researcher in the
               <a href="https://emprise.cs.cornell.edu/" target="_blank">EmPRISE lab</a>,
               working with assistive robots.
               Currently, I'm looking for full-time opportunities for after graduating this year.
